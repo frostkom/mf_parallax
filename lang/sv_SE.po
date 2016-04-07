@@ -1,0 +1,986 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MF Forms\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-16 11:22+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Martin Fors\n"
+"Language-Team: Martin Fors\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: sv_SE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;esc_attr__;esc_attr_e;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../..\n"
+
+#: ../404.php:12
+#: ../../mf_parallax/404.php:12
+msgid "Not Found"
+msgstr "Hittades inte"
+
+#: ../404.php:18
+#: ../../mf_parallax/404.php:18
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr "Sorry, men sidan du letade efter kunde inte hittas. Kanske en sökning kan hjälpa dig."
+
+#: ../functions.php:16
+#: ../../mf_parallax/functions.php:16
+msgid "Primary Navigation"
+msgstr "Primär navigation"
+
+#: ../functions.php:31
+#: ../functions.php:41
+#: ../../mf_parallax/functions.php:31
+#: ../../mf_parallax/functions.php:41
+msgid "Theme Options"
+msgstr "Temainställningar"
+
+#: ../functions.php:57
+#: ../../mf_parallax/functions.php:57
+msgid "Could not create a folder in uploads. Please add the correct rights for the script to create a new subfolder"
+msgstr "Det gick inte att skapa en mapp i uploads. Lägg till rätt behörigheter för mappen uploads så att det går att skapa en undermapp"
+
+#: ../functions.php:76
+#: ../../mf_parallax/functions.php:76
+msgid "The theme settings were backed up"
+msgstr "Temainställningarna sparades"
+
+#: ../functions.php:81
+#: ../../mf_parallax/functions.php:81
+msgid "It was not possible to backup the theme settings"
+msgstr "Det gick inte att spara temainställningarna"
+
+#: ../functions.php:87
+#: ../../mf_parallax/functions.php:87
+msgid "There were no theme settings to save"
+msgstr "Det fanns inga temainställningar att spara"
+
+#: ../functions.php:119
+#: ../../mf_parallax/functions.php:119
+msgid "The restore was successful"
+msgstr "Återställningen blev lyckad"
+
+#: ../functions.php:126
+#: ../../mf_parallax/functions.php:126
+msgid "There is something wrong with the source to restore"
+msgstr "Det är något fel på källan för återställning"
+
+#: ../functions.php:137
+#: ../../mf_parallax/functions.php:137
+msgid "The file was deleted successfully"
+msgstr "File togs bort"
+
+#: ../functions.php:154
+#: ../../mf_parallax/functions.php:154
+msgid "Name"
+msgstr "Namn"
+
+#: ../functions.php:155
+#: ../../mf_parallax/functions.php:155
+msgid "Date"
+msgstr "Datum"
+
+#: ../functions.php:182
+#: ../../mf_parallax/functions.php:182
+msgid "There are no previous backups"
+msgstr "Det finns inga tidigare backuper"
+
+#: ../functions.php:186
+#: ../../mf_parallax/functions.php:186
+msgid "Save New Backup"
+msgstr "Spara ny backup"
+
+#: ../functions.php:191
+#: ../../mf_parallax/functions.php:191
+msgid "Restore Backup"
+msgstr "Återställ backup"
+
+#: ../functions.php:215
+#: ../../mf_parallax/functions.php:215
+msgid "Generic"
+msgstr "Allmänt"
+
+#: ../functions.php:216
+#: ../functions.php:229
+#: ../functions.php:282
+#: ../functions.php:414
+#: ../functions.php:419
+#: ../../mf_parallax/functions.php:216
+#: ../../mf_parallax/functions.php:229
+#: ../../mf_parallax/functions.php:282
+#: ../../mf_parallax/functions.php:414
+#: ../../mf_parallax/functions.php:419
+msgid "Background"
+msgstr "Bakgrund"
+
+#: ../functions.php:217
+#: ../functions.php:283
+#: ../../mf_parallax/functions.php:217
+#: ../../mf_parallax/functions.php:283
+msgid "Font"
+msgstr "Typsnitt"
+
+#: ../functions.php:218
+#: ../functions.php:424
+#: ../../mf_parallax/functions.php:218
+#: ../../mf_parallax/functions.php:424
+msgid "Text Color"
+msgstr "Textfärg"
+
+#: ../functions.php:219
+#: ../../mf_parallax/functions.php:219
+msgid "Link Color"
+msgstr "Länkfärg"
+
+#: ../functions.php:220
+#: ../functions.php:221
+#: ../functions.php:284
+#: ../../mf_parallax/functions.php:220
+#: ../../mf_parallax/functions.php:221
+#: ../../mf_parallax/functions.php:284
+msgid "Font size"
+msgstr "Storlek på typsnitt"
+
+#: ../functions.php:221
+#: ../functions.php:414
+#: ../../mf_parallax/functions.php:221
+#: ../../mf_parallax/functions.php:414
+msgid "Desktop"
+msgstr "Datorskärm"
+
+#: ../functions.php:222
+#: ../../mf_parallax/functions.php:222
+msgid "Website Max Width"
+msgstr "Maxbredd på webbsida"
+
+#: ../functions.php:223
+#: ../../mf_parallax/functions.php:223
+msgid "Mobile Breakpoint"
+msgstr "Mobil brytpunkt"
+
+#: ../functions.php:224
+#: ../../mf_parallax/functions.php:224
+msgid "Aside Image Max Width"
+msgstr "Maxbredd på bilder i sidokolumn"
+
+#: ../functions.php:224
+#: ../functions.php:232
+#: ../functions.php:234
+#: ../functions.php:245
+#: ../functions.php:247
+#: ../functions.php:262
+#: ../functions.php:288
+#: ../functions.php:294
+#: ../functions.php:419
+#: ../../mf_parallax/functions.php:224
+#: ../../mf_parallax/functions.php:232
+#: ../../mf_parallax/functions.php:234
+#: ../../mf_parallax/functions.php:245
+#: ../../mf_parallax/functions.php:247
+#: ../../mf_parallax/functions.php:262
+#: ../../mf_parallax/functions.php:288
+#: ../../mf_parallax/functions.php:294
+#: ../../mf_parallax/functions.php:419
+msgid "Mobile"
+msgstr "Mobil"
+
+#: ../functions.php:227
+#: ../functions.php:317
+#: ../../mf_parallax/functions.php:227
+#: ../../mf_parallax/functions.php:317
+msgid "Header"
+msgstr "Sidhuvud"
+
+#: ../functions.php:228
+#: ../../mf_parallax/functions.php:228
+msgid "Fixed"
+msgstr "Fixerad"
+
+#: ../functions.php:230
+#: ../../mf_parallax/functions.php:230
+msgid "Override background with page background"
+msgstr "Ersätt bakgrund med sidans bakgrund"
+
+#: ../functions.php:231
+#: ../functions.php:232
+#: ../functions.php:244
+#: ../functions.php:245
+#: ../functions.php:261
+#: ../functions.php:262
+#: ../functions.php:287
+#: ../functions.php:288
+#: ../../mf_parallax/functions.php:231
+#: ../../mf_parallax/functions.php:232
+#: ../../mf_parallax/functions.php:244
+#: ../../mf_parallax/functions.php:245
+#: ../../mf_parallax/functions.php:261
+#: ../../mf_parallax/functions.php:262
+#: ../../mf_parallax/functions.php:287
+#: ../../mf_parallax/functions.php:288
+msgid "Padding"
+msgstr "Tomrum"
+
+#: ../functions.php:233
+#: ../functions.php:234
+#: ../../mf_parallax/functions.php:233
+#: ../../mf_parallax/functions.php:234
+msgid "Logo"
+msgstr "Logga"
+
+#: ../functions.php:235
+#: ../../mf_parallax/functions.php:235
+msgid "Logo Padding"
+msgstr "Tomrum runt logga"
+
+#: ../functions.php:236
+#: ../../mf_parallax/functions.php:236
+msgid "Logo Font"
+msgstr "Typsnitt på logga"
+
+#: ../functions.php:237
+#: ../../mf_parallax/functions.php:237
+msgid "Logo Font Size"
+msgstr "Storlek på logga"
+
+#: ../functions.php:238
+#: ../../mf_parallax/functions.php:238
+msgid "Logo Color"
+msgstr "Färg på logga"
+
+#: ../functions.php:241
+#: ../../mf_parallax/functions.php:241
+msgid "Navigation"
+msgstr "Meny"
+
+#: ../functions.php:242
+#: ../../mf_parallax/functions.php:242
+msgid "Compressed on mobile"
+msgstr "Komprimerad på små skärmar"
+
+#: ../functions.php:243
+#: ../../mf_parallax/functions.php:243
+msgid "Click to expand"
+msgstr "Klicka för att expandera"
+
+#: ../functions.php:246
+#: ../functions.php:247
+#: ../../mf_parallax/functions.php:246
+#: ../../mf_parallax/functions.php:247
+msgid "Float"
+msgstr "Flyt"
+
+#: ../functions.php:248
+#: ../../mf_parallax/functions.php:248
+msgid "Size"
+msgstr "Storlek"
+
+#: ../functions.php:249
+#: ../functions.php:250
+#: ../functions.php:285
+#: ../../mf_parallax/functions.php:249
+#: ../../mf_parallax/functions.php:250
+#: ../../mf_parallax/functions.php:285
+msgid "Color"
+msgstr "Färg"
+
+#: ../functions.php:250
+#: ../../mf_parallax/functions.php:250
+msgid "Hover"
+msgstr "Mus över"
+
+#: ../functions.php:251
+#: ../../mf_parallax/functions.php:251
+msgid "Link Padding"
+msgstr "Tomrum runt länkar"
+
+#: ../functions.php:259
+#: ../../mf_parallax/functions.php:259
+msgid "Match height with screen size"
+msgstr "Samma höjd som på skärmen"
+
+#: ../functions.php:260
+#: ../../mf_parallax/functions.php:260
+msgid "Main column width"
+msgstr "Bredd på huvudkolumn"
+
+#: ../functions.php:263
+#: ../functions.php:267
+#: ../functions.php:270
+#: ../functions.php:273
+#: ../../mf_parallax/functions.php:263
+#: ../../mf_parallax/functions.php:267
+#: ../../mf_parallax/functions.php:270
+#: ../../mf_parallax/functions.php:273
+msgid "Heading Margin"
+msgstr "Marginal på rubrik"
+
+#: ../functions.php:264
+#: ../../mf_parallax/functions.php:264
+msgid "Heading Font"
+msgstr "Typsnitt på rubrik"
+
+#: ../functions.php:265
+#: ../functions.php:268
+#: ../functions.php:271
+#: ../functions.php:274
+#: ../../mf_parallax/functions.php:265
+#: ../../mf_parallax/functions.php:268
+#: ../../mf_parallax/functions.php:271
+#: ../../mf_parallax/functions.php:274
+msgid "Heading Size"
+msgstr "Storlek på rubrik"
+
+#: ../functions.php:266
+#: ../functions.php:269
+#: ../functions.php:272
+#: ../functions.php:275
+#: ../../mf_parallax/functions.php:266
+#: ../../mf_parallax/functions.php:269
+#: ../../mf_parallax/functions.php:272
+#: ../../mf_parallax/functions.php:275
+msgid "Heading Weight"
+msgstr "Vikt på rubrik"
+
+#: ../functions.php:276
+#: ../../mf_parallax/functions.php:276
+msgid "Paragraph text size"
+msgstr "Storlek på text i paragraf"
+
+#: ../functions.php:277
+#: ../../mf_parallax/functions.php:277
+msgid "Quote size"
+msgstr "Storlek på citat"
+
+#: ../functions.php:278
+#: ../../mf_parallax/functions.php:278
+msgid "Aside paragraph size"
+msgstr "Storlek på paragraf i sidokolumn"
+
+#: ../functions.php:281
+#: ../functions.php:337
+#: ../../mf_parallax/functions.php:281
+#: ../../mf_parallax/functions.php:337
+msgid "Footer"
+msgstr "Sidfot"
+
+#: ../functions.php:286
+#: ../../mf_parallax/functions.php:286
+msgid "Margin"
+msgstr "Marginal"
+
+#: ../functions.php:289
+#: ../../mf_parallax/functions.php:289
+msgid "Widget Padding"
+msgstr "Tomrum runt widget"
+
+#: ../functions.php:292
+#: ../../mf_parallax/functions.php:292
+msgid "Custom"
+msgstr "Anpassad"
+
+#: ../functions.php:293
+#: ../functions.php:294
+#: ../../mf_parallax/functions.php:293
+#: ../../mf_parallax/functions.php:294
+msgid "Custom CSS"
+msgstr "Anpassad CSS"
+
+#: ../functions.php:319
+#: ../functions.php:329
+#: ../functions.php:339
+#: ../../mf_parallax/functions.php:319
+#: ../../mf_parallax/functions.php:329
+#: ../../mf_parallax/functions.php:339
+msgid "The widget area"
+msgstr "Widget-område"
+
+#: ../functions.php:327
+#: ../../mf_parallax/functions.php:327
+msgid "Pre Content"
+msgstr "Före innehåll"
+
+#: ../functions.php:359
+#: ../../mf_parallax/functions.php:359
+msgid "Information"
+msgstr "Information"
+
+#: ../functions.php:373
+#: ../../mf_parallax/functions.php:373
+msgid "Heading"
+msgstr "Rubrik"
+
+#: ../functions.php:378
+#: ../../mf_parallax/functions.php:378
+msgid "Aside"
+msgstr "Sidokolumn"
+
+#: ../functions.php:390
+#: ../../mf_parallax/functions.php:390
+msgid "Settings"
+msgstr "Inställningar"
+
+#: ../functions.php:404
+#: ../../mf_parallax/functions.php:404
+msgid "Show on page"
+msgstr "Visa på sida"
+
+#: ../functions.php:408
+#: ../../mf_parallax/functions.php:408
+msgid "Yes"
+msgstr "Ja"
+
+#: ../functions.php:409
+#: ../../mf_parallax/functions.php:409
+msgid "No"
+msgstr "Nej"
+
+#: ../functions.php:429
+#: ../../mf_parallax/functions.php:429
+msgid "Background Color"
+msgstr "Bakgrundsfärg"
+
+#: ../functions.php:452
+#: ../../mf_parallax/functions.php:452
+msgid "Site logo"
+msgstr "Logga för webbsida"
+
+#: ../functions.php:457
+#: ../../mf_parallax/functions.php:457
+msgid "Site mobile logo"
+msgstr "Logga för mobiler"
+
+#: ../header.php:30
+#: ../../mf_parallax/header.php:30
+#, php-format
+msgid "Page %s"
+msgstr "Sida %s"
+
+#: ../include/classes.php:9
+#: ../../mf_parallax/include/classes.php:9
+msgid "Display logo"
+msgstr "Visa logga"
+
+#: ../include/classes.php:14
+#: ../../mf_parallax/include/classes.php:14
+msgid "Theme Logo"
+msgstr "Temalogga"
+
+#: ../include/classes.php:46
+#: ../include/classes.php:98
+#: ../../mf_parallax/include/classes.php:46
+#: ../../mf_parallax/include/classes.php:98
+msgid "No need for settings here, we'll take care of the rest"
+msgstr "Inställningar behövs inte här, vi tar hand om resten"
+
+#: ../include/classes.php:61
+#: ../../mf_parallax/include/classes.php:61
+msgid "Display menu"
+msgstr "Visa meny"
+
+#: ../include/classes.php:66
+#: ../../mf_parallax/include/classes.php:66
+msgid "Theme Menu"
+msgstr "Temameny"
+
+#: ../../mf_theme/functions.php:18
+msgid "Secondary Navigation"
+msgstr "Sekundär meny"
+
+#: ../../mf_theme/functions.php:137
+#, php-format
+msgid "Time to delete %s don't you think?"
+msgstr "Dags att radera %s, eller vad säger du?"
+
+#: ../../mf_theme/functions.php:168
+msgid "Download"
+msgstr "Ladda ner"
+
+#: ../../mf_theme/functions.php:169
+msgid "Restore"
+msgstr "Återställ"
+
+#: ../../mf_theme/functions.php:170
+msgid "Delete"
+msgstr "Radera"
+
+#: ../../mf_theme/functions.php:218
+msgid "Use HTML5 History"
+msgstr "Använd HTML5-historik"
+
+#: ../../mf_theme/functions.php:233
+msgid "Overflow"
+msgstr ""
+
+#: ../../mf_theme/functions.php:237
+msgid "Show Logo on small screens"
+msgstr "Visa logga på små skärmar"
+
+#: ../../mf_theme/functions.php:242
+#: ../../mf_theme/functions.php:243
+msgid "Logo Width"
+msgstr "Bredd på logga"
+
+#: ../../mf_theme/functions.php:250
+msgid "Underline Color"
+msgstr "Färg på understrykning"
+
+#: ../../mf_theme/functions.php:263
+msgid "Show heading on front page"
+msgstr "Visa rubrik på startsida"
+
+#: ../../mf_theme/functions.php:266
+msgid "Weight"
+msgstr "Vikt på text"
+
+#: ../../mf_theme/functions.php:270
+msgid "Heading Border Bottom"
+msgstr "Kant på botten av rubrik"
+
+#: ../../mf_theme/functions.php:271
+msgid "Content Size"
+msgstr "Storlek på innehåll"
+
+#: ../../mf_theme/functions.php:272
+msgid "Article Link Color"
+msgstr "Färg på artikellänk"
+
+#: ../../mf_theme/functions.php:273
+msgid "Content Margin"
+msgstr "Marginal på innehåll"
+
+#: ../../mf_theme/functions.php:276
+#: ../../mf_theme/functions.php:361
+msgid "Pre Footer"
+msgstr "Före sidfot"
+
+#: ../../mf_theme/functions.php:285
+msgid "Link Background"
+msgstr "Bakgrund på länk"
+
+#: ../../mf_theme/functions.php:288
+msgid "Widget Flex"
+msgstr ""
+
+#: ../../mf_theme/functions.php:289
+msgid "Widget Overflow"
+msgstr ""
+
+#: ../../mf_theme/functions.php:291
+msgid "Widget Heading Size"
+msgstr "Storlek på rubrik i widget"
+
+#: ../../mf_theme/functions.php:292
+msgid "Widget Heading Margin"
+msgstr "Marginal på rubrik i widget"
+
+#: ../../mf_theme/functions.php:293
+msgid "Widget Heading Text Transform"
+msgstr ""
+
+#: ../../mf_theme/functions.php:331
+msgid "Slide menu"
+msgstr "Glidmeny"
+
+#: ../../mf_theme/functions.php:351
+msgid "Sidebar"
+msgstr "Höger kolumn"
+
+#: ../../mf_theme/functions.php:427
+msgid "Search for"
+msgstr "Sök efter"
+
+#: ../../mf_theme/functions.php:439
+msgid "Menu"
+msgstr "Meny"
+
+#: ../../mf_theme/functions.php:526
+#: ../../mf_theme/index.php:71
+msgid "Read More"
+msgstr "Läs mer"
+
+#: ../../mf_theme/functions.php:545
+msgid "Load more posts"
+msgstr "Ladda fler inlägg"
+
+#: ../../mf_theme/index.php:58
+msgid "Edit post"
+msgstr "Redigera"
+
+#: ../../mf_theme/index.php:91
+msgid "No results"
+msgstr "Inget resultat"
+
+#: ../../mf_theme/index.php:93
+#, php-format
+msgid "There were no results for '%s'"
+msgstr "Det fanns inget resultat för '%s'"
+
+#: ../../mf_theme/include/classes.php:95
+msgid "Choose here"
+msgstr "Välj här"
+
+#: ../../mf_theme/include/classes.php:96
+msgid "Main menu"
+msgstr "Huvudmeny"
+
+#: ../../mf_theme/include/classes.php:97
+msgid "Secondary"
+msgstr "Sekundär"
+
+#: ../../mf_theme/include/classes.php:98
+msgid "Main and Secondary menues"
+msgstr "Huvud- och sekundär meny"
+
+#: ../../mf_theme/include/classes.php:99
+msgid "Slide in from right"
+msgstr "Glid in från höger"
+
+#: ../../mf_theme/include/classes.php:103
+msgid "Menu type"
+msgstr "Menytyp"
+
+#~ msgid "Fixed header"
+#~ msgstr "Fixera sidhuvud"
+
+#~ msgid "Front"
+#~ msgstr "Startsida"
+
+#~ msgid "Mobile Logo"
+#~ msgstr "Logga för mobiler"
+
+#~ msgid "Body"
+#~ msgstr "Innehåll"
+
+#~ msgid "Header widgets"
+#~ msgstr "Widgets i sidhuvud"
+
+#~ msgid "Front widgets"
+#~ msgstr "Widgets på startsida"
+
+#~ msgid "Desktop Font size"
+#~ msgstr "Storlek på text på datorskärm"
+
+#~ msgid "Color (Hover)"
+#~ msgstr "Färg (Vid mus över)"
+
+#, fuzzy
+#~ msgid "Heading Weight (H2)"
+#~ msgstr "Typsnitt på rubrik (H2)"
+
+#, fuzzy
+#~ msgid "Heading Size (H3)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#, fuzzy
+#~ msgid "Heading Weight (H3)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#, fuzzy
+#~ msgid "Heading Size (H4)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#, fuzzy
+#~ msgid "Heading Weight (H4)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#, fuzzy
+#~ msgid "Heading Size (H5)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#, fuzzy
+#~ msgid "Heading Weight (H5)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#~ msgid "Heading Font (H1)"
+#~ msgstr "Typsnitt på rubrik (H1)"
+
+#~ msgid "Heading Size (H1)"
+#~ msgstr "Storlek på rubrik (H1)"
+
+#~ msgid "Heading Margin (H1)"
+#~ msgstr "Marginal på rubrik (H1)"
+
+#~ msgid "Custom CSS (Mobile)"
+#~ msgstr "Anpassad CSS (mobil)"
+
+#~ msgid "MF Theme Options"
+#~ msgstr "MF Temainställningar"
+
+#~ msgid "Forms"
+#~ msgstr "Formulär"
+
+#~ msgid "Form to replace all e-mail links"
+#~ msgstr "Formulär för att ersätta alla e-postlänkar"
+
+#~ msgid ""
+#~ "If you would like all e-mail links in text to be replaced by a form, "
+#~ "choose one here"
+#~ msgstr ""
+#~ "Om du vill att alla e-postlänkar i text ska ersättas med ett formulär, "
+#~ "välj det här"
+
+#~ msgid "Unread answers"
+#~ msgstr "Olästa svar"
+
+#~ msgid "Add New"
+#~ msgstr "Lägg till ny"
+
+#~ msgid "Last Answers"
+#~ msgstr "Senaste svaren"
+
+#~ msgid "Edit Last Answer"
+#~ msgstr "Redigera senaste svar"
+
+#~ msgid "Please, enter all required fields"
+#~ msgstr "Var vänlig fyll i alla obligatoriska fält"
+
+#~ msgid "Thank you!"
+#~ msgstr "Tack så mycket!"
+
+#~ msgid "space"
+#~ msgstr "mellanslag"
+
+#~ msgid "Required"
+#~ msgstr "Obligatoriskt"
+
+#~ msgid "Autofocus"
+#~ msgstr "Fokusera automatiskt"
+
+#~ msgid "Update"
+#~ msgstr "Uppdatera"
+
+#~ msgid "Submit"
+#~ msgstr "Skicka"
+
+#~ msgid "Perform test payment"
+#~ msgstr "Utför testbetalning"
+
+#~ msgid "Edit this form"
+#~ msgstr "Redigera formuläret"
+
+#~ msgid "See DIBS test info"
+#~ msgstr "Se DIBS testinfo"
+
+#~ msgid "Send in test mode (No money will be charged)"
+#~ msgstr "Skicka i testläge (Pengar kommer ej att dras)"
+
+#~ msgid "Number"
+#~ msgstr "Nummer"
+
+#~ msgid "E-mail"
+#~ msgstr "E-post"
+
+#~ msgid "Phone no"
+#~ msgstr "Telefonnummer"
+
+#~ msgid "Decimal number"
+#~ msgstr "Decimaltal"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Checkbox"
+#~ msgstr "Kryssruta"
+
+#~ msgid "Range"
+#~ msgstr "Spann"
+
+#~ msgid "Input field"
+#~ msgstr "Textrad"
+
+#~ msgid "Text"
+#~ msgstr "Text"
+
+#~ msgid "Space"
+#~ msgstr "mellanrum"
+
+#~ msgid "Datepicker"
+#~ msgstr "Datumväljare"
+
+#~ msgid "Radio button"
+#~ msgstr "Flervalsalternativ"
+
+#~ msgid "Referer URL"
+#~ msgstr "Referens-URL"
+
+#~ msgid "Dropdown"
+#~ msgstr "Rullgardin"
+
+#~ msgid "Multiple selection"
+#~ msgstr "Rullgardin (flerval)"
+
+#~ msgid "Zip code"
+#~ msgstr "Postnummer"
+
+#~ msgid "Social security number"
+#~ msgstr "Personnummer"
+
+#~ msgid "digits"
+#~ msgstr "siffror"
+
+#~ msgid "Answers in"
+#~ msgstr "Svar i"
+
+#~ msgid "Payment"
+#~ msgstr "Betalning"
+
+#~ msgid "Created"
+#~ msgstr "Skapad"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "Sent to"
+#~ msgstr "Skickat till"
+
+#~ msgid "Couldn't update the field"
+#~ msgstr "Det gick inte att uppdatera fältet"
+
+#~ msgid "Couldn't insert the new field"
+#~ msgstr "Det gick inte att lägga in det nya fältet"
+
+#~ msgid "Type"
+#~ msgstr "Typ"
+
+#~ msgid "Validate as"
+#~ msgstr "Validera som"
+
+#~ msgid "Placeholder Text"
+#~ msgstr "Valfri text"
+
+#~ msgid "Feel free to write anything you like here"
+#~ msgstr "Här kan du fylla i valfri text som visas i textfältet"
+
+#~ msgid "Min value"
+#~ msgstr "Minsta värde"
+
+#~ msgid "Max value"
+#~ msgstr "Högsta värde"
+
+#~ msgid "Default value"
+#~ msgstr "Standardvärde"
+
+#~ msgid "Value"
+#~ msgstr "Värde"
+
+#~ msgid "Enter option here"
+#~ msgstr "Skriv in alternativ här"
+
+#~ msgid "Add"
+#~ msgstr "Lägg till"
+
+#~ msgid "Cancel"
+#~ msgstr "Avbryt"
+
+#~ msgid "Preview"
+#~ msgstr "Förhandsgranska"
+
+#~ msgid "Choose page here"
+#~ msgstr "Välj sida här"
+
+#~ msgid "Send e-mail confirmation to questionnaire"
+#~ msgstr "Skicka e-postbekräftelse till besökaren"
+
+#~ msgid "E-mail confirmation content"
+#~ msgstr "Innehåll för e-postbekräftelse"
+
+#~ msgid ""
+#~ "If you don't choose a page, the content of the form will be sent as "
+#~ "content"
+#~ msgstr "Om du inte väljer en sida skickas istället svaren från formuläret"
+
+#~ msgid "Encrypted"
+#~ msgstr "Krypterade svar"
+
+#~ msgid "Improve UX"
+#~ msgstr "Förbättra användarupplevelsen"
+
+#~ msgid "Show Answers"
+#~ msgstr "Visa svar"
+
+#~ msgid "Send e-mail from/to"
+#~ msgstr "Skicka e-post från/till"
+
+#~ msgid "Send notification on new answer"
+#~ msgstr "Skicka e-post vid nytt svar"
+
+#~ msgid "Subject"
+#~ msgstr "Ämne"
+
+#~ msgid "Language"
+#~ msgstr "Språk"
+
+#~ msgid "Button text"
+#~ msgstr "Knapptext"
+
+#~ msgid "Payment (DIBS)"
+#~ msgstr "Betalning (DIBS)"
+
+#~ msgid "Merchant ID"
+#~ msgstr "Butiks-ID"
+
+#~ msgid "HMAC key"
+#~ msgstr "HMAC-nyckel"
+
+#~ msgid "Field for accepting payment"
+#~ msgstr "Fält för att acceptera betalning"
+
+#~ msgid "Field for payment cost"
+#~ msgstr "Fält för kostnad"
+
+#~ msgid ""
+#~ "Something went wrong. Contact your admin and add this URL as reference"
+#~ msgstr ""
+#~ "Något gick fel. Kontakta en administratör och skicka med denna URL som "
+#~ "referens"
+
+#~ msgid "Export"
+#~ msgstr "Exportera"
+
+#~ msgid "Back"
+#~ msgstr "Bakåt"
+
+#~ msgid "Row count"
+#~ msgstr "Antal rader"
+
+#~ msgid "All forms"
+#~ msgstr "Alla formulär"
+
+#~ msgid "Shortcode"
+#~ msgstr "Kortkod"
+
+#~ msgid "Answers"
+#~ msgstr "Svar"
+
+#~ msgid "There is nothing to show"
+#~ msgstr "Det finns inget att visa"
+
+#~ msgid "Copy"
+#~ msgstr "Kopiera"
+
+#~ msgid "Edit Page"
+#~ msgstr "Redigera sida"
+
+#~ msgid "View page"
+#~ msgstr "Visa sida"
+
+#~ msgid "Add New Page"
+#~ msgstr "Lägg till ny sida"
+
+#~ msgid "Export Answers"
+#~ msgstr "Exportera svar"
+
+#~ msgid "All Forms"
+#~ msgstr "Alla formulär"
+
+#~ msgid "Deleted"
+#~ msgstr "Borttagen"
+
+#~ msgid "Deny Duplicates"
+#~ msgstr "Spärra dubletter"
