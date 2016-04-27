@@ -277,10 +277,9 @@ echo "@media all
 					.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
 				."}
 
-				article aside
-				{}
+				article aside, article #aside{}
 
-					article aside p
+					article aside p, article #aside p
 					{"
 						.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
 					."}
@@ -368,7 +367,7 @@ echo "}
 				width: ".$options['content_main_width']."%;
 			}
 
-			article aside
+			article aside, article #aside
 			{
 				float: left;
 				width: ".(100 - 5 - $options['content_main_width'])."%;
@@ -475,12 +474,12 @@ echo "}
 		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
 	."}
 
-	article h2, aside p.has_one_image
+	article h2, aside p.has_one_image, #aside p.has_one_image
 	{
 		text-align: center;
 	}
 
-		aside img
+		aside img, #aside img
 		{"
 			.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
 		."}
@@ -509,7 +508,7 @@ echo "@media print
 		background: none;
 	}
 
-	header, aside, footer
+	header, aside, #aside, footer
 	{
 		display: none;
 	}

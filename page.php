@@ -30,9 +30,9 @@ get_header();
 
 					if($post_aside != '')
 					{
-						echo "<aside>"
+						echo "<div id='aside'>"
 							.apply_filters('the_content', $post_aside)
-						."</aside>";
+						."</div>";
 					}
 
 					echo "<section>";

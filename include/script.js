@@ -26,7 +26,7 @@ jQuery(function($)
 		}
 	});
 
-	$('aside p').each(function()
+	$('aside p, #aside p').each(function()
 	{
 		if($(this).children('img').length == 1 || ($(this).children('img.show_if_mobile').length == 1 && $(this).children('img.hide_if_mobile').length == 1))
 		{

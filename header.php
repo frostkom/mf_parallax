@@ -5,8 +5,6 @@
 
 global $page, $paged;
 
-require_user_login();
-
 echo "<!DOCTYPE html>
 <html lang='".get_bloginfo('language')."'>
 	<head>
