@@ -181,7 +181,7 @@ echo "@media all
 				.render_css(array('property' => 'padding', 'value' => 'logo_padding'))
 			."}
 
-			header nav, header .menu
+			header nav
 			{"
 				.render_css(array('property' => 'color', 'value' => 'nav_color'))
 				.render_css(array('property' => 'float', 'value' => 'nav_float'))
@@ -190,29 +190,29 @@ echo "@media all
 				."position: relative;
 			}
 
-				header nav .fa, header .menu .fa
+				header nav .fa
 				{
 					display: none;
 				}
 
-				header nav ul, header .menu ul
+				header nav ul
 				{
 					list-style: none;
 				}
 
-					header nav li, header .menu li
+					header nav li
 					{
 						display: inline-block;
 					}
 
-						header nav li > a, header .menu li > a
+						header nav li > a
 						{
 							color: inherit;
 							display: block;"
 							.render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
 						."}
 
-							header nav li.current_page_item > a, header .menu li.current_page_item > a
+							header nav li.current_page_item > a
 							{"
 								//.render_css(array('prefix' => "border-bottom: .3em solid ", 'value' => 'nav_underline_color_hover'))
 								.render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
@@ -394,7 +394,7 @@ echo "}
 			.render_css(array('property' => 'padding', 'value' => 'header_padding_mobile'))
 		."}
 
-			header nav, header .menu
+			header nav
 			{"
 				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
 
@@ -408,61 +408,49 @@ echo "}
 
 				if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
 				{
-					echo "header nav .fa-bars, header .menu .fa-bars, header nav .fa-close, header .menu .fa-close
+					echo "header nav > .fa
 					{
 						display: block;
 						font-size: 2em;
-						position: absolute;";
-
-						if(in_array($options['nav_float_mobile'], array('left', 'right')))
-						{
-							echo $options['nav_float_mobile'].": .5em;";
-						}
-
-						else
-						{
-							echo "right: .5em;";
-						}
-
-						echo "top: .2em;
+						margin-top: .15em;
 					}
 
-						header nav .fa-close, header .menu .fa-close
+						header nav .fa-close
 						{
-							visibility: hidden;
+							display: none;
 						}
 					
-						header nav ul > li, header .menu ul > li
+						header nav.is_mobile_ready ul > li
 						{
 							display: none;
 						}";
 
 					if(isset($options['nav_click2expand']) && $options['nav_click2expand'] == 2)
 					{
-						echo "header nav.open .fa-bars, header .menu.open .fa-bars
+						echo "header nav.open .fa-bars
 						{
-							visibility: hidden;
+							display: none;
 						}
 
-						header nav.open .fa-close, header .menu.open .fa-close
+						header nav.open .fa-close
 						{
-							visibility: visible;
+							display: block;
 						}
 
-							header nav.open ul > li, header .menu.open ul > li
-							{
-								display: block;
-							}";
+						header nav.open ul > li
+						{
+							display: block;
+						}";
 					}
 
 					else
 					{
-						echo "header nav:hover .fa-bars, header .menu:hover .fa-bars
+						echo "header nav > .fa
 						{
-							visibility: hidden;
+							display: none;
 						}
 
-							header nav ul > li.current_page_item, header nav ul > li.current_page_parent, header nav ul:hover > li, header .menu ul > li.current_page_item, header .menu ul > li.current_page_parent, header .menu ul:hover > li
+							header nav ul > li.current_page_item, header nav ul > li.current_page_parent, header nav ul:hover > li
 							{
 								display: inline-block;
 							}";

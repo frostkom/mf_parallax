@@ -26,21 +26,16 @@ jQuery(function($)
 		}
 	});
 
+	$('header nav > .fa').on('click', function()
+	{
+		$(this).parent('nav').toggleClass('open');
+	});
+
 	$('aside p, #aside p').each(function()
 	{
 		if($(this).children('img').length == 1 || ($(this).children('img.show_if_mobile').length == 1 && $(this).children('img.hide_if_mobile').length == 1))
 		{
 			$(this).addClass('has_one_image');
 		}
-	});
-
-	$('header nav .fa-bars').on('click', function()
-	{
-		$(this).parent('nav, .menu').addClass('open');
-	});
-
-	$('header nav .fa-close').on('click', function()
-	{
-		$(this).parent('nav, .menu').removeClass('open');
 	});
 });
