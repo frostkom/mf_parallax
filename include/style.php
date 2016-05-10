@@ -190,8 +190,9 @@ echo "@media all
 				."position: relative;
 			}
 
-				header nav .fa
+				header nav > .toggle_icon
 				{
+					cursor: pointer;
 					display: none;
 				}
 
@@ -408,7 +409,7 @@ echo "}
 
 				if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
 				{
-					echo "header nav > .fa
+					echo "header nav > .toggle_icon
 					{
 						display: block;
 						font-size: 2em;
@@ -445,7 +446,7 @@ echo "}
 
 					else
 					{
-						echo "header nav > .fa
+						echo "header nav > .toggle_icon
 						{
 							display: none;
 						}
@@ -482,9 +483,9 @@ echo "}
 		echo $options['custom_css_mobile'];
 	}
 
-echo "}";
+echo "}
 
-echo "@media print
+@media print
 {
 	body:before
 	{

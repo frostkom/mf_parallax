@@ -9,7 +9,7 @@ echo "<!DOCTYPE html>
 <html lang='".get_bloginfo('language')."'>
 	<head>
 		<meta charset='".get_bloginfo('charset')."'>
-		<meta name='viewport' content='width=device-width; initial-scale=1'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<title>";
 
 			wp_title('|', true, 'right');

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-27 15:48+0100\n"
+"POT-Creation-Date: 2016-05-04 11:31+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -32,413 +32,351 @@ msgid "Primary Navigation"
 msgstr "Primär navigation"
 
 #: ../functions.php:36
-#: ../functions.php:49
 #: ../../mf_parallax/functions.php:36
-#: ../../mf_parallax/functions.php:49
 msgid "Theme Options"
 msgstr "Temainställningar"
 
-#: ../functions.php:65
-#: ../../mf_parallax/functions.php:65
-msgid "Could not create a folder in uploads. Please add the correct rights for the script to create a new subfolder"
-msgstr "Det gick inte att skapa en mapp i uploads. Lägg till rätt behörigheter för mappen uploads så att det går att skapa en undermapp"
-
-#: ../functions.php:84
-#: ../../mf_parallax/functions.php:84
-msgid "The theme settings were backed up"
-msgstr "Temainställningarna sparades"
-
-#: ../functions.php:89
-#: ../../mf_parallax/functions.php:89
-msgid "It was not possible to backup the theme settings"
-msgstr "Det gick inte att spara temainställningarna"
-
-#: ../functions.php:95
-#: ../../mf_parallax/functions.php:95
-msgid "There were no theme settings to save"
-msgstr "Det fanns inga temainställningar att spara"
-
-#: ../functions.php:127
-#: ../../mf_parallax/functions.php:127
-msgid "The restore was successful"
-msgstr "Återställningen blev lyckad"
-
-#: ../functions.php:134
-#: ../../mf_parallax/functions.php:134
-msgid "There is something wrong with the source to restore"
-msgstr "Det är något fel på källan för återställning"
-
-#: ../functions.php:145
-#: ../../mf_parallax/functions.php:145
-msgid "The file was deleted successfully"
-msgstr "File togs bort"
-
-#: ../functions.php:162
-#: ../../mf_parallax/functions.php:162
-msgid "Name"
-msgstr "Namn"
-
-#: ../functions.php:163
-#: ../../mf_parallax/functions.php:163
-msgid "Date"
-msgstr "Datum"
-
-#: ../functions.php:190
-#: ../../mf_parallax/functions.php:190
-msgid "There are no previous backups"
-msgstr "Det finns inga tidigare backuper"
-
-#: ../functions.php:194
-#: ../../mf_parallax/functions.php:194
-msgid "Save New Backup"
-msgstr "Spara ny backup"
-
-#: ../functions.php:199
-#: ../../mf_parallax/functions.php:199
-msgid "Restore Backup"
-msgstr "Återställ backup"
-
-#: ../functions.php:229
-#: ../../mf_parallax/functions.php:229
+#: ../functions.php:56
+#: ../../mf_parallax/functions.php:56
 msgid "Generic"
 msgstr "Allmänt"
 
-#: ../functions.php:230
-#: ../functions.php:243
-#: ../functions.php:296
-#: ../functions.php:409
-#: ../functions.php:414
-#: ../../mf_parallax/functions.php:230
-#: ../../mf_parallax/functions.php:243
-#: ../../mf_parallax/functions.php:296
-#: ../../mf_parallax/functions.php:409
-#: ../../mf_parallax/functions.php:414
+#: ../functions.php:57
+#: ../functions.php:70
+#: ../functions.php:123
+#: ../functions.php:236
+#: ../functions.php:241
+#: ../../mf_parallax/functions.php:57
+#: ../../mf_parallax/functions.php:70
+#: ../../mf_parallax/functions.php:123
+#: ../../mf_parallax/functions.php:236
+#: ../../mf_parallax/functions.php:241
 msgid "Background"
 msgstr "Bakgrund"
 
-#: ../functions.php:231
-#: ../functions.php:297
-#: ../../mf_parallax/functions.php:231
-#: ../../mf_parallax/functions.php:297
+#: ../functions.php:58
+#: ../functions.php:124
+#: ../../mf_parallax/functions.php:58
+#: ../../mf_parallax/functions.php:124
 msgid "Font"
 msgstr "Typsnitt"
 
-#: ../functions.php:232
-#: ../functions.php:419
-#: ../../mf_parallax/functions.php:232
-#: ../../mf_parallax/functions.php:419
+#: ../functions.php:59
+#: ../functions.php:246
+#: ../../mf_parallax/functions.php:59
+#: ../../mf_parallax/functions.php:246
 msgid "Text Color"
 msgstr "Textfärg"
 
-#: ../functions.php:233
-#: ../../mf_parallax/functions.php:233
+#: ../functions.php:60
+#: ../../mf_parallax/functions.php:60
 msgid "Link Color"
 msgstr "Länkfärg"
 
-#: ../functions.php:234
-#: ../functions.php:235
-#: ../functions.php:298
-#: ../../mf_parallax/functions.php:234
-#: ../../mf_parallax/functions.php:235
-#: ../../mf_parallax/functions.php:298
+#: ../functions.php:61
+#: ../functions.php:62
+#: ../functions.php:125
+#: ../../mf_parallax/functions.php:61
+#: ../../mf_parallax/functions.php:62
+#: ../../mf_parallax/functions.php:125
 msgid "Font size"
 msgstr "Storlek på typsnitt"
 
-#: ../functions.php:235
-#: ../functions.php:409
-#: ../../mf_parallax/functions.php:235
-#: ../../mf_parallax/functions.php:409
+#: ../functions.php:62
+#: ../functions.php:236
+#: ../../mf_parallax/functions.php:62
+#: ../../mf_parallax/functions.php:236
 msgid "Desktop"
 msgstr "Datorskärm"
 
-#: ../functions.php:236
-#: ../../mf_parallax/functions.php:236
+#: ../functions.php:63
+#: ../../mf_parallax/functions.php:63
 msgid "Website Max Width"
 msgstr "Maxbredd på webbsida"
 
-#: ../functions.php:237
-#: ../../mf_parallax/functions.php:237
+#: ../functions.php:64
+#: ../../mf_parallax/functions.php:64
 msgid "Mobile Breakpoint"
 msgstr "Mobil brytpunkt"
 
-#: ../functions.php:238
-#: ../../mf_parallax/functions.php:238
+#: ../functions.php:65
+#: ../../mf_parallax/functions.php:65
 msgid "Aside Image Max Width"
 msgstr "Maxbredd på bilder i sidokolumn"
 
-#: ../functions.php:238
-#: ../functions.php:246
-#: ../functions.php:248
-#: ../functions.php:259
-#: ../functions.php:261
-#: ../functions.php:276
-#: ../functions.php:302
-#: ../functions.php:308
-#: ../functions.php:414
-#: ../../mf_parallax/functions.php:238
-#: ../../mf_parallax/functions.php:246
-#: ../../mf_parallax/functions.php:248
-#: ../../mf_parallax/functions.php:259
-#: ../../mf_parallax/functions.php:261
-#: ../../mf_parallax/functions.php:276
-#: ../../mf_parallax/functions.php:302
-#: ../../mf_parallax/functions.php:308
-#: ../../mf_parallax/functions.php:414
+#: ../functions.php:65
+#: ../functions.php:73
+#: ../functions.php:75
+#: ../functions.php:86
+#: ../functions.php:88
+#: ../functions.php:103
+#: ../functions.php:129
+#: ../functions.php:135
+#: ../functions.php:241
+#: ../../mf_parallax/functions.php:65
+#: ../../mf_parallax/functions.php:73
+#: ../../mf_parallax/functions.php:75
+#: ../../mf_parallax/functions.php:86
+#: ../../mf_parallax/functions.php:88
+#: ../../mf_parallax/functions.php:103
+#: ../../mf_parallax/functions.php:129
+#: ../../mf_parallax/functions.php:135
+#: ../../mf_parallax/functions.php:241
 msgid "Mobile"
 msgstr "Mobil"
 
-#: ../functions.php:241
-#: ../functions.php:334
-#: ../../mf_parallax/functions.php:241
-#: ../../mf_parallax/functions.php:334
+#: ../functions.php:68
+#: ../functions.php:161
+#: ../../mf_parallax/functions.php:68
+#: ../../mf_parallax/functions.php:161
 msgid "Header"
 msgstr "Sidhuvud"
 
-#: ../functions.php:242
-#: ../../mf_parallax/functions.php:242
+#: ../functions.php:69
+#: ../../mf_parallax/functions.php:69
 msgid "Fixed"
 msgstr "Fixerad"
 
-#: ../functions.php:244
-#: ../../mf_parallax/functions.php:244
+#: ../functions.php:71
+#: ../../mf_parallax/functions.php:71
 msgid "Override background with page background"
 msgstr "Ersätt bakgrund med sidans bakgrund"
 
-#: ../functions.php:245
-#: ../functions.php:246
-#: ../functions.php:258
-#: ../functions.php:259
-#: ../functions.php:275
-#: ../functions.php:276
-#: ../functions.php:301
-#: ../functions.php:302
-#: ../../mf_parallax/functions.php:245
-#: ../../mf_parallax/functions.php:246
-#: ../../mf_parallax/functions.php:258
-#: ../../mf_parallax/functions.php:259
-#: ../../mf_parallax/functions.php:275
-#: ../../mf_parallax/functions.php:276
-#: ../../mf_parallax/functions.php:301
-#: ../../mf_parallax/functions.php:302
+#: ../functions.php:72
+#: ../functions.php:73
+#: ../functions.php:85
+#: ../functions.php:86
+#: ../functions.php:102
+#: ../functions.php:103
+#: ../functions.php:128
+#: ../functions.php:129
+#: ../../mf_parallax/functions.php:72
+#: ../../mf_parallax/functions.php:73
+#: ../../mf_parallax/functions.php:85
+#: ../../mf_parallax/functions.php:86
+#: ../../mf_parallax/functions.php:102
+#: ../../mf_parallax/functions.php:103
+#: ../../mf_parallax/functions.php:128
+#: ../../mf_parallax/functions.php:129
 msgid "Padding"
 msgstr "Tomrum"
 
-#: ../functions.php:247
-#: ../functions.php:248
-#: ../../mf_parallax/functions.php:247
-#: ../../mf_parallax/functions.php:248
+#: ../functions.php:74
+#: ../functions.php:75
+#: ../../mf_parallax/functions.php:74
+#: ../../mf_parallax/functions.php:75
 msgid "Logo"
 msgstr "Logga"
 
-#: ../functions.php:249
-#: ../../mf_parallax/functions.php:249
+#: ../functions.php:76
+#: ../../mf_parallax/functions.php:76
 msgid "Logo Padding"
 msgstr "Tomrum runt logga"
 
-#: ../functions.php:250
-#: ../../mf_parallax/functions.php:250
+#: ../functions.php:77
+#: ../../mf_parallax/functions.php:77
 msgid "Logo Font"
 msgstr "Typsnitt på logga"
 
-#: ../functions.php:251
-#: ../../mf_parallax/functions.php:251
+#: ../functions.php:78
+#: ../../mf_parallax/functions.php:78
 msgid "Logo Font Size"
 msgstr "Storlek på logga"
 
-#: ../functions.php:252
-#: ../../mf_parallax/functions.php:252
+#: ../functions.php:79
+#: ../../mf_parallax/functions.php:79
 msgid "Logo Color"
 msgstr "Färg på logga"
 
-#: ../functions.php:255
-#: ../../mf_parallax/functions.php:255
+#: ../functions.php:82
+#: ../../mf_parallax/functions.php:82
 msgid "Navigation"
 msgstr "Meny"
 
-#: ../functions.php:256
-#: ../../mf_parallax/functions.php:256
+#: ../functions.php:83
+#: ../../mf_parallax/functions.php:83
 msgid "Compressed on mobile"
 msgstr "Komprimerad på små skärmar"
 
-#: ../functions.php:257
-#: ../../mf_parallax/functions.php:257
+#: ../functions.php:84
+#: ../../mf_parallax/functions.php:84
 msgid "Click to expand"
 msgstr "Klicka för att expandera"
 
-#: ../functions.php:260
-#: ../functions.php:261
-#: ../../mf_parallax/functions.php:260
-#: ../../mf_parallax/functions.php:261
+#: ../functions.php:87
+#: ../functions.php:88
+#: ../../mf_parallax/functions.php:87
+#: ../../mf_parallax/functions.php:88
 msgid "Float"
 msgstr "Flyt"
 
-#: ../functions.php:262
-#: ../../mf_parallax/functions.php:262
+#: ../functions.php:89
+#: ../../mf_parallax/functions.php:89
 msgid "Size"
 msgstr "Storlek"
 
-#: ../functions.php:263
-#: ../functions.php:264
-#: ../functions.php:299
-#: ../../mf_parallax/functions.php:263
-#: ../../mf_parallax/functions.php:264
-#: ../../mf_parallax/functions.php:299
+#: ../functions.php:90
+#: ../functions.php:91
+#: ../functions.php:126
+#: ../../mf_parallax/functions.php:90
+#: ../../mf_parallax/functions.php:91
+#: ../../mf_parallax/functions.php:126
 msgid "Color"
 msgstr "Färg"
 
-#: ../functions.php:264
-#: ../../mf_parallax/functions.php:264
+#: ../functions.php:91
+#: ../../mf_parallax/functions.php:91
 msgid "Hover"
 msgstr "Mus över"
 
-#: ../functions.php:265
-#: ../../mf_parallax/functions.php:265
+#: ../functions.php:92
+#: ../../mf_parallax/functions.php:92
 msgid "Link Padding"
 msgstr "Tomrum runt länkar"
 
-#: ../functions.php:273
-#: ../../mf_parallax/functions.php:273
+#: ../functions.php:100
+#: ../../mf_parallax/functions.php:100
 msgid "Match height with screen size"
 msgstr "Samma höjd som på skärmen"
 
-#: ../functions.php:274
-#: ../../mf_parallax/functions.php:274
+#: ../functions.php:101
+#: ../../mf_parallax/functions.php:101
 msgid "Main column width"
 msgstr "Bredd på huvudkolumn"
 
-#: ../functions.php:277
-#: ../functions.php:281
-#: ../functions.php:284
-#: ../functions.php:287
-#: ../../mf_parallax/functions.php:277
-#: ../../mf_parallax/functions.php:281
-#: ../../mf_parallax/functions.php:284
-#: ../../mf_parallax/functions.php:287
+#: ../functions.php:104
+#: ../functions.php:108
+#: ../functions.php:111
+#: ../functions.php:114
+#: ../../mf_parallax/functions.php:104
+#: ../../mf_parallax/functions.php:108
+#: ../../mf_parallax/functions.php:111
+#: ../../mf_parallax/functions.php:114
 msgid "Heading Margin"
 msgstr "Marginal på rubrik"
 
-#: ../functions.php:278
-#: ../../mf_parallax/functions.php:278
+#: ../functions.php:105
+#: ../../mf_parallax/functions.php:105
 msgid "Heading Font"
 msgstr "Typsnitt på rubrik"
 
-#: ../functions.php:279
-#: ../functions.php:282
-#: ../functions.php:285
-#: ../functions.php:288
-#: ../../mf_parallax/functions.php:279
-#: ../../mf_parallax/functions.php:282
-#: ../../mf_parallax/functions.php:285
-#: ../../mf_parallax/functions.php:288
+#: ../functions.php:106
+#: ../functions.php:109
+#: ../functions.php:112
+#: ../functions.php:115
+#: ../../mf_parallax/functions.php:106
+#: ../../mf_parallax/functions.php:109
+#: ../../mf_parallax/functions.php:112
+#: ../../mf_parallax/functions.php:115
 msgid "Heading Size"
 msgstr "Storlek på rubrik"
 
-#: ../functions.php:280
-#: ../functions.php:283
-#: ../functions.php:286
-#: ../functions.php:289
-#: ../../mf_parallax/functions.php:280
-#: ../../mf_parallax/functions.php:283
-#: ../../mf_parallax/functions.php:286
-#: ../../mf_parallax/functions.php:289
+#: ../functions.php:107
+#: ../functions.php:110
+#: ../functions.php:113
+#: ../functions.php:116
+#: ../../mf_parallax/functions.php:107
+#: ../../mf_parallax/functions.php:110
+#: ../../mf_parallax/functions.php:113
+#: ../../mf_parallax/functions.php:116
 msgid "Heading Weight"
 msgstr "Vikt på rubrik"
 
-#: ../functions.php:290
-#: ../../mf_parallax/functions.php:290
+#: ../functions.php:117
+#: ../../mf_parallax/functions.php:117
 msgid "Paragraph text size"
 msgstr "Storlek på text i paragraf"
 
-#: ../functions.php:291
-#: ../../mf_parallax/functions.php:291
+#: ../functions.php:118
+#: ../../mf_parallax/functions.php:118
 msgid "Quote size"
 msgstr "Storlek på citat"
 
-#: ../functions.php:292
-#: ../../mf_parallax/functions.php:292
+#: ../functions.php:119
+#: ../../mf_parallax/functions.php:119
 msgid "Aside paragraph size"
 msgstr "Storlek på paragraf i sidokolumn"
 
-#: ../functions.php:295
-#: ../functions.php:354
-#: ../../mf_parallax/functions.php:295
-#: ../../mf_parallax/functions.php:354
+#: ../functions.php:122
+#: ../functions.php:181
+#: ../../mf_parallax/functions.php:122
+#: ../../mf_parallax/functions.php:181
 msgid "Footer"
 msgstr "Sidfot"
 
-#: ../functions.php:300
-#: ../../mf_parallax/functions.php:300
+#: ../functions.php:127
+#: ../../mf_parallax/functions.php:127
 msgid "Margin"
 msgstr "Marginal"
 
-#: ../functions.php:303
-#: ../../mf_parallax/functions.php:303
+#: ../functions.php:130
+#: ../../mf_parallax/functions.php:130
 msgid "Widget Padding"
 msgstr "Tomrum runt widget"
 
-#: ../functions.php:306
-#: ../../mf_parallax/functions.php:306
+#: ../functions.php:133
+#: ../../mf_parallax/functions.php:133
 msgid "Custom"
 msgstr "Anpassad"
 
-#: ../functions.php:307
-#: ../functions.php:308
-#: ../../mf_parallax/functions.php:307
-#: ../../mf_parallax/functions.php:308
+#: ../functions.php:134
+#: ../functions.php:135
+#: ../../mf_parallax/functions.php:134
+#: ../../mf_parallax/functions.php:135
 msgid "Custom CSS"
 msgstr "Anpassad CSS"
 
-#: ../functions.php:336
-#: ../functions.php:346
-#: ../functions.php:356
-#: ../../mf_parallax/functions.php:336
-#: ../../mf_parallax/functions.php:346
-#: ../../mf_parallax/functions.php:356
+#: ../functions.php:163
+#: ../functions.php:173
+#: ../functions.php:183
+#: ../../mf_parallax/functions.php:163
+#: ../../mf_parallax/functions.php:173
+#: ../../mf_parallax/functions.php:183
 msgid "The widget area"
 msgstr "Widget-område"
 
-#: ../functions.php:344
-#: ../../mf_parallax/functions.php:344
+#: ../functions.php:171
+#: ../../mf_parallax/functions.php:171
 msgid "Pre Content"
 msgstr "Före innehåll"
 
-#: ../functions.php:376
-#: ../../mf_parallax/functions.php:376
+#: ../functions.php:203
+#: ../../mf_parallax/functions.php:203
 msgid "Information"
 msgstr "Information"
 
-#: ../functions.php:382
-#: ../../mf_parallax/functions.php:382
+#: ../functions.php:209
+#: ../../mf_parallax/functions.php:209
 msgid "Heading"
 msgstr "Rubrik"
 
-#: ../functions.php:387
-#: ../../mf_parallax/functions.php:387
+#: ../functions.php:214
+#: ../../mf_parallax/functions.php:214
 msgid "Aside"
 msgstr "Sidokolumn"
 
-#: ../functions.php:396
-#: ../../mf_parallax/functions.php:396
+#: ../functions.php:223
+#: ../../mf_parallax/functions.php:223
 msgid "Settings"
 msgstr "Inställningar"
 
-#: ../functions.php:402
-#: ../../mf_parallax/functions.php:402
+#: ../functions.php:229
+#: ../../mf_parallax/functions.php:229
 msgid "Show on page"
 msgstr "Visa på sida"
 
-#: ../functions.php:424
-#: ../../mf_parallax/functions.php:424
+#: ../functions.php:251
+#: ../../mf_parallax/functions.php:251
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../functions.php:450
-#: ../../mf_parallax/functions.php:450
+#: ../functions.php:277
+#: ../../mf_parallax/functions.php:277
 msgid "Site logo"
 msgstr "Logga för webbsida"
 
-#: ../functions.php:455
-#: ../../mf_parallax/functions.php:455
+#: ../functions.php:282
+#: ../../mf_parallax/functions.php:282
 msgid "Site mobile logo"
 msgstr "Logga för mobiler"
 
@@ -479,124 +417,107 @@ msgstr "Temameny"
 msgid "Secondary Navigation"
 msgstr "Sekundär meny"
 
-#: ../../mf_theme/functions.php:145
-#, php-format
-msgid "Time to delete %s don't you think?"
-msgstr "Dags att radera %s, eller vad säger du?"
-
-#: ../../mf_theme/functions.php:176
-msgid "Download"
-msgstr "Ladda ner"
-
-#: ../../mf_theme/functions.php:177
-msgid "Restore"
-msgstr "Återställ"
-
-#: ../../mf_theme/functions.php:178
-msgid "Delete"
-msgstr "Radera"
-
-#: ../../mf_theme/functions.php:232
+#: ../../mf_theme/functions.php:60
 msgid "Use HTML5 History"
 msgstr "Använd HTML5-historik"
 
-#: ../../mf_theme/functions.php:247
+#: ../../mf_theme/functions.php:75
 msgid "Overflow"
 msgstr ""
 
-#: ../../mf_theme/functions.php:251
+#: ../../mf_theme/functions.php:79
 msgid "Show Logo on small screens"
 msgstr "Visa logga på små skärmar"
 
-#: ../../mf_theme/functions.php:256
-#: ../../mf_theme/functions.php:257
+#: ../../mf_theme/functions.php:84
+#: ../../mf_theme/functions.php:85
 msgid "Logo Width"
 msgstr "Bredd på logga"
 
-#: ../../mf_theme/functions.php:264
+#: ../../mf_theme/functions.php:92
 msgid "Underline Color"
 msgstr "Färg på understrykning"
 
-#: ../../mf_theme/functions.php:274
+#: ../../mf_theme/functions.php:102
 msgid "Content"
 msgstr "Innehåll"
 
-#: ../../mf_theme/functions.php:277
+#: ../../mf_theme/functions.php:105
 msgid "Show heading on front page"
 msgstr "Visa rubrik på startsida"
 
-#: ../../mf_theme/functions.php:280
+#: ../../mf_theme/functions.php:108
 msgid "Weight"
 msgstr "Vikt på text"
 
-#: ../../mf_theme/functions.php:284
+#: ../../mf_theme/functions.php:112
 msgid "Heading Border Bottom"
 msgstr "Kant på botten av rubrik"
 
-#: ../../mf_theme/functions.php:286
-#: ../../mf_theme/functions.php:293
+#: ../../mf_theme/functions.php:114
+#: ../../mf_theme/functions.php:121
 msgid "Line Height"
 msgstr "Höjd på rader"
 
-#: ../../mf_theme/functions.php:287
+#: ../../mf_theme/functions.php:115
 msgid "Content Margin"
 msgstr "Marginal på innehåll"
 
-#: ../../mf_theme/functions.php:288
+#: ../../mf_theme/functions.php:116
 msgid "Article Link Color"
 msgstr "Färg på artikellänk"
 
-#: ../../mf_theme/functions.php:296
-#: ../../mf_theme/functions.php:384
+#: ../../mf_theme/functions.php:124
+#: ../../mf_theme/functions.php:212
 msgid "Pre Footer"
 msgstr "Före sidfot"
 
-#: ../../mf_theme/functions.php:305
+#: ../../mf_theme/functions.php:133
 msgid "Link Background"
 msgstr "Bakgrund på länk"
 
-#: ../../mf_theme/functions.php:308
+#: ../../mf_theme/functions.php:136
 msgid "Widget Flex"
 msgstr ""
 
-#: ../../mf_theme/functions.php:309
+#: ../../mf_theme/functions.php:137
 msgid "Widget Overflow"
 msgstr ""
 
-#: ../../mf_theme/functions.php:311
+#: ../../mf_theme/functions.php:139
 msgid "Widget Heading Size"
 msgstr "Storlek på rubrik i widget"
 
-#: ../../mf_theme/functions.php:312
+#: ../../mf_theme/functions.php:140
 msgid "Widget Heading Margin"
 msgstr "Marginal på rubrik i widget"
 
-#: ../../mf_theme/functions.php:313
+#: ../../mf_theme/functions.php:141
 msgid "Widget Heading Text Transform"
 msgstr ""
 
-#: ../../mf_theme/functions.php:354
+#: ../../mf_theme/functions.php:182
 msgid "Slide menu"
 msgstr "Glidmeny"
 
-#: ../../mf_theme/functions.php:374
+#: ../../mf_theme/functions.php:202
 msgid "Sidebar"
 msgstr "Höger kolumn"
 
-#: ../../mf_theme/functions.php:456
+#: ../../mf_theme/functions.php:284
 msgid "Search for"
 msgstr "Sök efter"
 
-#: ../../mf_theme/functions.php:471
+#: ../../mf_theme/functions.php:299
 msgid "Menu"
 msgstr "Meny"
 
-#: ../../mf_theme/functions.php:561
+#: ../../mf_theme/functions.php:389
 #: ../../mf_theme/index.php:69
 msgid "Read More"
 msgstr "Läs mer"
 
-#: ../../mf_theme/functions.php:580
+#: ../../mf_theme/functions.php:408
 msgid "Load more posts"
 msgstr "Ladda fler inlägg"
 
@@ -636,6 +557,58 @@ msgstr "Glid in från höger"
 #: ../../mf_theme/include/classes.php:94
 msgid "Menu type"
 msgstr "Menytyp"
+
+#~ msgid ""
+#~ "Could not create a folder in uploads. Please add the correct rights for "
+#~ "the script to create a new subfolder"
+#~ msgstr ""
+#~ "Det gick inte att skapa en mapp i uploads. Lägg till rätt behörigheter "
+#~ "för mappen uploads så att det går att skapa en undermapp"
+
+#~ msgid "The theme settings were backed up"
+#~ msgstr "Temainställningarna sparades"
+
+#~ msgid "It was not possible to backup the theme settings"
+#~ msgstr "Det gick inte att spara temainställningarna"
+
+#~ msgid "There were no theme settings to save"
+#~ msgstr "Det fanns inga temainställningar att spara"
+
+#~ msgid "The restore was successful"
+#~ msgstr "Återställningen blev lyckad"
+
+#~ msgid "There is something wrong with the source to restore"
+#~ msgstr "Det är något fel på källan för återställning"
+
+#~ msgid "The file was deleted successfully"
+#~ msgstr "File togs bort"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "There are no previous backups"
+#~ msgstr "Det finns inga tidigare backuper"
+
+#~ msgid "Save New Backup"
+#~ msgstr "Spara ny backup"
+
+#~ msgid "Restore Backup"
+#~ msgstr "Återställ backup"
+
+#~ msgid "Time to delete %s don't you think?"
+#~ msgstr "Dags att radera %s, eller vad säger du?"
+
+#~ msgid "Download"
+#~ msgstr "Ladda ner"
+
+#~ msgid "Restore"
+#~ msgstr "Återställ"
+
+#~ msgid "Delete"
+#~ msgstr "Radera"
 
 #~ msgid "Yes"
 #~ msgstr "Ja"
