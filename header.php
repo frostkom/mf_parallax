@@ -3,8 +3,6 @@
  * The Header for our theme.
  */
 
-global $page, $paged;
-
 echo "<!DOCTYPE html>
 <html lang='".get_bloginfo('language')."'>
 	<head>
