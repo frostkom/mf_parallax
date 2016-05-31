@@ -121,6 +121,17 @@ echo "@media all
 		max-width: 100%;
 	}
 
+	.clear
+	{
+		clear: both;
+	}
+
+	.aligncenter
+	{
+		margin: .5em 0 .5em 0;
+		text-align: center;
+	}
+
 	.alignleft
 	{
 		float: left;
@@ -131,11 +142,6 @@ echo "@media all
 	{
 		float: right;
 		margin: 0 0 .5em .5em;
-	}
-
-	.clear
-	{
-		clear: both;
 	}
 
 	html

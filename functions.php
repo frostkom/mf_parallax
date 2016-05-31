@@ -207,12 +207,12 @@ if(!function_exists('meta_boxes_parallax'))
 			'fields' => array(
 				array(
 					'name' => __("Heading", 'lang_parallax'),
-					'id'   => $meta_prefix."heading",
+					'id'   => $meta_prefix.'heading',
 					'type' => 'text'
 				),
 				array(
 					'name' => __("Aside", 'lang_parallax'),
-					'id'   => $meta_prefix."aside",
+					'id'   => $meta_prefix.'aside',
 					'type' => 'wysiwyg'
 				),
 			)
@@ -227,29 +227,29 @@ if(!function_exists('meta_boxes_parallax'))
 			'fields' => array(
 				array(
 					'name' => __("Show on page", 'lang_parallax'),
-					'id' => $meta_prefix."show_on_page",
+					'id' => $meta_prefix.'show_on_page',
 					'type' => 'select',
 					'options' => get_yes_no_for_select(),
 					'std' => 'yes',
 				),
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
-					'id' => $meta_prefix."background_image",
+					'id' => $meta_prefix.'background_image',
 					'type' => 'thickbox_image',
 				),
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
-					'id' => $meta_prefix."background_image_mobile",
+					'id' => $meta_prefix.'background_image_mobile',
 					'type' => 'thickbox_image',
 				),
 				array(
 					'name' => __("Text Color", 'lang_parallax'),
-					'id' => $meta_prefix."text_color",
+					'id' => $meta_prefix.'text_color',
 					'type' => 'color',
 				),
 				array(
 					'name' => __("Background Color", 'lang_parallax'),
-					'id' => $meta_prefix."bg_color",
+					'id' => $meta_prefix.'bg_color',
 					'type' => 'color',
 				)
 			)
