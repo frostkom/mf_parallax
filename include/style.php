@@ -291,8 +291,10 @@ echo "@media all
 						.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
 					."}
 
-				section
-				{}
+				article section
+				{"
+					.render_css(array('property' => 'font-size', 'value' => 'section_size'))
+				."}
 
 					article a
 					{
@@ -304,17 +306,18 @@ echo "@media all
 							text-decoration: underline;
 						}
 
-					article p
+					article p, article ol, article ul
 					{"
-						.render_css(array('property' => 'font-size', 'value' => 'section_size'))
-						."margin-bottom: .5em;
+						//.render_css(array('property' => 'font-size', 'value' => 'section_size'))
+						."list-style-position: inside;
+						margin-bottom: .5em;
 					}
 
-						section blockquote
-						{"
-							.render_css(array('property' => 'font-size', 'value' => 'quote_size'))
-							."margin-left: 0;
-						}
+					section blockquote
+					{"
+						.render_css(array('property' => 'font-size', 'value' => 'quote_size'))
+						."margin-left: 0;
+					}
 
 		footer
 		{"
