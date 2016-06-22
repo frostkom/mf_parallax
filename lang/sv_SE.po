@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 11:31+0100\n"
+"POT-Creation-Date: 2016-06-22 11:39+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -380,12 +380,6 @@ msgstr "Logga för webbsida"
 msgid "Site mobile logo"
 msgstr "Logga för mobiler"
 
-#: ../header.php:28
-#: ../../mf_parallax/header.php:28
-#, php-format
-msgid "Page %s"
-msgstr "Sida %s"
-
 #: ../include/classes.php:9
 #: ../../mf_parallax/include/classes.php:9
 msgid "Display logo"
@@ -412,6 +406,10 @@ msgstr "Visa meny"
 #: ../../mf_parallax/include/classes.php:57
 msgid "Theme Menu"
 msgstr "Temameny"
+
+#: ../../mf_theme/404.php:14
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help"
+msgstr "Ursäkta, men sidan du letade efter kunde inte hittas. Kanske en sökning kan hjälpa dig"
 
 #: ../../mf_theme/functions.php:20
 msgid "Secondary Navigation"
@@ -557,6 +555,9 @@ msgstr "Glid in från höger"
 #: ../../mf_theme/include/classes.php:94
 msgid "Menu type"
 msgstr "Menytyp"
+
+#~ msgid "Page %s"
+#~ msgstr "Sida %s"
 
 #~ msgid ""
 #~ "Could not create a folder in uploads. Please add the correct rights for "
