@@ -429,7 +429,7 @@ echo "}
 						{
 							display: none;
 						}
-					
+
 						header nav.is_mobile_ready ul > li
 						{
 							display: none;
