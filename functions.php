@@ -135,21 +135,7 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "textarea",	'id' => "custom_css_mobile", 'title' => __("Custom CSS", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")");
 			$options_params[] = array('category_end' => "");
 
-		$options = array();
-
-		//Maybe use get_theme_mods() instead?
-
-		foreach($options_params as $param)
-		{
-			if(!isset($param['category']) && !isset($param['category_end']))
-			{
-				$default = isset($param['default']) ? $param['default'] : "";
-
-				$options[$param['id']] = get_theme_mod($param['id'], $default);
-			}
-		}
-
-		return array($options_params, $options);
+		return gather_params($options_params);
 	}
 }
 

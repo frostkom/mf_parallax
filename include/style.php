@@ -171,11 +171,6 @@ echo "@media all
 				z-index: 10;";
 			}
 
-			/*else
-			{
-				echo "overflow: hidden;";
-			}*/
-
 		echo "}
 
 			header h1, #site_logo
