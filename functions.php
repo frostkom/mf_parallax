@@ -146,7 +146,6 @@ if(!function_exists('widgets_parallax'))
 		register_sidebar(array(
 			'name' => __('Header', 'lang_parallax'),
 			'id' => 'widget_header',
-			'description' => __('The widget area', 'lang_parallax'),
 			'before_widget' => "",
 			'before_title' => '<div>',
 			'after_title' => '</div>',
@@ -156,7 +155,6 @@ if(!function_exists('widgets_parallax'))
 		register_sidebar(array(
 			'name' => __('Pre Content', 'lang_parallax'),
 			'id' => 'widget_pre_content',
-			'description' => __('The widget area', 'lang_theme'),
 			'before_widget' => "<div class='widget %s %s'>",
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
@@ -166,7 +164,6 @@ if(!function_exists('widgets_parallax'))
 		register_sidebar(array(
 			'name' => __('Footer', 'lang_parallax'),
 			'id' => 'widget_footer',
-			'description' => __('The widget area', 'lang_parallax'),
 			'before_widget' => "<div class='widget'>",
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
