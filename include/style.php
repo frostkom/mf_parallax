@@ -193,7 +193,6 @@ echo "@media all
 
 				header nav > .toggle_icon
 				{
-					cursor: pointer;
 					display: none;
 				}
 
@@ -216,7 +215,6 @@ echo "@media all
 
 							header nav li.current_page_item > a
 							{"
-								//.render_css(array('prefix' => "border-bottom: .3em solid ", 'value' => 'nav_underline_color_hover'))
 								.render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
 							."}
 
@@ -302,9 +300,8 @@ echo "@media all
 						}
 
 					article p, article ol, article ul
-					{"
-						//.render_css(array('property' => 'font-size', 'value' => 'section_size'))
-						."list-style-position: inside;
+					{
+						list-style-position: inside;
 						margin-bottom: .5em;
 					}
 
@@ -312,6 +309,12 @@ echo "@media all
 					{"
 						.render_css(array('property' => 'font-size', 'value' => 'quote_size'))
 						."margin-left: 0;
+					}
+
+					article form button
+					{"
+						.render_css(array('property' => 'background', 'value' => 'nav_color_hover'))
+						."color: #fff;
 					}
 
 		footer
@@ -415,6 +418,7 @@ echo "}
 				{
 					echo "header nav > .toggle_icon
 					{
+						cursor: pointer;
 						display: block;
 						font-size: 2em;
 						margin-top: .15em;
