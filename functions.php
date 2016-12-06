@@ -15,7 +15,7 @@ if(!function_exists('setup_parallax'))
 		load_theme_textdomain('lang_parallax', get_template_directory()."/lang");
 
 		register_nav_menus(array(
-			'primary' => __('Primary Navigation', 'lang_parallax')
+			'primary' => __("Primary Navigation", 'lang_parallax')
 		));
 
 		add_post_type_support('page', 'excerpt');
@@ -33,7 +33,7 @@ if(!function_exists('options_parallax'))
 {
 	function options_parallax()
 	{
-		add_theme_page(__('Theme Options', 'lang_parallax'), __('Theme Options', 'lang_parallax'), 'edit_theme_options', 'theme_options', 'options_page_parallax');
+		add_theme_page(__("Theme Options", 'lang_parallax'), __("Theme Options", 'lang_parallax'), 'edit_theme_options', 'theme_options', 'options_page_parallax');
 	}
 }
 
@@ -144,7 +144,7 @@ if(!function_exists('widgets_parallax'))
 	function widgets_parallax()
 	{
 		register_sidebar(array(
-			'name' => __('Header', 'lang_parallax'),
+			'name' => __("Header", 'lang_parallax'),
 			'id' => 'widget_header',
 			'before_widget' => "",
 			'before_title' => '<div>',
@@ -153,7 +153,7 @@ if(!function_exists('widgets_parallax'))
 		));
 
 		register_sidebar(array(
-			'name' => __('Pre Content', 'lang_parallax'),
+			'name' => __("Pre Content", 'lang_parallax'),
 			'id' => 'widget_pre_content',
 			'before_widget' => "<div class='widget %s %s'>",
 			'before_title' => '<h3>',
@@ -162,7 +162,7 @@ if(!function_exists('widgets_parallax'))
 		));
 
 		register_sidebar(array(
-			'name' => __('Footer', 'lang_parallax'),
+			'name' => __("Footer", 'lang_parallax'),
 			'id' => 'widget_footer',
 			'before_widget' => "<div class='widget'>",
 			'before_title' => '<h3>',
@@ -183,7 +183,7 @@ if(!function_exists('meta_boxes_parallax'))
 
 		$meta_boxes[] = array(
 			'id' => 'info',
-			'title' => __('Information', 'lang_parallax'),
+			'title' => __("Information", 'lang_parallax'),
 			'pages' => array('page'),
 			//'context' => 'side',
 			'priority' => 'low',
@@ -203,7 +203,7 @@ if(!function_exists('meta_boxes_parallax'))
 
 		$meta_boxes[] = array(
 			'id' => 'settings',
-			'title' => __('Settings', 'lang_parallax'),
+			'title' => __("Settings", 'lang_parallax'),
 			'pages' => array('page'),
 			'context' => 'side',
 			'priority' => 'low',
