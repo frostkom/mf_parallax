@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-22 11:39+0100\n"
+"POT-Creation-Date: 2016-12-15 12:05+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,16 +15,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: ../..\n"
-
-#: ../404.php:9
-#: ../../mf_parallax/404.php:9
-msgid "Not Found"
-msgstr "Hittades inte"
-
-#: ../404.php:11
-#: ../../mf_parallax/404.php:11
-msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
-msgstr "Sorry, men sidan du letade efter kunde inte hittas. Kanske en sökning kan hjälpa dig."
 
 #: ../functions.php:18
 #: ../../mf_parallax/functions.php:18
@@ -44,13 +34,13 @@ msgstr "Allmänt"
 #: ../functions.php:57
 #: ../functions.php:70
 #: ../functions.php:123
-#: ../functions.php:236
-#: ../functions.php:241
+#: ../functions.php:219
+#: ../functions.php:224
 #: ../../mf_parallax/functions.php:57
 #: ../../mf_parallax/functions.php:70
 #: ../../mf_parallax/functions.php:123
-#: ../../mf_parallax/functions.php:236
-#: ../../mf_parallax/functions.php:241
+#: ../../mf_parallax/functions.php:219
+#: ../../mf_parallax/functions.php:224
 msgid "Background"
 msgstr "Bakgrund"
 
@@ -62,9 +52,9 @@ msgid "Font"
 msgstr "Typsnitt"
 
 #: ../functions.php:59
-#: ../functions.php:246
+#: ../functions.php:229
 #: ../../mf_parallax/functions.php:59
-#: ../../mf_parallax/functions.php:246
+#: ../../mf_parallax/functions.php:229
 msgid "Text Color"
 msgstr "Textfärg"
 
@@ -83,9 +73,9 @@ msgid "Font size"
 msgstr "Storlek på typsnitt"
 
 #: ../functions.php:62
-#: ../functions.php:236
+#: ../functions.php:219
 #: ../../mf_parallax/functions.php:62
-#: ../../mf_parallax/functions.php:236
+#: ../../mf_parallax/functions.php:219
 msgid "Desktop"
 msgstr "Datorskärm"
 
@@ -112,7 +102,7 @@ msgstr "Maxbredd på bilder i sidokolumn"
 #: ../functions.php:103
 #: ../functions.php:129
 #: ../functions.php:135
-#: ../functions.php:241
+#: ../functions.php:224
 #: ../../mf_parallax/functions.php:65
 #: ../../mf_parallax/functions.php:73
 #: ../../mf_parallax/functions.php:75
@@ -121,14 +111,14 @@ msgstr "Maxbredd på bilder i sidokolumn"
 #: ../../mf_parallax/functions.php:103
 #: ../../mf_parallax/functions.php:129
 #: ../../mf_parallax/functions.php:135
-#: ../../mf_parallax/functions.php:241
+#: ../../mf_parallax/functions.php:224
 msgid "Mobile"
 msgstr "Mobil"
 
 #: ../functions.php:68
-#: ../functions.php:161
+#: ../functions.php:147
 #: ../../mf_parallax/functions.php:68
-#: ../../mf_parallax/functions.php:161
+#: ../../mf_parallax/functions.php:147
 msgid "Header"
 msgstr "Sidhuvud"
 
@@ -298,9 +288,9 @@ msgid "Aside paragraph size"
 msgstr "Storlek på paragraf i sidokolumn"
 
 #: ../functions.php:122
-#: ../functions.php:181
+#: ../functions.php:165
 #: ../../mf_parallax/functions.php:122
-#: ../../mf_parallax/functions.php:181
+#: ../../mf_parallax/functions.php:165
 msgid "Footer"
 msgstr "Sidfot"
 
@@ -326,57 +316,48 @@ msgstr "Anpassad"
 msgid "Custom CSS"
 msgstr "Anpassad CSS"
 
-#: ../functions.php:163
-#: ../functions.php:173
-#: ../functions.php:183
-#: ../../mf_parallax/functions.php:163
-#: ../../mf_parallax/functions.php:173
-#: ../../mf_parallax/functions.php:183
-msgid "The widget area"
-msgstr "Widget-område"
-
-#: ../functions.php:171
-#: ../../mf_parallax/functions.php:171
+#: ../functions.php:156
+#: ../../mf_parallax/functions.php:156
 msgid "Pre Content"
 msgstr "Före innehåll"
 
-#: ../functions.php:203
-#: ../../mf_parallax/functions.php:203
+#: ../functions.php:186
+#: ../../mf_parallax/functions.php:186
 msgid "Information"
 msgstr "Information"
 
-#: ../functions.php:209
-#: ../../mf_parallax/functions.php:209
+#: ../functions.php:192
+#: ../../mf_parallax/functions.php:192
 msgid "Heading"
 msgstr "Rubrik"
 
-#: ../functions.php:214
-#: ../../mf_parallax/functions.php:214
+#: ../functions.php:197
+#: ../../mf_parallax/functions.php:197
 msgid "Aside"
 msgstr "Sidokolumn"
 
-#: ../functions.php:223
-#: ../../mf_parallax/functions.php:223
+#: ../functions.php:206
+#: ../../mf_parallax/functions.php:206
 msgid "Settings"
 msgstr "Inställningar"
 
-#: ../functions.php:229
-#: ../../mf_parallax/functions.php:229
+#: ../functions.php:212
+#: ../../mf_parallax/functions.php:212
 msgid "Show on page"
 msgstr "Visa på sida"
 
-#: ../functions.php:251
-#: ../../mf_parallax/functions.php:251
+#: ../functions.php:234
+#: ../../mf_parallax/functions.php:234
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../functions.php:277
-#: ../../mf_parallax/functions.php:277
+#: ../functions.php:260
+#: ../../mf_parallax/functions.php:260
 msgid "Site logo"
 msgstr "Logga för webbsida"
 
-#: ../functions.php:282
-#: ../../mf_parallax/functions.php:282
+#: ../functions.php:265
+#: ../../mf_parallax/functions.php:265
 msgid "Site mobile logo"
 msgstr "Logga för mobiler"
 
@@ -406,10 +387,6 @@ msgstr "Visa meny"
 #: ../../mf_parallax/include/classes.php:57
 msgid "Theme Menu"
 msgstr "Temameny"
-
-#: ../../mf_theme/404.php:14
-msgid "Apologies, but the page you requested could not be found. Perhaps searching will help"
-msgstr "Ursäkta, men sidan du letade efter kunde inte hittas. Kanske en sökning kan hjälpa dig"
 
 #: ../../mf_theme/functions.php:20
 msgid "Secondary Navigation"
@@ -466,7 +443,7 @@ msgid "Article Link Color"
 msgstr "Färg på artikellänk"
 
 #: ../../mf_theme/functions.php:124
-#: ../../mf_theme/functions.php:212
+#: ../../mf_theme/functions.php:194
 msgid "Pre Footer"
 msgstr "Före sidfot"
 
@@ -494,28 +471,28 @@ msgstr "Marginal på rubrik i widget"
 msgid "Widget Heading Text Transform"
 msgstr ""
 
-#: ../../mf_theme/functions.php:182
+#: ../../mf_theme/functions.php:167
 msgid "Slide menu"
 msgstr "Glidmeny"
 
-#: ../../mf_theme/functions.php:202
+#: ../../mf_theme/functions.php:185
 msgid "Sidebar"
 msgstr "Höger kolumn"
 
-#: ../../mf_theme/functions.php:284
+#: ../../mf_theme/functions.php:264
 msgid "Search for"
 msgstr "Sök efter"
 
-#: ../../mf_theme/functions.php:299
+#: ../../mf_theme/functions.php:279
 msgid "Menu"
 msgstr "Meny"
 
-#: ../../mf_theme/functions.php:389
+#: ../../mf_theme/functions.php:369
 #: ../../mf_theme/index.php:69
 msgid "Read More"
 msgstr "Läs mer"
 
-#: ../../mf_theme/functions.php:408
+#: ../../mf_theme/functions.php:388
 msgid "Load more posts"
 msgstr "Ladda fler inlägg"
 
@@ -552,9 +529,29 @@ msgstr "Huvud- och sekundär meny"
 msgid "Slide in from right"
 msgstr "Glid in från höger"
 
-#: ../../mf_theme/include/classes.php:94
-msgid "Menu type"
-msgstr "Menytyp"
+#: ../../mf_theme/include/classes.php:101
+msgid "Menu Type"
+msgstr "Typ av meny"
+
+#~ msgid "Not Found"
+#~ msgstr "Hittades inte"
+
+#~ msgid ""
+#~ "Apologies, but the page you requested could not be found. Perhaps "
+#~ "searching will help."
+#~ msgstr ""
+#~ "Sorry, men sidan du letade efter kunde inte hittas. Kanske en sökning kan "
+#~ "hjälpa dig."
+
+#~ msgid "The widget area"
+#~ msgstr "Widget-område"
+
+#~ msgid ""
+#~ "Apologies, but the page you requested could not be found. Perhaps "
+#~ "searching will help"
+#~ msgstr ""
+#~ "Ursäkta, men sidan du letade efter kunde inte hittas. Kanske en sökning "
+#~ "kan hjälpa dig"
 
 #~ msgid "Page %s"
 #~ msgstr "Sida %s"
