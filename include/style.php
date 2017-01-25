@@ -128,20 +128,20 @@ echo "@media all
 
 	.aligncenter
 	{
-		margin: .5em 0 .5em 0;
+		margin: .5em 0;
 		text-align: center;
 	}
 
 	.alignleft
 	{
 		float: left;
-		margin: 0 .5em .5em 0;
+		margin: .5em 1em .5em 0;
 	}
 
 	.alignright
 	{
 		float: right;
-		margin: 0 0 .5em .5em;
+		margin: .5em 0 .5em 1em;
 	}
 
 	html

@@ -6,11 +6,12 @@ if(!function_exists('head_parallax'))
 	{
 		enqueue_theme_fonts();
 
-		wp_enqueue_style('style', replace_stylesheet_url());
+		$template_url = get_bloginfo('template_url');
+
+		//wp_enqueue_style('style', replace_stylesheet_url());
+		wp_enqueue_style('style', $template_url."/include/style.php");
 
 		list($options_params, $options) = get_params();
-
-		$template_url = get_bloginfo('template_url');
 
 		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js");
 		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array('override_bg' => isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2));
