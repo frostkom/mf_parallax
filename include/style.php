@@ -182,7 +182,7 @@ echo "@media all
 				.render_css(array('property' => 'padding', 'value' => 'logo_padding'))
 			."}
 
-			header nav
+			#primary_nav
 			{"
 				.render_css(array('property' => 'color', 'value' => 'nav_color'))
 				.render_css(array('property' => 'float', 'value' => 'nav_float'))
@@ -191,29 +191,29 @@ echo "@media all
 				."position: relative;
 			}
 
-				header nav > .toggle_icon
+				#primary_nav > .toggle_icon
 				{
 					display: none;
 				}
 
-				header nav ul
+				#primary_nav ul
 				{
 					list-style: none;
 				}
 
-					header nav li
+					#primary_nav li
 					{
 						display: inline-block;
 					}
 
-						header nav li > a
+						#primary_nav li > a
 						{
 							color: inherit;
 							display: block;"
 							.render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
 						."}
 
-							header nav li.current_page_item > a
+							#primary_nav li.current_page_item > a
 							{"
 								.render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
 							."}
@@ -402,7 +402,7 @@ echo "}
 			.render_css(array('property' => 'padding', 'value' => 'header_padding_mobile'))
 		."}
 
-			header nav
+			#primary_nav
 			{"
 				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
 
@@ -416,7 +416,7 @@ echo "}
 
 				if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
 				{
-					echo "header nav > .toggle_icon
+					echo "#primary_nav > .toggle_icon
 					{
 						cursor: pointer;
 						display: block;
@@ -424,29 +424,29 @@ echo "}
 						margin-top: .15em;
 					}
 
-						header nav .fa-close
+						#primary_nav .fa-close
 						{
 							display: none;
 						}
 
-						header nav.is_mobile_ready ul > li
+						#primary_nav.is_mobile_ready ul > li
 						{
 							display: none;
 						}";
 
 					if(isset($options['nav_click2expand']) && $options['nav_click2expand'] == 2)
 					{
-						echo "header nav.open .fa-bars
+						echo "#primary_nav.open .fa-bars
 						{
 							display: none;
 						}
 
-						header nav.open .fa-close
+						#primary_nav.open .fa-close
 						{
 							display: block;
 						}
 
-						header nav.open ul > li
+						#primary_nav.open ul > li
 						{
 							display: block;
 						}";
@@ -454,12 +454,12 @@ echo "}
 
 					else
 					{
-						echo "header nav > .toggle_icon
+						echo "#primary_nav > .toggle_icon
 						{
 							display: none;
 						}
 
-							header nav ul > li.current_page_item, header nav ul > li.current_page_parent, header nav ul:hover > li
+							#primary_nav ul > li.current_page_item, #primary_nav ul > li.current_page_parent, #primary_nav ul:hover > li
 							{
 								display: inline-block;
 							}";

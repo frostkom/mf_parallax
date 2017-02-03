@@ -26,7 +26,7 @@ jQuery(function($)
 		}
 	});
 
-	$('header nav > .toggle_icon').on('click', function()
+	$(document).on('click', 'header nav > .toggle_icon', function()
 	{
 		$(this).parent('nav').toggleClass('open');
 	});
