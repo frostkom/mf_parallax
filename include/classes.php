@@ -2,7 +2,7 @@
 
 class widget_parallax_logo extends WP_Widget
 {
-	function widget_parallax_logo()
+	function __construct()
 	{
 		$widget_ops = array(
 			'classname' => 'parallax',
@@ -11,7 +11,7 @@ class widget_parallax_logo extends WP_Widget
 
 		$control_ops = array('id_base' => 'parallax-logo-widget');
 
-		$this->__construct('parallax-logo-widget', __("Theme Logo", 'lang_parallax'), $widget_ops, $control_ops);
+		parent::__construct('parallax-logo-widget', __("Theme Logo", 'lang_parallax'), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -45,7 +45,7 @@ class widget_parallax_logo extends WP_Widget
 
 class widget_parallax_menu extends WP_Widget
 {
-	function widget_parallax_menu()
+	function __construct()
 	{
 		$widget_ops = array(
 			'classname' => 'parallax',
@@ -54,7 +54,7 @@ class widget_parallax_menu extends WP_Widget
 
 		$control_ops = array('id_base' => 'parallax-menu-widget');
 
-		$this->__construct('parallax-menu-widget', __("Theme Menu", 'lang_parallax'), $widget_ops, $control_ops);
+		parent::__construct('parallax-menu-widget', __("Theme Menu", 'lang_parallax'), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
