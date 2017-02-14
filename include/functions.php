@@ -102,10 +102,6 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
 			$options_params[] = array('category_end' => "");
 
-			/*$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => "mf_parallax_front");
-				$options_params[] = array('type' => "text", 'id' => "front_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
-			$options_params[] = array('category_end' => "");*/
-
 			$options_params[] = array('category' => "Content", 'id' => "mf_parallax_content");
 				$options_params[] = array('type' => "checkbox", 'id' => "content_stretch_height", 'title' => __("Match height with screen size", 'lang_parallax'), 'default' => 2);
 				$options_params[] = array('type' => "number", 'id' => "content_main_width", 'title' => __("Main column width", 'lang_parallax')." (%)", 'default' => "60");
