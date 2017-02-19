@@ -88,11 +88,6 @@ echo "@media all
 		padding: 0;
 	}
 
-	html
-	{
-		overflow-y: scroll;
-	}
-
 	body, textarea
 	{"
 		.render_css(array('property' => 'color', 'value' => 'body_color'))
@@ -145,9 +140,11 @@ echo "@media all
 	}
 
 	html
-	{"
+	{
+		font-size: .625em;"
 		.render_css(array('property' => 'font-size', 'value' => 'body_font_size'))
-	."}
+		."overflow-y: scroll;
+	}
 
 	body
 	{"
