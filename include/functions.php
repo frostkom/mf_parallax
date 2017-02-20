@@ -8,7 +8,6 @@ if(!function_exists('head_parallax'))
 
 		$template_url = get_bloginfo('template_url');
 
-		//wp_enqueue_style('style', replace_stylesheet_url());
 		wp_enqueue_style('style', $template_url."/include/style.php");
 
 		list($options_params, $options) = get_params();
