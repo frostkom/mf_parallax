@@ -223,12 +223,12 @@ if(!function_exists('meta_boxes_parallax'))
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image',
-					'type' => 'thickbox_image',
+					'type' => 'file_advanced', //thickbox_image
 				),
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image_mobile',
-					'type' => 'thickbox_image',
+					'type' => 'file_advanced', //thickbox_image
 				),
 				array(
 					'name' => __("Text Color", 'lang_parallax'),
