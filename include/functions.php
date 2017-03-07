@@ -63,7 +63,7 @@ if(!function_exists('get_params'))
 		$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
 
 		$options_params[] = array('category' => __("Generic", 'lang_parallax'), 'id' => "mf_parallax_body");
-			$options_params[] = array('type' => "text", 'id' => "body_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
+			$options_params[] = array('type' => "text", 'id' => "body_bg", 'title' => __("Background", 'lang_parallax'), 'default' => "#fff", 'placeholder' => $bg_placeholder);
 				$options_params[] = array('type' => "font", 'id' => "body_font", 'title' => __("Font", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_color", 'title' => __("Text Color", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_link_color", 'title' => __("Link Color", 'lang_parallax'));
@@ -129,8 +129,8 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "font", 'id' => "footer_font", 'title' => __("Font", 'lang_parallax'));
 				$options_params[] = array('type' => "text", 'id' => "footer_font_size", 'title' => __("Font size", 'lang_parallax'), 'default' => "1.8em");
 				$options_params[] = array('type' => "color", 'id' => "footer_color", 'title' => __("Color", 'lang_parallax'));
-				$options_params[] = array('type' => "text", 'id' => "footer_margin", 'title' => __("Margin", 'lang_parallax'), 'default' => "0 0 .3em");
-				$options_params[] = array('type' => "text", 'id' => "footer_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => ".1em");
+				$options_params[] = array('type' => "text", 'id' => "footer_margin", 'title' => __("Margin", 'lang_parallax')); //, 'default' => "0 0 .3em"
+				$options_params[] = array('type' => "text", 'id' => "footer_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => ".1em 0");
 					$options_params[] = array('type' => "text",	'id' => "footer_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => "footer_padding");
 					$options_params[] = array('type' => "text", 'id' => "footer_widget_padding", 'title' => __("Widget Padding", 'lang_parallax'), 'default' => ".2em");
 			$options_params[] = array('category_end' => "");
