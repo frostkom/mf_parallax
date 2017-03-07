@@ -221,6 +221,13 @@ if(!function_exists('meta_boxes_parallax'))
 					'std' => 'yes',
 				),
 				array(
+					'name' => __("Show in menu", 'lang_parallax'),
+					'id' => $meta_prefix.'show_in_menu',
+					'type' => 'select',
+					'options' => get_yes_no_for_select(),
+					'std' => 'yes',
+				),
+				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image',
 					'type' => 'file_advanced', //thickbox_image
@@ -315,8 +322,9 @@ if(!function_exists('get_menu_parallax'))
 			$css_identifier = "#".$post_name;
 
 			$post_show_on_page = get_post_meta($post_id, $meta_prefix.'show_on_page', true);
+			$post_show_in_menu = get_post_meta($post_id, $meta_prefix.'show_in_menu', true);
 
-			if($post_show_on_page == 'yes')
+			if($post_show_on_page == 'yes' && $post_show_in_menu != 'no')
 			{
 				$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='/".$css_identifier."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
 
