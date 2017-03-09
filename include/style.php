@@ -283,12 +283,10 @@ echo "@media all
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
 					."}
 
-					article aside, article #aside{}
-
-						article aside p, article #aside p
-						{"
-							.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
-						."}
+					article aside p, article #aside p
+					{"
+						.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
+					."}
 
 					article section
 					{"
@@ -332,14 +330,15 @@ echo "@media all
 
 				footer > div
 				{"
-					.render_css(array('property' => 'color', 'value' => 'footer_color'))
-					.render_css(array('property' => 'font-family', 'value' => 'footer_font'))
-					.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
 					.render_css(array('property' => 'padding', 'value' => 'footer_padding'))
+					.render_css(array('property' => 'text-align', 'value' => 'footer_align'))
 				."}
 
 					footer .widget
 					{"
+						.render_css(array('property' => 'color', 'value' => 'footer_color'))
+						.render_css(array('property' => 'font-family', 'value' => 'footer_font'))
+						.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
 						.render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
 					."}"
 	.$style_all;
@@ -486,10 +485,15 @@ echo "}
 		text-align: center;
 	}
 
-		aside img, #aside img
-		{"
-			.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
-		."}
+		article aside, article #aside
+		{
+			margin-bottom: 3em;
+		}
+
+			aside img, #aside img
+			{"
+				.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
+			."}
 
 	footer > div
 	{"
