@@ -50,8 +50,6 @@ foreach($result as $post)
 		$style_bg_img .= "background-repeat: ".$background_repeat.";";
 	}
 
-	do_log($css_identifier.": ".$style_bg_img);
-
 	if($background_image_mobile != '')
 	{
 		$style_bg_img_mobile .= "background-image: url(".$background_image_mobile.");";
