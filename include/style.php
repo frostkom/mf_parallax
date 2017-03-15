@@ -33,6 +33,7 @@ foreach($result as $post)
 	$css_identifier = "#".$post_name.", .header_".$post_name;
 
 	$background_image = get_meta_image_url($post_id, $meta_prefix.'background_image');
+	$background_repeat = get_post_meta($post_id, $meta_prefix.'background_repeat', true);
 	$background_image_mobile = get_meta_image_url($post_id, $meta_prefix.'background_image_mobile');
 	$text_color = get_post_meta($post_id, $meta_prefix.'text_color', true);
 	$bg_color = get_post_meta($post_id, $meta_prefix.'bg_color', true);
@@ -41,12 +42,19 @@ foreach($result as $post)
 
 	if($background_image != '')
 	{
-		$style_bg_img = "background-image: url(".$background_image.");";
+		$style_bg_img .= "background-image: url(".$background_image.");";
 	}
+
+	if($background_repeat != '')
+	{
+		$style_bg_img .= "background-repeat: ".$background_repeat.";";
+	}
+
+	do_log($css_identifier.": ".$style_bg_img);
 
 	if($background_image_mobile != '')
 	{
-		$style_bg_img_mobile = "background-image: url(".$background_image_mobile.");";
+		$style_bg_img_mobile .= "background-image: url(".$background_image_mobile.");";
 	}
 
 	$style_all .= $css_identifier

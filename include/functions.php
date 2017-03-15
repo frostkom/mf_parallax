@@ -191,7 +191,7 @@ if(!function_exists('meta_boxes_parallax'))
 			'id' => 'info',
 			'title' => __("Information", 'lang_parallax'),
 			'pages' => array('page'),
-			//'context' => 'side',
+			'context' => 'after_title',
 			'priority' => 'low',
 			'fields' => array(
 				array(
@@ -237,6 +237,18 @@ if(!function_exists('meta_boxes_parallax'))
 					'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image_mobile',
 					'type' => 'file_advanced', //thickbox_image
+				),
+				array(
+					'name' => __("Repeat Image", 'lang_parallax'),
+					'id' => $meta_prefix.'background_repeat',
+					'type' => 'select',
+					'options' => array(
+						'' => "-- ".__("Choose here", 'lang_parallax')." --",
+						'no-repeat' => __("No", 'lang_parallax'),
+						'repeat' => __("Yes", 'lang_parallax'),
+						'repeat-x' => __("Yes", 'lang_parallax')." (".__("Horizontal", 'lang_parallax').")",
+						'repeat-y' => __("Yes", 'lang_parallax')." (".__("Vertical", 'lang_parallax').")",
+					),
 				),
 				array(
 					'name' => __("Text Color", 'lang_parallax'),
