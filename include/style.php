@@ -169,11 +169,21 @@ echo "@media all
 				."background-size: 100%;"
 				."text-align: center;";
 
-				if(isset($options['header_fixed']) && $options['header_fixed'] == 2)
+				if(isset($options['header_fixed']) && in_array($options['header_fixed'], array(2, 'absolute', 'fixed')))
 				{
-					echo "left: 0;
-					position: fixed;
-					right: 0;
+					echo "left: 0;";
+
+					if($options['header_fixed'] == 2)
+					{
+						echo "position: fixed;";
+					}
+
+					else
+					{
+						echo render_css(array('property' => 'position', 'value' => 'header_fixed'));
+					}
+
+					echo "right: 0;
 					z-index: 10;";
 				}
 

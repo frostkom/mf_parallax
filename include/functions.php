@@ -75,7 +75,8 @@ if(!function_exists('get_params'))
 		$options_params[] = array('category_end' => "");
 
 			$options_params[] = array('category' => __("Header", 'lang_parallax'), 'id' => "mf_parallax_header");
-				$options_params[] = array('type' => "checkbox", 'id' => "header_fixed", 'title' => __("Fixed", 'lang_parallax'), 'default' => 2);
+				//$options_params[] = array('type' => "checkbox", 'id' => "header_fixed", 'title' => __("Fixed", 'lang_parallax'), 'default' => 2);
+				$options_params[] = array('type' => "position", 'id' => "header_fixed", 'title' => __("Position", 'lang_parallax'), 'default' => 'fixed');
 				$options_params[] = array('type' => "text",	'id' => "header_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
 				$options_params[] = array('type' => "checkbox", 'id' => "header_override_bg_with_page_bg", 'title' => __("Override background with page background", 'lang_parallax'), 'default' => 2);
 				$options_params[] = array('type' => "text",	'id' => "header_padding", 'title' => __("Padding", 'lang_parallax'));
