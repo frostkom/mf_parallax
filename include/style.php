@@ -153,9 +153,15 @@ echo "@media all
 	}
 
 	body
-	{"
-		.render_css(array('property' => 'background', 'value' => 'footer_bg'))
-		.render_css(array('property' => 'font-family', 'value' => 'body_font'))
+	{";
+
+		if(isset($options['footer_bg']) && $options['footer_bg'] != '')
+		{
+			echo render_css(array('property' => 'background', 'value' => 'footer_bg'))
+			."min-height: 100vh;";
+		}
+
+		echo render_css(array('property' => 'font-family', 'value' => 'body_font'))
 	."}
 
 		#wrapper
