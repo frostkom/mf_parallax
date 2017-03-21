@@ -235,12 +235,12 @@ if(!function_exists('meta_boxes_parallax'))
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image',
-					'type' => 'file_advanced', //thickbox_image
+					'type' => 'file_advanced',
 				),
 				array(
 					'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
 					'id' => $meta_prefix.'background_image_mobile',
-					'type' => 'file_advanced', //thickbox_image
+					'type' => 'file_advanced',
 				),
 				array(
 					'name' => __("Repeat Image", 'lang_parallax'),
@@ -249,7 +249,7 @@ if(!function_exists('meta_boxes_parallax'))
 					'options' => array(
 						'' => "-- ".__("Choose here", 'lang_parallax')." --",
 						'no-repeat' => __("No", 'lang_parallax'),
-						'repeat' => __("Yes", 'lang_parallax'),
+						//'repeat' => __("Yes", 'lang_parallax'),
 						'repeat-x' => __("Yes", 'lang_parallax')." (".__("Horizontal", 'lang_parallax').")",
 						'repeat-y' => __("Yes", 'lang_parallax')." (".__("Vertical", 'lang_parallax').")",
 					),
