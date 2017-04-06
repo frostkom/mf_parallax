@@ -80,7 +80,7 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "checkbox", 'id' => "header_override_bg_with_page_bg", 'title' => __("Override background with page background", 'lang_parallax'), 'default' => 2);
 				$options_params[] = array('type' => "text",	'id' => "header_padding", 'title' => __("Padding", 'lang_parallax'));
 					$options_params[] = array('type' => "text",	'id' => "header_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
-				
+
 			$options_params[] = array('category_end' => "");
 
 			$options_params[] = array('category' => __("Logo", 'lang_parallax'), 'id' => 'mf_parallax_logo');

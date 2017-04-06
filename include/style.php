@@ -32,9 +32,11 @@ foreach($result as $post)
 
 	$css_identifier = "#".$post_name.", .header_".$post_name;
 
-	$background_image = get_meta_image_url($post_id, $meta_prefix.'background_image');
+	//$background_image = get_meta_image_url($post_id, $meta_prefix.'background_image');
+	$background_image = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image', 'image_size' => 'full'));
 	$background_repeat = get_post_meta($post_id, $meta_prefix.'background_repeat', true);
-	$background_image_mobile = get_meta_image_url($post_id, $meta_prefix.'background_image_mobile');
+	//$background_image_mobile = get_meta_image_url($post_id, $meta_prefix.'background_image_mobile');
+	$background_image_mobile = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image_mobile', 'image_size' => 'full'));
 	$text_color = get_post_meta($post_id, $meta_prefix.'text_color', true);
 	$bg_color = get_post_meta($post_id, $meta_prefix.'bg_color', true);
 
@@ -247,7 +249,7 @@ echo "@media all
 									."}
 
 			article
-			{ 
+			{
 				background: 50% 0 repeat fixed;
 				background-size: 100%;";
 
