@@ -194,7 +194,7 @@ if(!function_exists('meta_boxes_parallax'))
 		$meta_boxes[] = array(
 			'id' => 'info',
 			'title' => __("Information", 'lang_parallax'),
-			'pages' => array('page'),
+			'post_types' => array('page'),
 			'context' => 'after_title',
 			'priority' => 'low',
 			'fields' => array(
@@ -214,7 +214,7 @@ if(!function_exists('meta_boxes_parallax'))
 		$meta_boxes[] = array(
 			'id' => 'settings',
 			'title' => __("Settings", 'lang_parallax'),
-			'pages' => array('page'),
+			'post_types' => array('page'),
 			'context' => 'side',
 			'priority' => 'low',
 			'fields' => array(
