@@ -449,7 +449,6 @@ echo "}
 				{
 					echo "#primary_nav > .toggle_icon
 					{
-						cursor: pointer;
 						display: block;
 						font-size: 2em;
 						margin-top: .15em;
