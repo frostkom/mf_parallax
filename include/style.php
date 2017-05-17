@@ -19,7 +19,7 @@ $options_fonts = get_theme_fonts();
 
 list($options_params, $options) = get_params();
 
-echo show_font_face($options_params, $options_fonts, $options);
+$out = show_font_face($options_params, $options_fonts, $options);
 
 $style_all = $style_desktop = $style_mobile = "";
 
@@ -81,7 +81,7 @@ foreach($result as $post)
 	}
 }
 
-echo "@media all
+$out .= "@media all
 {
 	body:before
 	{
@@ -157,11 +157,11 @@ echo "@media all
 
 		if(isset($options['footer_bg']) && $options['footer_bg'] != '')
 		{
-			echo render_css(array('property' => 'background', 'value' => 'footer_bg'))
+			$out .= render_css(array('property' => 'background', 'value' => 'footer_bg'))
 			."min-height: 100vh;";
 		}
 
-		echo render_css(array('property' => 'font-family', 'value' => 'body_font'))
+		$out .= render_css(array('property' => 'font-family', 'value' => 'body_font'))
 	."}
 
 		#wrapper
@@ -177,23 +177,23 @@ echo "@media all
 
 				if(isset($options['header_fixed']) && in_array($options['header_fixed'], array(2, 'absolute', 'fixed')))
 				{
-					echo "left: 0;";
+					$out .= "left: 0;";
 
 					if($options['header_fixed'] == 2)
 					{
-						echo "position: fixed;";
+						$out .= "position: fixed;";
 					}
 
 					else
 					{
-						echo render_css(array('property' => 'position', 'value' => 'header_fixed'));
+						$out .= render_css(array('property' => 'position', 'value' => 'header_fixed'));
 					}
 
-					echo "right: 0;
+					$out .= "right: 0;
 					z-index: 10;";
 				}
 
-			echo "}
+			$out .= "}
 
 				header > div
 				{"
@@ -253,10 +253,10 @@ echo "@media all
 
 				if(isset($options['content_stretch_height']) && $options['content_stretch_height'] == 2)
 				{
-					echo "min-height: 100vh;";
+					$out .= "min-height: 100vh;";
 				}
 
-				echo "overflow: hidden;
+				$out .= "overflow: hidden;
 				position: relative;
 				width: 100%;
 			}
@@ -275,7 +275,7 @@ echo "@media all
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size'))
 					."}*/
 
-					echo "article h2
+					$out .= "article h2
 					{"
 						.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h2'))
@@ -367,10 +367,10 @@ echo "@media all
 
 	if(isset($options['custom_css_all']) && $options['custom_css_all'] != '')
 	{
-		echo $options['custom_css_all'];
+		$out .= $options['custom_css_all'];
 	}
 
-echo "}
+$out .= "}
 
 @media (min-width: ".$options['mobile_breakpoint']."px)
 {
@@ -391,7 +391,7 @@ echo "}
 
 		if($options['website_max_width'] > 0)
 		{
-			echo "header > div, mf-pre-content > div, article > div, footer > div
+			$out .= "header > div, mf-pre-content > div, article > div, footer > div
 			{
 				margin: 0 auto;
 				max-width: ".$options['website_max_width']."px;
@@ -400,7 +400,7 @@ echo "}
 
 		if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
 		{
-			echo "article > div > h2, section
+			$out .= "article > div > h2, section
 			{
 				float: right;
 				width: ".$options['content_main_width']."%;
@@ -413,7 +413,7 @@ echo "}
 			}";
 		}
 
-	echo $style_desktop
+	$out .= $style_desktop
 ."}
 
 @media (max-width: ".$options['mobile_breakpoint']."px)
@@ -439,15 +439,15 @@ echo "}
 
 				if($options['nav_float_mobile'] == "none")
 				{
-					echo "text-align: center;";
+					$out .= "text-align: center;";
 				}
 
-				echo render_css(array('property' => 'padding', 'value' => 'nav_padding_mobile'))
+				$out .= render_css(array('property' => 'padding', 'value' => 'nav_padding_mobile'))
 			."}";
 
 				if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
 				{
-					echo "#primary_nav > .toggle_icon
+					$out .= "#primary_nav > .toggle_icon
 					{
 						display: block;
 						font-size: 2em;
@@ -466,7 +466,7 @@ echo "}
 
 					if(isset($options['nav_click2expand']) && $options['nav_click2expand'] == 2)
 					{
-						echo "#primary_nav.open .fa-bars
+						$out .= "#primary_nav.open .fa-bars
 						{
 							display: none;
 						}
@@ -484,7 +484,7 @@ echo "}
 
 					else
 					{
-						echo "#primary_nav > .toggle_icon
+						$out .= "#primary_nav > .toggle_icon
 						{
 							display: none;
 						}
@@ -496,7 +496,7 @@ echo "}
 					}
 				}
 
-	echo "article > div
+	$out .= "article > div
 	{"
 		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
 	."}
@@ -523,10 +523,10 @@ echo "}
 
 	if(isset($options['custom_css_mobile']) && $options['custom_css_mobile'] != '')
 	{
-		echo $options['custom_css_mobile'];
+		$out .= $options['custom_css_mobile'];
 	}
 
-echo "}
+$out .= "}
 
 @media print
 {
@@ -555,3 +555,5 @@ echo "}
 		min-height: auto;
 	}
 }";
+
+echo compress_css($out);
