@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 07:38+0100\n"
+"POT-Creation-Date: 2017-05-22 11:03+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -47,297 +47,304 @@ msgstr "Temameny"
 msgid "Primary Navigation"
 msgstr "Primär navigation"
 
-#: ../include/functions.php:45
+#: ../include/functions.php:36
 msgid "Theme Options"
 msgstr "Temainställningar"
 
-#: ../include/functions.php:65
+#: ../include/functions.php:56
 msgid "Generic"
 msgstr "Allmänt"
 
-#: ../include/functions.php:66
-#: ../include/functions.php:79
-#: ../include/functions.php:132
-#: ../include/functions.php:236
-#: ../include/functions.php:241
+#: ../include/functions.php:57
+#: ../include/functions.php:70
+#: ../include/functions.php:123
+#: ../include/functions.php:227
+#: ../include/functions.php:232
 msgid "Background"
 msgstr "Bakgrund"
 
-#: ../include/functions.php:67
-#: ../include/functions.php:90
-#: ../include/functions.php:133
+#: ../include/functions.php:58
+#: ../include/functions.php:81
+#: ../include/functions.php:124
 msgid "Font"
 msgstr "Typsnitt"
 
-#: ../include/functions.php:68
-#: ../include/functions.php:92
-#: ../include/functions.php:103
-#: ../include/functions.php:104
-#: ../include/functions.php:258
+#: ../include/functions.php:59
+#: ../include/functions.php:83
+#: ../include/functions.php:94
+#: ../include/functions.php:95
+#: ../include/functions.php:249
 msgid "Text Color"
 msgstr "Textfärg"
 
-#: ../include/functions.php:69
+#: ../include/functions.php:60
 msgid "Link Color"
 msgstr "Länkfärg"
 
-#: ../include/functions.php:70
+#: ../include/functions.php:61
 msgid "Max Width"
 msgstr "Maxbredd"
 
-#: ../include/functions.php:71
-#: ../include/functions.php:73
-#: ../include/functions.php:91
-#: ../include/functions.php:102
-#: ../include/functions.php:126
-#: ../include/functions.php:134
+#: ../include/functions.php:62
+#: ../include/functions.php:64
+#: ../include/functions.php:82
+#: ../include/functions.php:93
+#: ../include/functions.php:117
+#: ../include/functions.php:125
 msgid "Font Size"
 msgstr "Textstorlek"
 
-#: ../include/functions.php:72
+#: ../include/functions.php:63
 msgid "Breakpoint"
 msgstr "Brytpunkt"
 
-#: ../include/functions.php:72
+#: ../include/functions.php:63
+#: ../include/functions.php:64
+#: ../include/functions.php:65
 #: ../include/functions.php:73
-#: ../include/functions.php:74
-#: ../include/functions.php:82
-#: ../include/functions.php:88
-#: ../include/functions.php:99
-#: ../include/functions.php:101
-#: ../include/functions.php:112
-#: ../include/functions.php:139
-#: ../include/functions.php:145
-#: ../include/functions.php:241
+#: ../include/functions.php:79
+#: ../include/functions.php:90
+#: ../include/functions.php:92
+#: ../include/functions.php:103
+#: ../include/functions.php:130
+#: ../include/functions.php:136
+#: ../include/functions.php:232
 msgid "Mobile"
 msgstr "Mobil"
 
-#: ../include/functions.php:74
+#: ../include/functions.php:65
 msgid "Aside Image Max Width"
 msgstr "Maxbredd på bilder i sidokolumn"
 
-#: ../include/functions.php:77
-#: ../include/functions.php:157
+#: ../include/functions.php:68
+#: ../include/functions.php:148
 msgid "Header"
 msgstr "Sidhuvud"
 
-#: ../include/functions.php:78
+#: ../include/functions.php:69
 msgid "Position"
 msgstr "Position"
 
-#: ../include/functions.php:80
+#: ../include/functions.php:71
 msgid "Override background with page background"
 msgstr "Ersätt bakgrund med sidans bakgrund"
 
-#: ../include/functions.php:81
-#: ../include/functions.php:82
+#: ../include/functions.php:72
+#: ../include/functions.php:73
+#: ../include/functions.php:80
 #: ../include/functions.php:89
-#: ../include/functions.php:98
-#: ../include/functions.php:99
-#: ../include/functions.php:111
-#: ../include/functions.php:112
-#: ../include/functions.php:137
-#: ../include/functions.php:139
+#: ../include/functions.php:90
+#: ../include/functions.php:102
+#: ../include/functions.php:103
+#: ../include/functions.php:128
+#: ../include/functions.php:130
 msgid "Padding"
 msgstr "Tomrum"
 
-#: ../include/functions.php:86
+#: ../include/functions.php:77
 msgid "Logo"
 msgstr "Logga"
 
-#: ../include/functions.php:87
-#: ../include/functions.php:88
+#: ../include/functions.php:78
+#: ../include/functions.php:79
 msgid "Image"
 msgstr "Bild"
 
-#: ../include/functions.php:95
+#: ../include/functions.php:86
 msgid "Navigation"
 msgstr "Meny"
 
-#: ../include/functions.php:96
+#: ../include/functions.php:87
 msgid "Compressed on mobile"
 msgstr "Komprimerad på små skärmar"
 
-#: ../include/functions.php:97
+#: ../include/functions.php:88
 msgid "Click to expand"
 msgstr "Klicka för att expandera"
 
-#: ../include/functions.php:100
-#: ../include/functions.php:101
+#: ../include/functions.php:91
+#: ../include/functions.php:92
 msgid "Float"
 msgstr "Flyt"
 
-#: ../include/functions.php:104
+#: ../include/functions.php:95
 msgid "Hover"
 msgstr "Mus över"
 
-#: ../include/functions.php:105
+#: ../include/functions.php:96
 msgid "Link Padding"
 msgstr "Tomrum runt länkar"
 
-#: ../include/functions.php:109
+#: ../include/functions.php:100
 msgid "Match Height with Screen Size"
 msgstr "Samma höjd som på skärmen"
 
-#: ../include/functions.php:110
+#: ../include/functions.php:101
 msgid "Main Column Width"
 msgstr "Bredd på huvudkolumn"
 
-#: ../include/functions.php:113
-#: ../include/functions.php:117
-#: ../include/functions.php:120
-#: ../include/functions.php:123
+#: ../include/functions.php:104
+#: ../include/functions.php:108
+#: ../include/functions.php:111
+#: ../include/functions.php:114
 msgid "Heading Margin"
 msgstr "Marginal på rubrik"
 
-#: ../include/functions.php:114
+#: ../include/functions.php:105
 msgid "Heading Font"
 msgstr "Typsnitt på rubrik"
 
+#: ../include/functions.php:106
+#: ../include/functions.php:109
+#: ../include/functions.php:112
 #: ../include/functions.php:115
-#: ../include/functions.php:118
-#: ../include/functions.php:121
-#: ../include/functions.php:124
 msgid "Heading Size"
 msgstr "Storlek på rubrik"
 
+#: ../include/functions.php:107
+#: ../include/functions.php:110
+#: ../include/functions.php:113
 #: ../include/functions.php:116
-#: ../include/functions.php:119
-#: ../include/functions.php:122
-#: ../include/functions.php:125
 msgid "Heading Weight"
 msgstr "Vikt på rubrik"
 
-#: ../include/functions.php:126
+#: ../include/functions.php:117
 msgid "Content"
 msgstr "Innehåll"
 
-#: ../include/functions.php:127
+#: ../include/functions.php:118
 msgid "Quote Size"
 msgstr "Storlek på citat"
 
-#: ../include/functions.php:128
+#: ../include/functions.php:119
 msgid "Aside Paragraph Size"
 msgstr "Storlek på paragraf i sidokolumn"
 
-#: ../include/functions.php:131
-#: ../include/functions.php:175
+#: ../include/functions.php:122
+#: ../include/functions.php:166
 msgid "Footer"
 msgstr "Sidfot"
 
-#: ../include/functions.php:135
+#: ../include/functions.php:126
 msgid "Color"
 msgstr "Färg"
 
-#: ../include/functions.php:136
+#: ../include/functions.php:127
 msgid "Margin"
 msgstr "Marginal"
 
-#: ../include/functions.php:138
+#: ../include/functions.php:129
 msgid "Align"
 msgstr "Justera"
 
-#: ../include/functions.php:140
+#: ../include/functions.php:131
 msgid "Widget Padding"
 msgstr "Tomrum runt widget"
 
-#: ../include/functions.php:143
+#: ../include/functions.php:134
 msgid "Custom"
 msgstr "Anpassad"
 
-#: ../include/functions.php:144
-#: ../include/functions.php:145
+#: ../include/functions.php:135
+#: ../include/functions.php:136
 msgid "Custom CSS"
 msgstr "Anpassad CSS"
 
-#: ../include/functions.php:166
+#: ../include/functions.php:157
 msgid "Pre Content"
 msgstr "Före innehåll"
 
-#: ../include/functions.php:196
+#: ../include/functions.php:187
 msgid "Information"
 msgstr "Information"
 
-#: ../include/functions.php:202
+#: ../include/functions.php:193
 msgid "Heading"
 msgstr "Rubrik"
 
-#: ../include/functions.php:207
+#: ../include/functions.php:198
 msgid "Aside"
 msgstr "Sidokolumn"
 
-#: ../include/functions.php:216
+#: ../include/functions.php:207
 msgid "Settings"
 msgstr "Inställningar"
 
-#: ../include/functions.php:222
+#: ../include/functions.php:213
 msgid "Show on page"
 msgstr "Visa på sida"
 
-#: ../include/functions.php:229
+#: ../include/functions.php:220
 msgid "Show in menu"
 msgstr "Visa i meny"
 
-#: ../include/functions.php:236
+#: ../include/functions.php:227
 msgid "Desktop"
 msgstr "Datorskärm"
 
-#: ../include/functions.php:246
+#: ../include/functions.php:237
 msgid "Repeat Image"
 msgstr "Repetera bild"
 
-#: ../include/functions.php:250
+#: ../include/functions.php:241
 msgid "Choose here"
 msgstr "Välj här"
 
-#: ../include/functions.php:251
+#: ../include/functions.php:242
 msgid "No"
 msgstr "Nej"
 
-#: ../include/functions.php:253
-#: ../include/functions.php:254
+#: ../include/functions.php:244
+#: ../include/functions.php:245
 msgid "Yes"
 msgstr "Ja"
 
-#: ../include/functions.php:253
+#: ../include/functions.php:244
 msgid "Horizontal"
 msgstr "Horisontellt"
 
-#: ../include/functions.php:254
+#: ../include/functions.php:245
 msgid "Vertical"
 msgstr "Vertikalt"
 
-#: ../include/functions.php:263
+#: ../include/functions.php:254
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../include/functions.php:289
+#: ../include/functions.php:280
 msgid "Site logo"
 msgstr "Logga för webbsida"
 
-#: ../include/functions.php:294
+#: ../include/functions.php:285
 msgid "Site mobile logo"
 msgstr "Logga för mobiler"
 
 #: ../../mf_theme/index.php:62
-#: ../../mf_theme/include/functions.php:594
+#: ../../mf_theme/include/functions.php:579
 msgid "Read More"
 msgstr "Läs mer"
 
-#: ../../mf_theme/index.php:88
+#: ../../mf_theme/searchpage.php:18
 msgid "No results"
 msgstr "Inget resultat"
 
-#: ../../mf_theme/index.php:90
+#: ../../mf_theme/searchpage.php:20
 #, php-format
-msgid "There were no results for '%s'"
-msgstr "Det fanns inget resultat för '%s'"
+msgid "I could not find any results for '%s'"
+msgstr "Jag kunde inte hitta något resultat för '%s'"
+
+#: ../../mf_theme/include/classes.php:57
+#: ../../mf_theme/include/functions.php:155
+#: ../../mf_theme/include/functions.php:472
+msgid "Menu"
+msgstr "Meny"
 
 #: ../../mf_theme/include/classes.php:87
 msgid "Main menu"
 msgstr "Huvudmeny"
 
 #: ../../mf_theme/include/classes.php:88
+#: ../../mf_theme/include/functions.php:158
 msgid "Secondary"
 msgstr "Sekundär"
 
@@ -353,236 +360,183 @@ msgstr "Glid in från höger"
 msgid "Menu Type"
 msgstr "Typ av meny"
 
-#: ../../mf_theme/include/functions.php:72
+#: ../../mf_theme/include/functions.php:62
 msgid "Secondary Navigation"
 msgstr "Sekundär meny"
 
-#: ../../mf_theme/include/functions.php:118
-#: ../../mf_theme/include/functions.php:119
+#: ../../mf_theme/include/functions.php:99
+#: ../../mf_theme/include/functions.php:100
 msgid "Button Color"
 msgstr "Färg på knappar"
 
-#: ../../mf_theme/include/functions.php:128
+#: ../../mf_theme/include/functions.php:109
 msgid "Fixed"
 msgstr "Fixerad"
 
-#: ../../mf_theme/include/functions.php:131
+#: ../../mf_theme/include/functions.php:112
 msgid "Overflow"
 msgstr ""
 
-#: ../../mf_theme/include/functions.php:133
-#: ../../mf_theme/include/functions.php:134
-#, fuzzy
+#: ../../mf_theme/include/functions.php:114
+#: ../../mf_theme/include/functions.php:115
 msgid "Search"
-msgstr "Sök efter"
+msgstr "Sök"
 
-#: ../../mf_theme/include/functions.php:140
-#: ../../mf_theme/include/functions.php:143
-#: ../../mf_theme/include/functions.php:230
+#: ../../mf_theme/include/functions.php:121
+#: ../../mf_theme/include/functions.php:124
+#: ../../mf_theme/include/functions.php:218
 msgid "Width"
 msgstr "Bredd"
 
-#: ../../mf_theme/include/functions.php:152
+#: ../../mf_theme/include/functions.php:133
+#: ../../mf_theme/include/functions.php:160
 msgid "Clear"
 msgstr "Rensa"
 
-#: ../../mf_theme/include/functions.php:154
-#: ../../mf_theme/include/functions.php:171
-#: ../../mf_theme/include/functions.php:207
-#: ../../mf_theme/include/functions.php:212
-#: ../../mf_theme/include/functions.php:214
-#: ../../mf_theme/include/functions.php:219
-#: ../../mf_theme/include/functions.php:235
-#: ../../mf_theme/include/functions.php:237
+#: ../../mf_theme/include/functions.php:135
+#: ../../mf_theme/include/functions.php:153
+#: ../../mf_theme/include/functions.php:161
+#: ../../mf_theme/include/functions.php:197
+#: ../../mf_theme/include/functions.php:202
+#: ../../mf_theme/include/functions.php:204
+#: ../../mf_theme/include/functions.php:209
+#: ../../mf_theme/include/functions.php:223
+#: ../../mf_theme/include/functions.php:225
 msgid "Size"
 msgstr "Storlek"
 
-#: ../../mf_theme/include/functions.php:158
+#: ../../mf_theme/include/functions.php:139
 msgid "Underline Color"
 msgstr "Färg på understrykning"
 
-#: ../../mf_theme/include/functions.php:159
-#: ../../mf_theme/include/functions.php:160
-#: ../../mf_theme/include/functions.php:184
+#: ../../mf_theme/include/functions.php:140
+#: ../../mf_theme/include/functions.php:141
+#: ../../mf_theme/include/functions.php:165
+#: ../../mf_theme/include/functions.php:166
+#: ../../mf_theme/include/functions.php:177
 msgid "Current"
 msgstr "Nuvarande"
 
-#: ../../mf_theme/include/functions.php:163
+#: ../../mf_theme/include/functions.php:144
 msgid "Submenu"
 msgstr "Undermeny"
 
-#: ../../mf_theme/include/functions.php:170
-#, fuzzy
+#: ../../mf_theme/include/functions.php:145
+msgid "Show Up Arrow"
+msgstr "Visa pil uppåt"
+
+#: ../../mf_theme/include/functions.php:152
 msgid "Mobile Menu"
-msgstr "Mobil"
+msgstr "Mobilmeny"
 
-#: ../../mf_theme/include/functions.php:173
-#: ../../mf_theme/include/functions.php:487
-msgid "Menu"
-msgstr "Meny"
-
-#: ../../mf_theme/include/functions.php:178
+#: ../../mf_theme/include/functions.php:171
 msgid "Slide Menu"
 msgstr "Glidmeny"
 
-#: ../../mf_theme/include/functions.php:202
-#, fuzzy
+#: ../../mf_theme/include/functions.php:192
 msgid "Headings"
-msgstr "Rubrik"
+msgstr "Rubriker"
 
-#: ../../mf_theme/include/functions.php:205
-#: ../../mf_theme/include/functions.php:234
-#, fuzzy
+#: ../../mf_theme/include/functions.php:195
+#: ../../mf_theme/include/functions.php:222
 msgid "Border Bottom"
-msgstr "Kant på botten av rubrik"
+msgstr "Kant på botten"
 
-#: ../../mf_theme/include/functions.php:208
+#: ../../mf_theme/include/functions.php:198
 msgid "Weight"
 msgstr "Vikt på text"
 
-#: ../../mf_theme/include/functions.php:217
+#: ../../mf_theme/include/functions.php:207
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
-#: ../../mf_theme/include/functions.php:220
-#: ../../mf_theme/include/functions.php:238
+#: ../../mf_theme/include/functions.php:210
+#: ../../mf_theme/include/functions.php:226
 msgid "Line Height"
 msgstr "Höjd på rader"
 
-#: ../../mf_theme/include/functions.php:223
-#, fuzzy
+#: ../../mf_theme/include/functions.php:213
 msgid "Margin between Content"
-msgstr "Före innehåll"
+msgstr "Marginal mellan innehåll"
 
-#: ../../mf_theme/include/functions.php:231
+#: ../../mf_theme/include/functions.php:219
 msgid "Widget Background"
 msgstr "Bakgrund på widget"
 
-#: ../../mf_theme/include/functions.php:232
+#: ../../mf_theme/include/functions.php:220
 msgid "Widget Border"
 msgstr "Kant runt widget"
 
-#: ../../mf_theme/include/functions.php:245
-#: ../../mf_theme/include/functions.php:360
+#: ../../mf_theme/include/functions.php:232
+#: ../../mf_theme/include/functions.php:346
 msgid "Pre Footer"
 msgstr "Före sidfot"
 
-#: ../../mf_theme/include/functions.php:259
+#: ../../mf_theme/include/functions.php:233
+msgid "Full Width"
+msgstr "Fullbredd"
+
+#: ../../mf_theme/include/functions.php:246
 msgid "Font size"
 msgstr "Storlek på typsnitt"
 
-#: ../../mf_theme/include/functions.php:262
+#: ../../mf_theme/include/functions.php:249
 msgid "Widget Flex"
 msgstr ""
 
-#: ../../mf_theme/include/functions.php:263
+#: ../../mf_theme/include/functions.php:250
 msgid "Widget Overflow"
 msgstr ""
 
-#: ../../mf_theme/include/functions.php:266
+#: ../../mf_theme/include/functions.php:252
 msgid "Widget Heading Margin"
 msgstr "Marginal på rubrik i widget"
 
-#: ../../mf_theme/include/functions.php:267
+#: ../../mf_theme/include/functions.php:253
 msgid "Widget Heading Text Transform"
 msgstr ""
 
-#: ../../mf_theme/include/functions.php:268
+#: ../../mf_theme/include/functions.php:254
 msgid "Paragraph/List Margin"
 msgstr "Marginal på paragrafer och listor"
 
-#: ../../mf_theme/include/functions.php:269
+#: ../../mf_theme/include/functions.php:255
 msgid "Link Background"
 msgstr "Bakgrund på länk"
 
-#: ../../mf_theme/include/functions.php:270
+#: ../../mf_theme/include/functions.php:256
 msgid "Link Margin"
 msgstr "Marginal på länkar"
 
-#: ../../mf_theme/include/functions.php:303
+#: ../../mf_theme/include/functions.php:289
 msgid "After Header"
 msgstr "Efter sidhuvud"
 
-#: ../../mf_theme/include/functions.php:312
+#: ../../mf_theme/include/functions.php:298
 msgid "Slide menu"
 msgstr "Glidmeny"
 
-#: ../../mf_theme/include/functions.php:331
-#, fuzzy
-msgid "After Content"
-msgstr "Före innehåll"
-
-#: ../../mf_theme/include/functions.php:340
-#: ../../mf_theme/include/functions.php:349
-msgid "Sidebar"
-msgstr "Höger kolumn"
-
-#: ../../mf_theme/include/functions.php:340
+#: ../../mf_theme/include/functions.php:317
 msgid "Left"
-msgstr ""
+msgstr "Vänster"
 
-#: ../../mf_theme/include/functions.php:349
-#, fuzzy
+#: ../../mf_theme/include/functions.php:326
+msgid "Below Main Column"
+msgstr "Under huvudkolumn"
+
+#: ../../mf_theme/include/functions.php:335
 msgid "Right"
-msgstr "Vikt på text"
+msgstr "Höger"
 
-#: ../../mf_theme/include/functions.php:397
-#, fuzzy
+#: ../../mf_theme/include/functions.php:383
 msgid "Display Heading"
-msgstr "Visa meny"
+msgstr "Visa rubrik"
 
-#: ../../mf_theme/include/functions.php:468
-msgid "Search for"
-msgstr "Sök efter"
+#: ../../mf_theme/include/functions.php:390
+msgid "Text Columns"
+msgstr "Textkolumner"
 
-#: ../../mf_theme/include/functions.php:612
+#: ../../mf_theme/include/functions.php:597
 msgid "Load more posts"
 msgstr "Ladda fler inlägg"
 
-#~ msgid "Hamburger Menu"
-#~ msgstr "Marginal på hamburgermeny"
-
-#~ msgid "Show heading on front page"
-#~ msgstr "Visa rubrik på startsida"
-
-#~ msgid "Logo Padding"
-#~ msgstr "Tomrum runt logga"
-
-#~ msgid "Logo Font"
-#~ msgstr "Typsnitt på logga"
-
-#~ msgid "Logo Font Size"
-#~ msgstr "Storlek på logga"
-
-#~ msgid "Logo Color"
-#~ msgstr "Färg på logga"
-
-#~ msgid "Show Logo on small screens"
-#~ msgstr "Visa logga på små skärmar"
-
-#~ msgid "Submenu Background"
-#~ msgstr "Bakgrund på undermeny"
-
-#~ msgid "Hamburger Font Size"
-#~ msgstr "Storlek på hamburgermeny"
-
-#~ msgid "Slide Menu Background"
-#~ msgstr "Bakgrund på glidmeny"
-
-#~ msgid "Slide Menu Link Padding"
-#~ msgstr "Tomrum runt länkar i glidmeny"
-
-#~ msgid "Slide Menu Color"
-#~ msgstr "Färg på glidmeny"
-
-#~ msgid "Content Margin"
-#~ msgstr "Marginal på innehåll"
-
-#~ msgid "Article Link Color"
-#~ msgstr "Färg på artikellänk"
-
-#~ msgid "Paragraph text size"
-#~ msgstr "Storlek på text i paragraf"
-
-#~ msgid "Widget Heading Size"
-#~ msgstr "Storlek på rubrik i widget"
