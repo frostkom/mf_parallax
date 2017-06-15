@@ -12,7 +12,7 @@ if(!function_exists('head_parallax'))
 
 		list($options_params, $options) = get_params();
 
-		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", '3.0.0');
+		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", get_plugin_version(__FILE__));
 		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array('override_bg' => isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2), get_plugin_version(__FILE__));
 	}
 }
@@ -96,8 +96,9 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
 			$options_params[] = array('category_end' => "");
 
-			$options_params[] = array('category' => "Content", 'id' => "mf_parallax_content");
+			$options_params[] = array('category' => __("Content", 'lang_parallax'), 'id' => "mf_parallax_content");
 				$options_params[] = array('type' => "checkbox", 'id' => "content_stretch_height", 'title' => __("Match Height with Screen Size", 'lang_parallax'), 'default' => 2);
+				$options_params[] = array('type' => "float", 'id' => "content_main_position", 'title' => __("Main Column Position", 'lang_parallax'), 'default' => "right");
 				$options_params[] = array('type' => "number", 'id' => "content_main_width", 'title' => __("Main Column Width", 'lang_parallax')." (%)", 'default' => "60");
 				$options_params[] = array('type' => "text", 'id' => "content_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "30px 0 20px");
 					$options_params[] = array('type' => "text",	'id' => "content_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'content_padding');
@@ -178,6 +179,13 @@ if(!function_exists('widgets_parallax'))
 
 if(!function_exists('meta_boxes_parallax'))
 {
+	function get_show_on_page_info()
+	{
+		$out = "<p>".sprintf(__("To choose if this page should be part of the One Page/Parallax you have to set %sShow on Front%s to Your latest Posts.", 'lang_parallax'), "<a href='".admin_url("options-reading.php")."'>", "</a>")."</p>";
+
+		return $out;
+	}
+
 	function meta_boxes_parallax($meta_boxes)
 	{
 		$meta_prefix = "mf_parallax_";
@@ -202,60 +210,80 @@ if(!function_exists('meta_boxes_parallax'))
 			)
 		);
 
+		$arr_page_settings = array();
+
+		if(get_option('show_on_front') == 'posts')
+		{
+			$arr_page_settings[] = array(
+				'name' => __("Show on page", 'lang_parallax'),
+				'id' => $meta_prefix.'show_on_page',
+				'type' => 'select',
+				'options' => get_yes_no_for_select(),
+				'std' => 'yes',
+			);
+
+			$arr_page_settings[] = array(
+				'name' => __("Show in menu", 'lang_parallax'),
+				'id' => $meta_prefix.'show_in_menu',
+				'type' => 'select',
+				'options' => get_yes_no_for_select(),
+				'std' => 'yes',
+			);
+		}
+
+		else
+		{
+			$arr_page_settings[] = array(
+				'id' => $meta_prefix.'info',
+				'type' => 'custom_html',
+				'callback' => 'get_show_on_page_info',
+			);
+		}
+
+		$arr_page_settings[] = array(
+			'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
+			'id' => $meta_prefix.'background_image',
+			'type' => 'file_advanced',
+		);
+
+		$arr_page_settings[] = array(
+			'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
+			'id' => $meta_prefix.'background_image_mobile',
+			'type' => 'file_advanced',
+		);
+
+		$arr_page_settings[] = array(
+			'name' => __("Repeat Image", 'lang_parallax'),
+			'id' => $meta_prefix.'background_repeat',
+			'type' => 'select',
+			'options' => array(
+				'' => "-- ".__("Choose here", 'lang_parallax')." --",
+				'no-repeat' => __("No", 'lang_parallax'),
+				//'repeat' => __("Yes", 'lang_parallax'),
+				'repeat-x' => __("Yes", 'lang_parallax')." (".__("Horizontal", 'lang_parallax').")",
+				'repeat-y' => __("Yes", 'lang_parallax')." (".__("Vertical", 'lang_parallax').")",
+			),
+		);
+
+		$arr_page_settings[] = array(
+			'name' => __("Text Color", 'lang_parallax'),
+			'id' => $meta_prefix.'text_color',
+			'type' => 'color',
+		);
+
+		$arr_page_settings[] = array(
+			'name' => __("Background Color", 'lang_parallax'),
+			'id' => $meta_prefix.'bg_color',
+			'type' => 'color',
+		);
+
 		$meta_boxes[] = array(
 			'id' => 'settings',
 			'title' => __("Settings", 'lang_parallax'),
 			'post_types' => array('page'),
 			'context' => 'side',
 			'priority' => 'low',
-			'fields' => array(
-				array(
-					'name' => __("Show on page", 'lang_parallax'),
-					'id' => $meta_prefix.'show_on_page',
-					'type' => 'select',
-					'options' => get_yes_no_for_select(),
-					'std' => 'yes',
-				),
-				array(
-					'name' => __("Show in menu", 'lang_parallax'),
-					'id' => $meta_prefix.'show_in_menu',
-					'type' => 'select',
-					'options' => get_yes_no_for_select(),
-					'std' => 'yes',
-				),
-				array(
-					'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
-					'id' => $meta_prefix.'background_image',
-					'type' => 'file_advanced',
-				),
-				array(
-					'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
-					'id' => $meta_prefix.'background_image_mobile',
-					'type' => 'file_advanced',
-				),
-				array(
-					'name' => __("Repeat Image", 'lang_parallax'),
-					'id' => $meta_prefix.'background_repeat',
-					'type' => 'select',
-					'options' => array(
-						'' => "-- ".__("Choose here", 'lang_parallax')." --",
-						'no-repeat' => __("No", 'lang_parallax'),
-						//'repeat' => __("Yes", 'lang_parallax'),
-						'repeat-x' => __("Yes", 'lang_parallax')." (".__("Horizontal", 'lang_parallax').")",
-						'repeat-y' => __("Yes", 'lang_parallax')." (".__("Vertical", 'lang_parallax').")",
-					),
-				),
-				array(
-					'name' => __("Text Color", 'lang_parallax'),
-					'id' => $meta_prefix.'text_color',
-					'type' => 'color',
-				),
-				array(
-					'name' => __("Background Color", 'lang_parallax'),
-					'id' => $meta_prefix.'bg_color',
-					'type' => 'color',
-				)
-			)
+			'fields' => $arr_page_settings,
 		);
 
 		return $meta_boxes;
@@ -313,40 +341,52 @@ if(!function_exists('get_menu_parallax'))
 
 		$out = "";
 
-		$result = $wpdb->get_results("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
-
-		$i = 0;
-
 		$nav_content = "";
 
-		$meta_prefix = "mf_parallax_";
-
-		foreach($result as $post)
+		if(get_option('show_on_front') == 'posts')
 		{
-			$post_id = $post->ID;
-			$post_title = $post->post_title;
-			$post_name = $post->post_name;
+			$nav_content .= "<ul id='menu-main-menu'>";
 
-			$css_identifier = "#".$post_name;
+				$result = $wpdb->get_results("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
 
-			$post_show_on_page = get_post_meta($post_id, $meta_prefix.'show_on_page', true);
-			$post_show_in_menu = get_post_meta($post_id, $meta_prefix.'show_in_menu', true);
+				$i = 0;
 
-			if($post_show_on_page == 'yes' && $post_show_in_menu != 'no')
-			{
-				$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='/".$css_identifier."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
+				$meta_prefix = "mf_parallax_";
 
-				$i++;
-			}
+				foreach($result as $post)
+				{
+					$post_id = $post->ID;
+					$post_title = $post->post_title;
+					$post_name = $post->post_name;
+
+					$css_identifier = "#".$post_name;
+
+					$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
+					$post_show_in_menu = get_post_meta_or_default($post_id, $meta_prefix.'show_in_menu', true, 'yes');
+
+					if($post_show_on_page == 'yes' && $post_show_in_menu == 'yes')
+					{
+						$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='/".$css_identifier."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
+
+						$i++;
+					}
+				}
+
+			$nav_content .= "</ul>";
+		}
+
+		else
+		{
+			$nav_content = wp_nav_menu(array('theme_location' => 'primary', 'menu' => 'Main', 'container' => "div", 'container_override' => false, 'echo' => false));
 		}
 
 		if($nav_content != '')
 		{
 			$out .= "<nav id='primary_nav' class='is_mobile_ready'>
 				<i class='fa fa-bars toggle_icon'></i>
-				<i class='fa fa-close toggle_icon'></i>
-				<ul id='menu-main-menu'>".$nav_content."</ul>
-			</nav>";
+				<i class='fa fa-close toggle_icon'></i>"
+				.$nav_content
+			."</nav>";
 		}
 
 		return $out;

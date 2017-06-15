@@ -18,8 +18,7 @@
  */
 
 ;(function($, window, document, undefined){
-
-	// our plugin constructor
+	/* our plugin constructor */
 	var OnePageNav = function(elem, options){
 		this.elem = elem;
 		this.$elem = $(elem);
@@ -32,7 +31,7 @@
 		this.docHeight = this.$doc.height();
 	};
 
-	// the plugin prototype
+	/* the plugin prototype */
 	OnePageNav.prototype = {
 		defaults: {
 			navItems: 'a',
@@ -50,13 +49,12 @@
 		},
 
 		init: function() {
-			// Introduce defaults that can be extended either
-			// globally or using an object literal.
+			/* Introduce defaults that can be extended either globally or using an object literal. */
 			this.config = $.extend({}, this.defaults, this.options, this.metadata);
 
 			this.$nav = this.$elem.find(this.config.navItems);
 
-			//Filter any links out of the nav
+			/* Filter any links out of the nav */
 			if(this.config.filter !== '') {
 				this.$nav = this.$nav.filter(this.config.filter);
 			}
@@ -74,16 +72,16 @@
 				}
 			});
 
-			//Handle clicks on the nav
+			/* Handle clicks on the nav */
 			this.$nav.on('click.onePageNav', $.proxy(this.handleClick, this));
 
-			//Get the section positions
+			/* Get the section positions */
 			this.getPositions();
 
-			//Handle scroll changes
+			/* Handle scroll changes */
 			this.bindInterval();
 
-			//Update the positions on resize too
+			/* Update the positions on resize too */
 			this.$win.on('resize.onePageNav', $.proxy(this.getPositions, this));
 
 			return this;
@@ -107,13 +105,13 @@
 			self.t = setInterval(function() {
 				docHeight = self.$doc.height();
 
-				//If it was scrolled
+				/* If it was scrolled */
 				if(self.didScroll) {
 					self.didScroll = false;
 					self.scrollChange();
 				}
 
-				//If the document height changes
+				/* If the document height changes */
 				if(docHeight !== self.docHeight) {
 					self.docHeight = docHeight;
 					self.getPositions();
@@ -162,28 +160,28 @@
 			var newLoc = '#' + self.getHash($link);
 
 			if(!$parent.hasClass(self.config.currentClass) || self.config.scrollToCurrentTopAnyway == true) {
-				//Start callback
+				/* Start callback */
 				if(self.config.begin) {
 					self.config.begin();
 				}
 
-				//Change the highlighted nav item
+				/* Change the highlighted nav item */
 				self.adjustNav(self, $parent);
 
-				//Removing the auto-adjust on scroll
+				/* Removing the auto-adjust on scroll */
 				self.unbindInterval();
 
-				//Scroll to the correct position
+				/* Scroll to the correct position */
 				self.scrollTo(newLoc, function() {
-					//Do we need to change the hash?
+					/* Do we need to change the hash? */
 					if(self.config.changeHash) {
 						window.location.hash = newLoc;
 					}
 
-					//Add the auto-adjust on scroll back in
+					/* Add the auto-adjust on scroll back in */
 					self.bindInterval();
 
-					//End callback
+					/* End callback */
 					if(self.config.end) {
 						self.config.end();
 					}
@@ -198,16 +196,16 @@
 			var position = this.getSection(windowTop);
 			var $parent;
 
-			//If the position is set
+			/* If the position is set */
 			if(position !== null) {
 				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();
 
-				//If it's not already the current section
+				/* If it's not already the current section */
 				if(!$parent.hasClass(this.config.currentClass)) {
-					//Change the highlighted nav item
+					/* Change the highlighted nav item */
 					this.adjustNav(this, $parent);
 
-					//If there is a scrollChange callback
+					/* If there is a scrollChange callback */
 					if(this.config.scrollChange) {
 						this.config.scrollChange($parent);
 					}
@@ -245,5 +243,4 @@
 			new OnePageNav(this, options).init();
 		});
 	};
-
 })( jQuery, window , document );

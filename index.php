@@ -15,7 +15,7 @@ get_header();
 		$post_content = apply_filters('the_content', $post->post_content);
 		$post_name = $post->post_name;
 
-		$post_show_on_page = get_post_meta($post_id, $meta_prefix.'show_on_page', true);
+		$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
 
 		if($post_show_on_page == 'yes')
 		{

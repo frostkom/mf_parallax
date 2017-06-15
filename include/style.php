@@ -400,17 +400,34 @@ $out .= "}
 
 		if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
 		{
-			$out .= "article > div > h2, section
+			switch($options['content_main_position'])
 			{
-				float: right;
-				width: ".$options['content_main_width']."%;
+				default:
+				case 'right':
+					$pos_section = 'right';
+					$pos_aside = 'left';
+				break;
+
+				case 'left':
+					$pos_section = 'left';
+					$pos_aside = 'right';
+				break;
 			}
 
-			article aside, article #aside
+			if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
 			{
-				float: left;
-				width: ".(100 - 5 - $options['content_main_width'])."%;
-			}";
+				$out .= "article > div > h2, section
+				{
+					float: ".$pos_section.";
+					width: ".$options['content_main_width']."%;
+				}
+
+				article aside, article #aside
+				{
+					float: ".$pos_aside.";
+					width: ".(100 - 5 - $options['content_main_width'])."%;
+				}";
+			}
 		}
 
 	$out .= $style_desktop
