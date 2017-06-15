@@ -51,10 +51,13 @@ if(!function_exists('get_params'))
 	{
 		$options_params = array();
 
+		$arr_sidebars = wp_get_sidebars_widgets();
+
 		$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
 
 		$options_params[] = array('category' => __("Generic", 'lang_parallax'), 'id' => "mf_parallax_body");
 			$options_params[] = array('type' => "text", 'id' => "body_bg", 'title' => __("Background", 'lang_parallax'), 'default' => "#fff", 'placeholder' => $bg_placeholder);
+				$options_params[] = array('type' => "text", 'id' => 'main_padding', 'title' => __("Padding", 'lang_parallax'), 'default' => "1em 2em");
 				$options_params[] = array('type' => "font", 'id' => "body_font", 'title' => __("Font", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_color", 'title' => __("Text Color", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_link_color", 'title' => __("Link Color", 'lang_parallax'));
@@ -70,8 +73,7 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text",	'id' => "header_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
 				$options_params[] = array('type' => "checkbox", 'id' => "header_override_bg_with_page_bg", 'title' => __("Override background with page background", 'lang_parallax'), 'default' => 2);
 				$options_params[] = array('type' => "text",	'id' => "header_padding", 'title' => __("Padding", 'lang_parallax'));
-					$options_params[] = array('type' => "text",	'id' => "header_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
-
+					//$options_params[] = array('type' => "text",	'id' => "header_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
 			$options_params[] = array('category_end' => "");
 
 			$options_params[] = array('category' => __("Logo", 'lang_parallax'), 'id' => 'mf_parallax_logo');
@@ -96,13 +98,22 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
 			$options_params[] = array('category_end' => "");
 
+			if(isset($arr_sidebars['widget_pre_content']) && count($arr_sidebars['widget_pre_content']) > 0)
+			{
+				$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => 'mf_parallax_pre_content');
+					$options_params[] = array('type' => "checkbox", 'id' => 'pre_content_full_width', 'title' => __("Full Width", 'lang_parallax'), 'default' => 1);
+					$options_params[] = array('type' => "text", 'id' => 'pre_content_bg', 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
+					$options_params[] = array('type' => "text", 'id' => 'pre_content_padding', 'title' => __("Padding", 'lang_parallax'));
+				$options_params[] = array('category_end' => "");
+			}
+
 			$options_params[] = array('category' => __("Content", 'lang_parallax'), 'id' => "mf_parallax_content");
 				$options_params[] = array('type' => "checkbox", 'id' => "content_stretch_height", 'title' => __("Match Height with Screen Size", 'lang_parallax'), 'default' => 2);
 				$options_params[] = array('type' => "float", 'id' => "content_main_position", 'title' => __("Main Column Position", 'lang_parallax'), 'default' => "right");
 				$options_params[] = array('type' => "number", 'id' => "content_main_width", 'title' => __("Main Column Width", 'lang_parallax')." (%)", 'default' => "60");
-				$options_params[] = array('type' => "text", 'id' => "content_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "30px 0 20px");
-					$options_params[] = array('type' => "text",	'id' => "content_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'content_padding');
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h2", 'title' => __("Heading Margin", 'lang_parallax')." (H2)", 'default' => "3em 0 1em");
+				$options_params[] = array('type' => "text", 'id' => "content_padding", 'title' => __("Padding", 'lang_parallax')); //, 'default' => "30px 0 20px"
+					//$options_params[] = array('type' => "text",	'id' => "content_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'content_padding');
+					$options_params[] = array('type' => "text", 'id' => "heading_margin_h2", 'title' => __("Heading Margin", 'lang_parallax')." (H2)", 'default' => "0 0 1em");
 					$options_params[] = array('type' => "font", 'id' => "heading_font_h2", 'title' => __("Heading Font", 'lang_parallax')." (H2)");
 					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h2", 'title' => __("Heading Size", 'lang_parallax')." (H2)", 'default' => "2em");
 					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h2", 'title' => __("Heading Weight", 'lang_parallax')." (H2)");
@@ -128,7 +139,7 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "footer_margin", 'title' => __("Margin", 'lang_parallax')); //, 'default' => "0 0 .3em"
 				$options_params[] = array('type' => "text", 'id' => "footer_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => ".1em 0");
 				$options_params[] = array('type' => "align", 'id' => "footer_align", 'title' => __("Align", 'lang_parallax'));
-					$options_params[] = array('type' => "text",	'id' => "footer_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'footer_padding');
+					//$options_params[] = array('type' => "text",	'id' => "footer_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'footer_padding');
 					$options_params[] = array('type' => "text", 'id' => "footer_widget_padding", 'title' => __("Widget Padding", 'lang_parallax'), 'default' => ".2em");
 			$options_params[] = array('category_end' => "");
 
@@ -215,16 +226,16 @@ if(!function_exists('meta_boxes_parallax'))
 		if(get_option('show_on_front') == 'posts')
 		{
 			$arr_page_settings[] = array(
-				'name' => __("Show on page", 'lang_parallax'),
-				'id' => $meta_prefix.'show_on_page',
+				'name' => __("Show in Menu", 'lang_parallax'),
+				'id' => $meta_prefix.'show_in_menu',
 				'type' => 'select',
 				'options' => get_yes_no_for_select(),
 				'std' => 'yes',
 			);
 
 			$arr_page_settings[] = array(
-				'name' => __("Show in menu", 'lang_parallax'),
-				'id' => $meta_prefix.'show_in_menu',
+				'name' => __("Show on Page", 'lang_parallax'),
+				'id' => $meta_prefix.'show_on_page',
 				'type' => 'select',
 				'options' => get_yes_no_for_select(),
 				'std' => 'yes',
@@ -239,6 +250,20 @@ if(!function_exists('meta_boxes_parallax'))
 				'callback' => 'get_show_on_page_info',
 			);
 		}
+
+		$arr_page_settings[] = array(
+			'name' => __("Display Heading", 'lang_parallax'),
+			'id' => $meta_prefix.'display_heading',
+			'type' => 'select',
+			'options' => get_yes_no_for_select(),
+			'std' => 'yes',
+		);
+
+		$arr_page_settings[] = array(
+			'name' => __("Background Color", 'lang_parallax'),
+			'id' => $meta_prefix.'bg_color',
+			'type' => 'color',
+		);
 
 		$arr_page_settings[] = array(
 			'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
@@ -268,12 +293,6 @@ if(!function_exists('meta_boxes_parallax'))
 		$arr_page_settings[] = array(
 			'name' => __("Text Color", 'lang_parallax'),
 			'id' => $meta_prefix.'text_color',
-			'type' => 'color',
-		);
-
-		$arr_page_settings[] = array(
-			'name' => __("Background Color", 'lang_parallax'),
-			'id' => $meta_prefix.'bg_color',
 			'type' => 'color',
 		);
 
@@ -359,14 +378,14 @@ if(!function_exists('get_menu_parallax'))
 					$post_title = $post->post_title;
 					$post_name = $post->post_name;
 
-					$css_identifier = "#".$post_name;
-
 					$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
 					$post_show_in_menu = get_post_meta_or_default($post_id, $meta_prefix.'show_in_menu', true, 'yes');
 
-					if($post_show_on_page == 'yes' && $post_show_in_menu == 'yes')
+					if($post_show_in_menu == 'yes')
 					{
-						$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='/".$css_identifier."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
+						$post_url = ($post_show_on_page == 'yes' ? "/#".$post_name : get_permalink($post_id));
+
+						$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='".$post_url."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
 
 						$i++;
 					}

@@ -37,13 +37,15 @@ echo "<!DOCTYPE html>
 
 			if(is_active_sidebar('widget_pre_content'))
 			{
-				echo "<mf-pre-content>
+				list($options_params, $options) = get_params();
+
+				echo "<div id='mf-pre-content'".(isset($options['pre_content_full_width']) && $options['pre_content_full_width'] == 2 ? " class='full_width'" : "").">
 					<div>";
 
 						dynamic_sidebar('widget_pre_content');
 
 					echo "</div>
-				</mf-pre-content>";
+				</div>";
 			}
 
 			echo "<mf-content>

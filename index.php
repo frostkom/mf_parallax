@@ -7,11 +7,12 @@ get_header();
 
 	$meta_prefix = "mf_parallax_";
 
-	$result = $wpdb->get_results("SELECT ID, post_content, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
+	$result = $wpdb->get_results("SELECT ID, post_title, post_content, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
 
 	foreach($result as $post)
 	{
 		$post_id = $post->ID;
+		$post_title = $post->post_title;
 		$post_content = apply_filters('the_content', $post->post_content);
 		$post_name = $post->post_name;
 
@@ -19,6 +20,8 @@ get_header();
 
 		if($post_show_on_page == 'yes')
 		{
+			$post_display_heading = get_post_meta_or_default($post_id, $meta_prefix.'display_heading', true, 'yes');
+
 			$post_heading = get_post_meta($post_id, $meta_prefix.'heading', true);
 			$post_aside = get_post_meta($post_id, $meta_prefix.'aside', true);
 
@@ -37,8 +40,14 @@ get_header();
 						."</div>";
 					}
 
-					echo "<section>
-						<div>".$post_content."</div>
+					echo "<section>";
+
+						if($post_title != '' && $post_display_heading == 'yes')
+						{
+							echo "<h2>".$post_title."</h2>";
+						}
+
+						echo "<div>".$post_content."</div>
 					</section>
 				</div>
 			</article>";

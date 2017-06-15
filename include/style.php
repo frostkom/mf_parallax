@@ -88,7 +88,7 @@ $out .= "@media all
 		display: none;
 	}
 
-	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, button, header, nav, mf-pre-content, mf-content, article, section, footer
+	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, button, header, nav, #mf-pre-content, mf-content, article, section, footer
 	{
 		margin: 0;
 		padding: 0;
@@ -99,7 +99,7 @@ $out .= "@media all
 		.render_css(array('property' => 'color', 'value' => 'body_color'))
 	."}
 
-	div, a, p, ul, li, form, input, select, textarea, button, header, nav, mf-pre-content, mf-content, article, section, footer
+	div, a, p, ul, li, form, input, select, textarea, button, header, nav, #mf-pre-content, mf-content, article, section, footer
 	{
 		box-sizing: border-box;
 	}
@@ -169,6 +169,23 @@ $out .= "@media all
 			.render_css(array('property' => 'background', 'value' => 'body_bg'))
 		."}
 
+			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
+			{"
+				.render_css(array('property' => 'padding', 'value' => 'main_padding'))
+				."position: relative;
+			}
+
+			.full_width .widget
+			{
+				left: 50%;
+				margin-left: -50vw;
+				margin-right: -50vw;
+				position: relative;
+				right: 50%;
+				width: 100vw;
+				max-width: none;
+			}
+
 			header
 			{"
 				.render_css(array('property' => 'background', 'value' => 'header_bg'))
@@ -197,7 +214,7 @@ $out .= "@media all
 
 				header > div
 				{"
-					.render_css(array('property' => 'font-family', 'value' => 'logo_font'))
+					//.render_css(array('property' => 'font-family', 'value' => 'logo_font'))
 					.render_css(array('property' => 'padding', 'value' => 'header_padding'))
 				."}
 
@@ -246,7 +263,21 @@ $out .= "@media all
 										.render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
 									."}
 
-			article
+			#mf-pre-content
+			{"
+				.render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
+				."overflow: hidden;
+			}";
+
+				if(isset($options['pre_content_padding']) && $options['pre_content_padding'] != '')
+				{
+					$out .= "#mf-pre-content > div
+					{"
+						.render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
+					."}";
+				}
+
+			$out .= "article
 			{
 				background: 50% 0 repeat fixed;
 				background-size: 100%;";
@@ -351,7 +382,8 @@ $out .= "@media all
 			}
 
 				footer > div
-				{"
+				{
+					overflow: hidden;"
 					.render_css(array('property' => 'padding', 'value' => 'footer_padding'))
 					.render_css(array('property' => 'text-align', 'value' => 'footer_align'))
 				."}
@@ -391,7 +423,7 @@ $out .= "}
 
 		if($options['website_max_width'] > 0)
 		{
-			$out .= "header > div, mf-pre-content > div, article > div, footer > div
+			$out .= "header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
 			{
 				margin: 0 auto;
 				max-width: ".$options['website_max_width']."px;
@@ -416,13 +448,13 @@ $out .= "}
 
 			if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
 			{
-				$out .= "article > div > h2, section
+				$out .= "article > div > h2, article #aside + section
 				{
 					float: ".$pos_section.";
 					width: ".$options['content_main_width']."%;
 				}
 
-				article aside, article #aside
+				article #aside
 				{
 					float: ".$pos_aside.";
 					width: ".(100 - 5 - $options['content_main_width'])."%;
@@ -443,14 +475,14 @@ $out .= "}
 	.hide_if_mobile
 	{
 		display: none;
-	}
+	}";
 
-		header > div
+		/*header > div
 		{"
 			.render_css(array('property' => 'padding', 'value' => 'header_padding_mobile'))
-		."}
+		."}*/
 
-			#primary_nav
+			$out .= "#primary_nav
 			{"
 				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
 
@@ -513,12 +545,12 @@ $out .= "}
 					}
 				}
 
-	$out .= "article > div
+	/*article > div
 	{"
 		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
-	."}
+	."}*/
 
-	article h2, aside p.has_one_image, #aside p.has_one_image
+	$out .= "article h2, aside p.has_one_image, #aside p.has_one_image
 	{
 		text-align: center;
 	}
@@ -531,12 +563,12 @@ $out .= "}
 			aside img, #aside img
 			{"
 				.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
-			."}
+			."}";
 
-	footer > div
+	/*footer > div
 	{"
 		.render_css(array('property' => 'padding', 'value' => 'footer_padding_mobile'))
-	."}";
+	."}*/
 
 	if(isset($options['custom_css_mobile']) && $options['custom_css_mobile'] != '')
 	{

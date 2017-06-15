@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 12:18+0100\n"
+"POT-Creation-Date: 2017-06-15 09:13+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -58,8 +58,8 @@ msgstr "Allmänt"
 #: ../include/functions.php:57
 #: ../include/functions.php:70
 #: ../include/functions.php:124
-#: ../include/functions.php:244
-#: ../include/functions.php:250
+#: ../include/functions.php:252
+#: ../include/functions.php:258
 msgid "Background"
 msgstr "Bakgrund"
 
@@ -73,7 +73,7 @@ msgstr "Typsnitt"
 #: ../include/functions.php:83
 #: ../include/functions.php:94
 #: ../include/functions.php:95
-#: ../include/functions.php:269
+#: ../include/functions.php:277
 msgid "Text Color"
 msgstr "Textfärg"
 
@@ -108,7 +108,7 @@ msgstr "Brytpunkt"
 #: ../include/functions.php:104
 #: ../include/functions.php:131
 #: ../include/functions.php:137
-#: ../include/functions.php:250
+#: ../include/functions.php:258
 msgid "Mobile"
 msgstr "Mobil"
 
@@ -277,55 +277,59 @@ msgid "Aside"
 msgstr "Sidokolumn"
 
 #: ../include/functions.php:218
-msgid "Show on page"
-msgstr "Visa på sida"
-
-#: ../include/functions.php:226
-msgid "Show in menu"
+msgid "Show in Menu"
 msgstr "Visa i meny"
 
+#: ../include/functions.php:226
+msgid "Show on Page"
+msgstr "Visa på sida"
+
 #: ../include/functions.php:244
+msgid "Display Heading"
+msgstr "Visa rubrik"
+
+#: ../include/functions.php:252
 msgid "Desktop"
 msgstr "Datorskärm"
 
-#: ../include/functions.php:256
+#: ../include/functions.php:264
 msgid "Repeat Image"
 msgstr "Repetera bild"
 
-#: ../include/functions.php:260
+#: ../include/functions.php:268
 msgid "Choose here"
 msgstr "Välj här"
 
-#: ../include/functions.php:261
+#: ../include/functions.php:269
 msgid "No"
 msgstr "Nej"
 
-#: ../include/functions.php:263
-#: ../include/functions.php:264
+#: ../include/functions.php:271
+#: ../include/functions.php:272
 msgid "Yes"
 msgstr "Ja"
 
-#: ../include/functions.php:263
+#: ../include/functions.php:271
 msgid "Horizontal"
 msgstr "Horisontellt"
 
-#: ../include/functions.php:264
+#: ../include/functions.php:272
 msgid "Vertical"
 msgstr "Vertikalt"
 
-#: ../include/functions.php:275
+#: ../include/functions.php:283
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../include/functions.php:282
+#: ../include/functions.php:290
 msgid "Settings"
 msgstr "Inställningar"
 
-#: ../include/functions.php:308
+#: ../include/functions.php:316
 msgid "Site logo"
 msgstr "Logga för webbsida"
 
-#: ../include/functions.php:313
+#: ../include/functions.php:321
 msgid "Site mobile logo"
 msgstr "Logga för mobiler"
 
@@ -538,10 +542,6 @@ msgstr "Under huvudkolumn"
 #: ../../mf_theme/include/functions.php:348
 msgid "Right"
 msgstr "Höger"
-
-#: ../../mf_theme/include/functions.php:396
-msgid "Display Heading"
-msgstr "Visa rubrik"
 
 #: ../../mf_theme/include/functions.php:403
 msgid "Text Columns"

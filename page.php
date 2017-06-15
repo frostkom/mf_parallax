@@ -8,17 +8,21 @@ get_header();
 
 	if(have_posts())
 	{
+		$meta_prefix = "mf_parallax_";
+
 		while(have_posts())
 		{
 			the_post();
 
 			$post_id = $post->ID;
-			//$post_title = $post->post_title;
+			$post_title = $post->post_title;
 			$post_content = apply_filters('the_content', $post->post_content);
 			$post_name = $post->post_name;
 
-			$post_heading = get_post_meta($post_id, 'mf_parallax_heading', true);
-			$post_aside = get_post_meta($post_id, 'mf_parallax_aside', true);
+			$post_display_heading = get_post_meta_or_default($post_id, $meta_prefix.'display_heading', true, 'yes');
+
+			$post_heading = get_post_meta($post_id, $meta_prefix.'heading', true);
+			$post_aside = get_post_meta($post_id, $meta_prefix.'aside', true);
 
 			echo "<article id='".$post_name."'>
 				<div>";
@@ -37,10 +41,10 @@ get_header();
 
 					echo "<section>";
 
-						/*if($post_title != '')
+						if($post_title != '' && $post_display_heading == 'yes')
 						{
 							echo "<h2>".$post_title."</h2>";
-						}*/
+						}
 
 						echo "<div>".$post_content."</div>
 					</section>
