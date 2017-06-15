@@ -208,11 +208,11 @@ if(!function_exists('meta_boxes_parallax'))
 			'context' => 'after_title',
 			'priority' => 'low',
 			'fields' => array(
-				array(
+				/*array(
 					'name' => __("Heading", 'lang_parallax'),
 					'id'   => $meta_prefix.'heading',
 					'type' => 'text'
-				),
+				),*/
 				array(
 					'name' => __("Aside", 'lang_parallax'),
 					'id'   => $meta_prefix.'aside',

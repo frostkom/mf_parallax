@@ -22,23 +22,16 @@ get_header();
 		{
 			$post_display_heading = get_post_meta_or_default($post_id, $meta_prefix.'display_heading', true, 'yes');
 
-			$post_heading = get_post_meta($post_id, $meta_prefix.'heading', true);
+			//$post_heading = get_post_meta($post_id, $meta_prefix.'heading', true);
 			$post_aside = get_post_meta($post_id, $meta_prefix.'aside', true);
 
 			echo "<article id='".$post_name."'>
 				<div>";
 
-					if($post_heading != '')
+					/*if($post_heading != '')
 					{
 						echo "<h2>".$post_heading."</h2>";
-					}
-
-					if($post_aside != '')
-					{
-						echo "<div id='aside'>"
-							.apply_filters('the_content', $post_aside)
-						."</div>";
-					}
+					}*/
 
 					echo "<section>";
 
@@ -48,8 +41,16 @@ get_header();
 						}
 
 						echo "<div>".$post_content."</div>
-					</section>
-				</div>
+					</section>";
+
+					if($post_aside != '')
+					{
+						echo "<div id='aside'>"
+							.apply_filters('the_content', $post_aside)
+						."</div>";
+					}
+
+				echo "</div>
 			</article>";
 		}
 	}

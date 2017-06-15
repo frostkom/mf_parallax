@@ -336,7 +336,7 @@ $out .= "@media all
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
 					."}
 
-					article aside p, article #aside p
+					article #aside p
 					{"
 						.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
 					."}
@@ -430,37 +430,87 @@ $out .= "}
 			}";
 		}
 
-		if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
-		{
-			switch($options['content_main_position'])
+			if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
 			{
-				default:
-				case 'right':
-					$pos_section = 'right';
-					$pos_aside = 'left';
-				break;
-
-				case 'left':
-					$pos_section = 'left';
-					$pos_aside = 'right';
-				break;
-			}
-
-			if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
-			{
-				$out .= "article > div > h2, article #aside + section
+				switch($options['content_main_position'])
 				{
-					float: ".$pos_section.";
-					width: ".$options['content_main_width']."%;
+					default:
+					case 'right':
+						$pos_section = 'right';
+						$pos_aside = 'left';
+
+						$order_section = 2;
+						$order_aside = 1;
+
+						$margin_aside = "0 5% 0 0";
+					break;
+
+					case 'left':
+						$pos_section = 'left';
+						$pos_aside = 'right';
+
+						$order_section = 1;
+						$order_aside = 2;
+
+						$margin_aside = "0 0 0 5%";
+					break;
 				}
 
-				article #aside
+				if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
 				{
-					float: ".$pos_aside.";
-					width: ".(100 - 5 - $options['content_main_width'])."%;
-				}";
+					$width_section = $options['content_main_width'];
+					$width_aside = 100 - 5 - $options['content_main_width'];
+
+					/*$out .= "article > div > h2, article #aside + section
+					{
+						float: ".$pos_section.";
+						width: ".$width_section."%;
+					}
+
+					article #aside
+					{
+						float: ".$pos_aside.";
+						width: ".$width_aside."%;
+					}";*/
+
+					$out .= "article > div
+					{
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+					}
+					
+						article section
+						{
+							-webkit-box-flex: 1 1 ".$width_section."%;
+							-webkit-flex: 1 1 ".$width_section."%;
+							-ms-flex: 1 1 ".$width_section."%;
+							flex: 1 1 ".$width_section."%;
+							-webkit-box-ordinal-group: ".$order_section.";
+							-webkit-order: ".$order_section.";
+							-ms-flex-order: ".$order_section.";
+							order: ".$order_section.";
+							float: ".$pos_section.";
+							min-width: ".$width_section."%;
+						}
+
+						article #aside
+						{
+							-webkit-box-flex: 1 1 ".$width_aside."%;
+							-webkit-flex: 1 1 ".$width_aside."%;
+							-ms-flex: 1 1 ".$width_aside."%;
+							flex: 1 1 ".$width_aside."%;
+							-webkit-box-ordinal-group: ".$order_aside.";
+							-webkit-order: ".$order_aside.";
+							-ms-flex-order: ".$order_aside.";
+							order: ".$order_aside.";
+							float: ".$pos_aside.";
+							margin: ".$margin_aside.";
+							min-width: ".$width_aside."%;
+						}";
+				}
 			}
-		}
 
 	$out .= $style_desktop
 ."}
@@ -545,25 +595,26 @@ $out .= "}
 					}
 				}
 
-	/*article > div
-	{"
-		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
-	."}*/
-
-	$out .= "article h2, aside p.has_one_image, #aside p.has_one_image
+	$out .= "article > div
 	{
-		text-align: center;
-	}
+		display: block;"
+		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
+	."}
 
-		article aside, article #aside
+		article h2, #aside p.has_one_image
 		{
-			margin-bottom: 3em;
+			text-align: center;
 		}
 
-			aside img, #aside img
-			{"
-				.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
-			."}";
+			article #aside
+			{
+				margin-bottom: 3em;
+			}
+
+				aside img, #aside img
+				{"
+					.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
+				."}";
 
 	/*footer > div
 	{"
@@ -589,7 +640,7 @@ $out .= "}
 		background: none;
 	}
 
-	header, aside, #aside, footer
+	header, #aside, footer
 	{
 		display: none;
 	}
