@@ -78,11 +78,14 @@ if(!function_exists('get_params'))
 
 			$options_params[] = array('category' => __("Logo", 'lang_parallax'), 'id' => 'mf_parallax_logo');
 				$options_params[] = array('type' => "image", 'id' => "header_logo", 'title' => __("Image", 'lang_parallax'));
-					$options_params[] = array('type' => "image", 'id' => "header_mobile_logo", 'title' => __("Image", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'header_logo');
-					$options_params[] = array('type' => "text",	'id' => "logo_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "1.5em 1em");
-					$options_params[] = array('type' => "font",	'id' => "logo_font", 'title' => __("Font", 'lang_parallax'), 'hide_if' => 'header_logo');
-					$options_params[] = array('type' => "text", 'id' => "logo_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => "3em", 'hide_if' => 'header_logo');
-					$options_params[] = array('type' => "color", 'id' => "logo_color", 'title' => __("Text Color", 'lang_parallax'), 'hide_if' => 'header_logo');
+					$options_params[] = array('type' => "float", 'id' => 'logo_float', 'title' => __("Position", 'lang_parallax'), 'default' => 'left', 'show_if' => 'header_logo');
+					$options_params[] = array('type' => "text", 'id' => 'logo_width', 'title' => __("Width", 'lang_parallax'), 'show_if' => 'header_logo');
+				$options_params[] = array('type' => "image", 'id' => "header_mobile_logo", 'title' => __("Image", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'header_logo');
+					$options_params[] = array('type' => "text", 'id' => 'logo_width_mobile', 'title' => __("Width", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")");
+				$options_params[] = array('type' => "text",	'id' => "logo_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "1.5em 1em");
+				$options_params[] = array('type' => "font",	'id' => "logo_font", 'title' => __("Font", 'lang_parallax'), 'hide_if' => 'header_logo');
+				$options_params[] = array('type' => "text", 'id' => "logo_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => "3em", 'hide_if' => 'header_logo');
+				$options_params[] = array('type' => "color", 'id' => "logo_color", 'title' => __("Text Color", 'lang_parallax'), 'hide_if' => 'header_logo');
 			$options_params[] = array('category_end' => "");
 
 			$options_params[] = array('category' => __("Navigation", 'lang_parallax'), 'id' => "mf_parallax_navigation");
@@ -113,22 +116,31 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "number", 'id' => "content_main_width", 'title' => __("Main Column Width", 'lang_parallax')." (%)", 'default' => "60");
 				$options_params[] = array('type' => "text", 'id' => "content_padding", 'title' => __("Padding", 'lang_parallax')); //, 'default' => "30px 0 20px"
 					//$options_params[] = array('type' => "text",	'id' => "content_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'content_padding');
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h2", 'title' => __("Heading Margin", 'lang_parallax')." (H2)", 'default' => "0 0 1em");
-					$options_params[] = array('type' => "font", 'id' => "heading_font_h2", 'title' => __("Heading Font", 'lang_parallax')." (H2)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h2", 'title' => __("Heading Size", 'lang_parallax')." (H2)", 'default' => "2em");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h2", 'title' => __("Heading Weight", 'lang_parallax')." (H2)");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h3", 'title' => __("Heading Margin", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h3", 'title' => __("Heading Size", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h3", 'title' => __("Heading Weight", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h4", 'title' => __("Heading Margin", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h4", 'title' => __("Heading Size", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h4", 'title' => __("Heading Weight", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h5", 'title' => __("Heading Margin", 'lang_parallax')." (H5)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h5", 'title' => __("Heading Size", 'lang_parallax')." (H5)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h5", 'title' => __("Heading Weight", 'lang_parallax')." (H5)");
+			$options_params[] = array('category_end' => "");
+
+				$options_params[] = array('category' => " - ".__("Headings", 'lang_parallax'), 'id' => 'mf_parallax_content_heading');
+					$options_params[] = array('type' => "text", 'id' => "heading_margin_h2", 'title' => __("Margin", 'lang_parallax')." (H2)", 'default' => "0 0 1em");
+					$options_params[] = array('type' => "font", 'id' => "heading_font_h2", 'title' => __("Font", 'lang_parallax')." (H2)");
+					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h2", 'title' => __("Size", 'lang_parallax')." (H2)", 'default' => "2em");
+					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h2", 'title' => __("Weight", 'lang_parallax')." (H2)");
+					$options_params[] = array('type' => "text", 'id' => "heading_margin_h3", 'title' => __("Margin", 'lang_parallax')." (H3)");
+					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h3", 'title' => __("Size", 'lang_parallax')." (H3)");
+					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h3", 'title' => __("Weight", 'lang_parallax')." (H3)");
+					$options_params[] = array('type' => "text", 'id' => "heading_margin_h4", 'title' => __("Margin", 'lang_parallax')." (H4)");
+					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h4", 'title' => __("Size", 'lang_parallax')." (H4)");
+					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h4", 'title' => __("Weight", 'lang_parallax')." (H4)");
+					$options_params[] = array('type' => "text", 'id' => "heading_margin_h5", 'title' => __("Margin", 'lang_parallax')." (H5)");
+					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h5", 'title' => __("Size", 'lang_parallax')." (H5)");
+					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h5", 'title' => __("Weight", 'lang_parallax')." (H5)");
+				$options_params[] = array('category_end' => "");
+
+				$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
 					$options_params[] = array('type' => "text", 'id' => "section_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Content", 'lang_parallax').")", 'default' => "1.6em");
 					$options_params[] = array('type' => "text", 'id' => "quote_size", 'title' => __("Quote Size", 'lang_parallax'));
-					$options_params[] = array('type' => "text", 'id' => "aside_p", 'title' => __("Aside Paragraph Size", 'lang_parallax'));
+				$options_params[] = array('category_end' => "");
+
+			$options_params[] = array('category' => __("Aside", 'lang_parallax'), 'id' => 'mf_parallax_aside');
+				$options_params[] = array('type' => "text", 'id' => "aside_p", 'title' => __("Paragraph Size", 'lang_parallax'));
 			$options_params[] = array('category_end' => "");
 
 			$options_params[] = array('category' => __("Footer", 'lang_parallax'), 'id' => "mf_parallax_footer");

@@ -221,10 +221,12 @@ $out .= "@media all
 					header h1, #site_logo
 					{"
 						.render_css(array('property' => 'color', 'value' => 'logo_color'))
-						."float: left;"
+						."display: block;"
+						.render_css(array('property' => 'float', 'value' => 'logo_float'))
 						.render_css(array('property' => 'font-family', 'value' => 'logo_font'))
 						.render_css(array('property' => 'font-size', 'value' => 'logo_font_size'))
 						.render_css(array('property' => 'padding', 'value' => 'logo_padding'))
+						.render_css(array('property' => 'max-width', 'value' => 'logo_width'))
 					."}
 
 					#primary_nav
@@ -318,14 +320,15 @@ $out .= "@media all
 					{"
 						.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
-						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
 						.render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
+						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
 					."}
 
 					article h4
 					{"
 						.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h4'))
+						.render_css(array('property' => 'margin', 'value' => 'heading_margin_h4'))
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h4'))
 					."}
 
@@ -333,6 +336,7 @@ $out .= "@media all
 					{"
 						.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h5'))
+						.render_css(array('property' => 'margin', 'value' => 'heading_margin_h5'))
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
 					."}
 
@@ -362,7 +366,7 @@ $out .= "@media all
 							margin-bottom: .5em;
 						}
 
-						section blockquote
+						article blockquote
 						{"
 							.render_css(array('property' => 'font-size', 'value' => 'quote_size'))
 							."margin-left: 0;
@@ -442,7 +446,8 @@ $out .= "}
 						$order_section = 2;
 						$order_aside = 1;
 
-						$margin_aside = "0 5% 0 0";
+						$margin_aside = "0 2.5% 0 0";
+						$padding_aside = "0 2.5% 0 0";
 					break;
 
 					case 'left':
@@ -452,7 +457,8 @@ $out .= "}
 						$order_section = 1;
 						$order_aside = 2;
 
-						$margin_aside = "0 0 0 5%";
+						$margin_aside = "0 0 0 2.5%";
+						$padding_aside = "0 0 0 2.5%";
 					break;
 				}
 
@@ -507,6 +513,7 @@ $out .= "}
 							order: ".$order_aside.";
 							float: ".$pos_aside.";
 							margin: ".$margin_aside.";
+							padding: ".$padding_aside.";
 							min-width: ".$width_aside."%;
 						}";
 				}
@@ -532,7 +539,12 @@ $out .= "}
 			.render_css(array('property' => 'padding', 'value' => 'header_padding_mobile'))
 		."}*/
 
-			$out .= "#primary_nav
+			$out .= "header h1, #site_logo
+			{"
+				.render_css(array('property' => 'max-width', 'value' => 'logo_width_mobile'))
+			."}
+			
+			#primary_nav
 			{"
 				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
 
