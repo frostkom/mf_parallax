@@ -88,7 +88,7 @@ $out .= "@media all
 		display: none;
 	}
 
-	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, button, header, nav, #mf-pre-content, mf-content, article, section, footer
+	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, button, header, nav, #mf-pre-content, mf-content, article, section, blockquote, footer
 	{
 		margin: 0;
 		padding: 0;
@@ -99,7 +99,7 @@ $out .= "@media all
 		.render_css(array('property' => 'color', 'value' => 'body_color'))
 	."}
 
-	div, a, p, ul, li, form, input, select, textarea, button, header, nav, #mf-pre-content, mf-content, article, section, footer
+	div, a, p, ul, li, form, input, select, textarea, button, header, nav, #mf-pre-content, mf-content, article, section, blockquote, footer
 	{
 		box-sizing: border-box;
 	}

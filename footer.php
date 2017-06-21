@@ -8,7 +8,7 @@
 
 			if(is_active_sidebar('widget_footer'))
 			{
-				echo "<footer>
+				echo "<footer id='footer'>
 					<div>";
 
 						dynamic_sidebar('widget_footer');
