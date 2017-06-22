@@ -101,12 +101,25 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
 			$options_params[] = array('category_end' => "");
 
+			if(isset($arr_sidebars['widget_slide']) && count($arr_sidebars['widget_slide']) > 0)
+			{
+				$options_params[] = array('category' => " - ".__("Slide Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_slide');
+					$options_params[] = array('type' => "text", 'id' => 'slide_nav_link_padding', 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1.5em 1em 1em");
+					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg', 'title' => __("Background", 'lang_parallax'), 'default' => "#fff");
+					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg_hover', 'title' => " - ".__("Background", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'slide_nav_bg');
+					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color', 'title' => __("Text Color", 'lang_parallax'));
+					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color_hover', 'title' => " - ".__("Text Color", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'slide_nav_color');
+					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color_current', 'title' => __("Text Color", 'lang_parallax')." (".__("Current", 'lang_parallax').")");
+				$options_params[] = array('category_end' => "");
+			}
+
 			if(isset($arr_sidebars['widget_pre_content']) && count($arr_sidebars['widget_pre_content']) > 0)
 			{
 				$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => 'mf_parallax_pre_content');
 					$options_params[] = array('type' => "checkbox", 'id' => 'pre_content_full_width', 'title' => __("Full Width", 'lang_parallax'), 'default' => 1);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_bg', 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_padding', 'title' => __("Padding", 'lang_parallax'));
+					//$options_params[] = array('type' => "text", 'id' => "pre_content_size", 'title' => __("Font Size", 'lang_parallax'));
 				$options_params[] = array('category_end' => "");
 			}
 
@@ -136,6 +149,8 @@ if(!function_exists('get_params'))
 
 				$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
 					$options_params[] = array('type' => "text", 'id' => "section_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Content", 'lang_parallax').")", 'default' => "1.6em");
+					$options_params[] = array('type' => "text", 'id' => 'section_line_height', 'title' => __("Line Height", 'lang_parallax'), 'default' => "1.5");
+					$options_params[] = array('type' => "text", 'id' => 'section_margin', 'title' => __("Margin", 'lang_parallax'));
 					$options_params[] = array('type' => "text", 'id' => "quote_size", 'title' => __("Quote Size", 'lang_parallax'));
 				$options_params[] = array('category_end' => "");
 
@@ -168,6 +183,8 @@ if(!function_exists('widgets_parallax'))
 {
 	function widgets_parallax()
 	{
+		$arr_sidebars = wp_get_sidebars_widgets();
+
 		register_sidebar(array(
 			'name' => __("Header", 'lang_parallax'),
 			'id' => 'widget_header',
@@ -176,6 +193,18 @@ if(!function_exists('widgets_parallax'))
 			'after_title' => '</div>',
 			'after_widget' => ""
 		));
+
+		if(isset($arr_sidebars['widget_header']) && count($arr_sidebars['widget_header']) > 0)
+		{
+			register_sidebar(array(
+				'name' => __("Slide menu", 'lang_parallax'),
+				'id' => 'widget_slide',
+				'before_widget' => "",
+				'before_title' => "",
+				'after_title' => "",
+				'after_widget' => ""
+			));
+		}
 
 		register_sidebar(array(
 			'name' => __("Pre Content", 'lang_parallax'),
@@ -366,58 +395,98 @@ if(!function_exists('get_logo_parallax'))
 
 if(!function_exists('get_menu_parallax'))
 {
-	function get_menu_parallax()
+	function get_menu_parallax($data = array())
 	{
 		global $wpdb;
 
+		if(!isset($data['where'])){		$data['where'] = "";}
+		if(!isset($data['type'])){		$data['type'] = "";}
+
 		$out = "";
 
-		$nav_content = "";
-
-		if(get_option('show_on_front') == 'posts')
+		if($data['type'] == 'slide')
 		{
-			$nav_content .= "<ul id='menu-main-menu'>";
-
-				$result = $wpdb->get_results("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
-
-				$i = 0;
-
-				$meta_prefix = "mf_parallax_";
-
-				foreach($result as $post)
-				{
-					$post_id = $post->ID;
-					$post_title = $post->post_title;
-					$post_name = $post->post_name;
-
-					$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
-					$post_show_in_menu = get_post_meta_or_default($post_id, $meta_prefix.'show_in_menu', true, 'yes');
-
-					if($post_show_in_menu == 'yes')
-					{
-						$post_url = ($post_show_on_page == 'yes' ? "/#".$post_name : get_permalink($post_id));
-
-						$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='".$post_url."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
-
-						$i++;
-					}
-				}
-
-			$nav_content .= "</ul>";
+			$out .= "<nav>
+				<a href='#' id='slide_nav'>
+					<i class='fa fa-bars'></i>
+				</a>
+			</nav>"; //".__("Menu", 'lang_parallax')." 
 		}
 
 		else
 		{
-			$nav_content = wp_nav_menu(array('theme_location' => 'primary', 'menu' => 'Main', 'container' => "div", 'container_override' => false, 'echo' => false));
-		}
+			if(in_array($data['type'], array('', 'secondary', 'both')))
+			{
+				$nav_content = wp_nav_menu(array('theme_location' => 'secondary', 'menu' => 'Secondary', 'container' => "div", 'container_override' => false, 'fallback_cb' => false, 'echo' => false));
 
-		if($nav_content != '')
-		{
-			$out .= "<nav id='primary_nav' class='is_mobile_ready'>
-				<i class='fa fa-bars toggle_icon'></i>
-				<i class='fa fa-close toggle_icon'></i>"
-				.$nav_content
-			."</nav>";
+				if($nav_content != '')
+				{
+					$out .= "<nav id='secondary_nav' class='theme_nav is_mobile_ready'>"
+						.$nav_content
+					."</nav>";
+				}
+			}
+
+			if(in_array($data['type'], array('', 'main', 'both')))
+			{
+				$nav_content = "";
+
+				if(get_option('show_on_front') == 'posts')
+				{
+					$nav_content .= "<ul id='menu-main-menu'>";
+
+						$result = $wpdb->get_results("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
+
+						$i = 0;
+
+						$meta_prefix = "mf_parallax_";
+
+						foreach($result as $post)
+						{
+							$post_id = $post->ID;
+							$post_title = $post->post_title;
+							$post_name = $post->post_name;
+
+							$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
+							$post_show_in_menu = get_post_meta_or_default($post_id, $meta_prefix.'show_in_menu', true, 'yes');
+
+							if($post_show_in_menu == 'yes')
+							{
+								$post_url = ($post_show_on_page == 'yes' ? "/#".$post_name : get_permalink($post_id));
+
+								$nav_content .= "<li class='page_item page-item-".$post_id.($i == 0 ? " current_page_item" : "")."'><a href='".$post_url."'>".($post_title == "" ? "&nbsp;" : $post_title)."</a></li>";
+
+								$i++;
+							}
+						}
+
+					$nav_content .= "</ul>";
+				}
+
+				else
+				{
+					$nav_content = wp_nav_menu(array('theme_location' => 'primary', 'menu' => 'Main', 'container' => "div", 'container_override' => false, 'echo' => false));
+				}
+
+				if($nav_content != '')
+				{
+					if($data['where'] == 'widget_slide')
+					{
+						$out .= "<nav id='primary_nav' class='theme_nav'>"
+							.$nav_content
+						."</nav>";
+					}
+
+					else
+					{
+						$out .= "<nav id='primary_nav' class='is_mobile_ready'>
+							<i class='fa fa-bars toggle_icon'></i>
+							<i class='fa fa-close toggle_icon'></i>"
+							.$nav_content
+						."</nav>";
+					}
+				}
+			}
 		}
 
 		return $out;

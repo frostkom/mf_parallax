@@ -11,7 +11,7 @@ class widget_parallax_logo extends WP_Widget
 
 		$control_ops = array('id_base' => 'parallax-logo-widget');
 
-		parent::__construct('parallax-logo-widget', __("Theme Logo", 'lang_parallax'), $widget_ops, $control_ops);
+		parent::__construct('parallax-logo-widget', __("Logo", 'lang_parallax'), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -54,7 +54,7 @@ class widget_parallax_menu extends WP_Widget
 
 		$control_ops = array('id_base' => 'parallax-menu-widget');
 
-		parent::__construct('parallax-menu-widget', __("Theme Menu", 'lang_parallax'), $widget_ops, $control_ops);
+		parent::__construct('parallax-menu-widget', __("Menu", 'lang_parallax'), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -62,7 +62,7 @@ class widget_parallax_menu extends WP_Widget
 		extract($args);
 
 		echo $before_widget
-			.get_menu_parallax()
+			.get_menu_parallax(array('type' => $instance['theme_menu_type'], 'where' => $id))
 		.$after_widget;
 	}
 
@@ -70,7 +70,7 @@ class widget_parallax_menu extends WP_Widget
 	{
 		$instance = $old_instance;
 
-		//$instance[''] = strip_tags($new_instance['']);
+		$instance['theme_menu_type'] = strip_tags($new_instance['theme_menu_type']);
 
 		return $instance;
 	}
@@ -78,10 +78,12 @@ class widget_parallax_menu extends WP_Widget
 	function form($instance)
 	{
 		$defaults = array(
-			//'' => "",
+			'theme_menu_type' => "",
 		);
 		$instance = wp_parse_args((array)$instance, $defaults);
 
-		echo "<p>".__("No need for settings here, we'll take care of the rest", 'lang_parallax')."</p>";
+		echo "<div class='mf_form'>"
+			.show_select(array('data' => get_menu_type_for_select(), 'name' => $this->get_field_name('theme_menu_type'), 'text' => __("Menu Type", 'lang_theme'), 'value' => $instance['theme_menu_type']))
+		."</div>";
 	}
 }

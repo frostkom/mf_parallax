@@ -28,12 +28,24 @@ echo "<!DOCTYPE html>
 						list($options_params, $options) = get_params();
 
 						echo get_logo_parallax($options)
-						.get_menu_parallax();
+						.get_menu_parallax(array('where' => 'header'));
 					}
 
 					echo "<div class='clear'></div>
 				</div>
 			</header>";
+
+			if(is_active_sidebar('widget_slide'))
+			{
+				echo "<mf-slide-nav>
+					<div>
+						<i class='fa fa-close'></i>";
+
+						dynamic_sidebar('widget_slide');
+
+					echo "</div>
+				</mf-slide-nav>";
+			}
 
 			if(is_active_sidebar('widget_pre_content'))
 			{
