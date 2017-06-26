@@ -61,6 +61,8 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "font", 'id' => "body_font", 'title' => __("Font", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_color", 'title' => __("Text Color", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_link_color", 'title' => __("Link Color", 'lang_parallax'));
+				$options_params[] = array('type' => "color", 'id' => 'button_color', 'title' => __("Button Color", 'lang_parallax'));
+					$options_params[] = array('type' => "color", 'id' => 'button_color_hover', 'title' => " - ".__("Button Color", 'lang_parallax')." (".__("Hover", 'lang_theme').")", 'show_if' => 'button_color');
 				$options_params[] = array('type' => "number", 'id' => "website_max_width", 'title' => __("Max Width", 'lang_parallax'), 'default' => "1100");
 				$options_params[] = array('type' => "text", 'id' => "body_desktop_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => ".625em", 'show_if' => "body_font_size");
 				$options_params[] = array('type' => "number", 'id' => "mobile_breakpoint", 'title' => __("Breakpoint", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "600");
@@ -103,6 +105,11 @@ if(!function_exists('get_params'))
 
 			if(isset($arr_sidebars['widget_slide']) && count($arr_sidebars['widget_slide']) > 0)
 			{
+				$options_params[] = array('category' => " - ".__("Mobile Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_hamburger');
+					$options_params[] = array('type' => "text", 'id' => 'hamburger_font_size', 'title' => __("Size", 'lang_parallax'), 'default' => "2.5em");
+					$options_params[] = array('type' => "text", 'id' => 'hamburger_margin', 'title' => __("Margin", 'lang_parallax'), 'default' => "1em .8em");
+				$options_params[] = array('category_end' => "");
+
 				$options_params[] = array('category' => " - ".__("Slide Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_slide');
 					$options_params[] = array('type' => "text", 'id' => 'slide_nav_link_padding', 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1.5em 1em 1em");
 					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg', 'title' => __("Background", 'lang_parallax'), 'default' => "#fff");
@@ -408,7 +415,7 @@ if(!function_exists('get_menu_parallax'))
 		{
 			$out .= "<nav>
 				<a href='#' id='slide_nav'>
-					<i class='fa fa-bars'></i>
+					<i class='fa fa-bars toggle_icon'></i>
 				</a>
 			</nav>"; //".__("Menu", 'lang_parallax')." 
 		}

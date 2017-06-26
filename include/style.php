@@ -83,67 +83,45 @@ foreach($result as $post)
 
 $out .= "@media all
 {
-	body:before
-	{
-		display: none;
-	}
-
-	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, button, header, nav, #mf-pre-content, mf-content, article, section, blockquote, footer
-	{
-		margin: 0;
-		padding: 0;
-	}
-
 	body, textarea
 	{"
 		.render_css(array('property' => 'color', 'value' => 'body_color'))
 	."}
 
-	div, a, p, ul, li, form, input, select, textarea, button, header, nav, #mf-pre-content, mf-content, article, section, blockquote, footer
-	{
-		box-sizing: border-box;
-	}
+	p a
+	{"
+		.render_css(array('property' => 'color', 'value' => 'body_link_color'))
+	."}
 
-	a
-	{
-		color: inherit;
-		text-decoration: none;
-	}
-
-		p a
+	#wrapper button, #wrapper .button
+	{";
+		if(isset($options['button_color']) && $options['button_color'] != '')
 		{
-			text-decoration: underline;"
-			.render_css(array('property' => 'color', 'value' => 'body_link_color'))
+			$out .= render_css(array('property' => 'background', 'value' => 'button_color'));
+		}
+
+		else
+		{
+			$out .= render_css(array('property' => 'background', 'value' => 'nav_color_hover'));
+		}
+
+		$out .= "color: #fff;"
+	."}
+
+		#wrapper button:hover, #wrapper .button:hover
+		{"
+			.render_css(array('property' => 'background', 'value' => 'button_color_hover'))
 		."}
 
-	img
-	{
-		border: 0;
-		max-width: 100%;
-	}
+		#wrapper button.button-secondary
+		{
+			background: #999;
+		}
 
-	.clear
-	{
-		clear: both;
-	}
-
-	.aligncenter
-	{
-		margin: .5em 0;
-		text-align: center;
-	}
-
-	.alignleft
-	{
-		float: left;
-		margin: .5em 1em .5em 0;
-	}
-
-	.alignright
-	{
-		float: right;
-		margin: .5em 0 .5em 1em;
-	}
+			#wrapper button.button-secondary:hover
+			{
+				background: #aaa;
+			}
 
 	html
 	{
@@ -264,6 +242,29 @@ $out .= "@media all
 									{"
 										.render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
 									."}
+
+					#slide_nav > .toggle_icon
+					{"
+						.render_css(array('property' => 'color', 'value' => 'logo_color'))
+						."display: block;";
+
+						if(isset($options['hamburger_font_size']) && $options['hamburger_font_size'] != '')
+						{
+							$out .= render_css(array('property' => 'font-size', 'value' => 'hamburger_font_size'));
+						}
+
+						else
+						{
+							$out .= render_css(array('property' => 'font-size', 'value' => 'logo_font_size'));
+						}
+
+						$out .= "margin: .1em .2em;"
+						.render_css(array('property' => 'padding', 'value' => 'hamburger_margin'))
+						."position: absolute;
+						right: 0;
+						top: 0;
+						z-index: 1;
+					}
 
 			#mf-pre-content
 			{"
