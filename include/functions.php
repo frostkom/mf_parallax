@@ -225,7 +225,7 @@ if(!function_exists('widgets_parallax'))
 		register_sidebar(array(
 			'name' => __("Footer", 'lang_parallax'),
 			'id' => 'widget_footer',
-			'before_widget' => "<div class='widget'>",
+			'before_widget' => "<div class='widget %s %s'>",
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
 			'after_widget' => '</div>'

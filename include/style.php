@@ -511,7 +511,7 @@ $out .= "}
 {
 	body:before
 	{
-		content: 'desktop';
+		content: 'tablet';
 	}
 
 	.show_if_mobile
@@ -524,14 +524,14 @@ $out .= "}
 		.render_css(array('property' => 'font-size', 'value' => 'body_desktop_font_size'))
 	."}";
 
-		if($options['website_max_width'] > 0)
+		/*if($options['website_max_width'] > 0)
 		{
 			$out .= "header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
 			{
 				margin: 0 auto;
 				max-width: ".$options['website_max_width']."px;
 			}";
-		}
+		}*/
 
 			if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
 			{
@@ -737,9 +737,26 @@ $out .= "}
 		$out .= $options['custom_css_mobile'];
 	}
 
-$out .= "}
+$out .= "}";
 
-@media print
+if(isset($options['website_max_width']) && $options['website_max_width'] > 0)
+{
+	$out .= "@media (min-width: ".$options['website_max_width']."px)
+	{
+		body:before
+		{
+			content: 'desktop';
+		}
+
+			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
+			{
+				margin: 0 auto;
+				max-width: ".$options['website_max_width']."px;
+			}
+	}";
+}
+
+$out .= "@media print
 {
 	body:before
 	{
