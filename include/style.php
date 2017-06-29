@@ -260,9 +260,20 @@ $out .= "@media all
 
 						$out .= "margin: .1em .2em;"
 						.render_css(array('property' => 'padding', 'value' => 'hamburger_margin'))
-						."position: absolute;
-						right: 0;
-						top: 0;
+						."position: absolute;";
+
+						switch($options['hamburger_position'])
+						{
+							default:
+								$out .= "right: 0;";
+							break;
+
+							case 'left':
+								$out .= "left: 0;";
+							break;
+						}
+
+						$out .= "top: 0;
 						z-index: 1;
 					}
 
@@ -314,9 +325,20 @@ $out .= "@media all
 					//.render_css(array('property' => 'font-size', 'value' => 'nav_size'))
 					."overflow: hidden;
 					padding: 2.6em 0 1em;
-					position: absolute;
-					right: -90%;
-					top: 0;
+					position: absolute;";
+
+					switch($options['slide_nav_position'])
+					{
+						default:
+							$out .= "right: -90%;";
+						break;
+
+						case 'left':
+							$out .= "left: -90%;";
+						break;
+					}
+
+					$out .= "top: 0;
 					width: 90%;
 					max-width: 300px;
 				}

@@ -13,7 +13,7 @@ if(!function_exists('head_parallax'))
 		list($options_params, $options) = get_params();
 
 		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", get_plugin_version(__FILE__));
-		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array('override_bg' => isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2), get_plugin_version(__FILE__));
+		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array('override_bg' => (isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2), 'slide_nav_position' => (isset($options['slide_nav_position']) && $options['slide_nav_position'] == 'left' ? $options['slide_nav_position'] : 'right')), get_plugin_version(__FILE__));
 	}
 }
 
@@ -106,11 +106,13 @@ if(!function_exists('get_params'))
 			if(isset($arr_sidebars['widget_slide']) && count($arr_sidebars['widget_slide']) > 0)
 			{
 				$options_params[] = array('category' => " - ".__("Mobile Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_hamburger');
+					$options_params[] = array('type' => "float", 'id' => 'hamburger_position', 'title' => __("Position", 'lang_parallax'), 'default' => "right");
 					$options_params[] = array('type' => "text", 'id' => 'hamburger_font_size', 'title' => __("Size", 'lang_parallax'), 'default' => "2.5em");
 					$options_params[] = array('type' => "text", 'id' => 'hamburger_margin', 'title' => __("Margin", 'lang_parallax'), 'default' => "1em .8em");
 				$options_params[] = array('category_end' => "");
 
 				$options_params[] = array('category' => " - ".__("Slide Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_slide');
+					$options_params[] = array('type' => "float", 'id' => 'slide_nav_position', 'title' => __("Position", 'lang_parallax'), 'default' => "right");
 					$options_params[] = array('type' => "text", 'id' => 'slide_nav_link_padding', 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1.5em 1em 1em");
 					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg', 'title' => __("Background", 'lang_parallax'), 'default' => "#fff");
 					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg_hover', 'title' => " - ".__("Background", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'slide_nav_bg');
