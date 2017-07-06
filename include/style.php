@@ -93,7 +93,7 @@ $out .= "@media all
 		.render_css(array('property' => 'color', 'value' => 'body_link_color'))
 	."}
 
-	#wrapper button, #wrapper .button
+	#wrapper .mf_form button, #wrapper .button
 	{";
 		if(isset($options['button_color']) && $options['button_color'] != '')
 		{
@@ -108,7 +108,7 @@ $out .= "@media all
 		$out .= "color: #fff;"
 	."}
 
-		#wrapper button:hover, #wrapper .button:hover
+		#wrapper .mf_form button:hover, #wrapper .button:hover
 		{"
 			.render_css(array('property' => 'background', 'value' => 'button_color_hover'))
 		."}
@@ -357,42 +357,47 @@ $out .= "@media all
 						list-style: none;
 					}
 
-						mf-slide-nav .theme_nav ul a
-						{"
-							.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-							."display: block;
-							letter-spacing: .2em;"
-							.render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
-							."transition: all .4s ease;
-						}
-
-							mf-slide-nav .theme_nav ul a:hover
-							{"
-								.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-								.render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
-								."text-indent: .3em;
-							}
-
-							mf-slide-nav .theme_nav li.current_page_item > a
-							{"
-								.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-								.render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
-							."}
-
-						mf-slide-nav .theme_nav li ul
+						mf-slide-nav li
 						{
-							margin-bottom: 0;
+							width: 100%;
 						}
 
-							mf-slide-nav .theme_nav li ul a
-							{
-								text-indent: 1.4em;
+							mf-slide-nav .theme_nav ul a
+							{"
+								.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
+								."display: block;
+								letter-spacing: .2em;"
+								.render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
+								."transition: all .4s ease;
 							}
 
-								mf-slide-nav .theme_nav li ul a:hover
-								{
-									text-indent: 2em;
+								mf-slide-nav .theme_nav ul a:hover
+								{"
+									.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+									.render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
+									."text-indent: .3em;
 								}
+
+								mf-slide-nav .theme_nav li.current_page_item > a
+								{"
+									.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+									.render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
+								."}
+
+							mf-slide-nav .theme_nav li ul
+							{
+								margin-bottom: 0;
+							}
+
+								mf-slide-nav .theme_nav li ul a
+								{
+									text-indent: 1.4em;
+								}
+
+									mf-slide-nav .theme_nav li ul a:hover
+									{
+										text-indent: 2em;
+									}
 
 					mf-slide-nav ul, mf-slide-nav p
 					{

@@ -122,15 +122,15 @@ if(!function_exists('get_params'))
 				$options_params[] = array('category_end' => "");
 			}
 
-			if(isset($arr_sidebars['widget_pre_content']) && count($arr_sidebars['widget_pre_content']) > 0)
-			{
+			/*if(isset($arr_sidebars['widget_pre_content']) && count($arr_sidebars['widget_pre_content']) > 0)
+			{*/
 				$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => 'mf_parallax_pre_content');
 					$options_params[] = array('type' => "checkbox", 'id' => 'pre_content_full_width', 'title' => __("Full Width", 'lang_parallax'), 'default' => 1);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_bg', 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_padding', 'title' => __("Padding", 'lang_parallax'));
 					//$options_params[] = array('type' => "text", 'id' => "pre_content_size", 'title' => __("Font Size", 'lang_parallax'));
 				$options_params[] = array('category_end' => "");
-			}
+			//}
 
 			$options_params[] = array('category' => __("Content", 'lang_parallax'), 'id' => "mf_parallax_content");
 				$options_params[] = array('type' => "checkbox", 'id' => "content_stretch_height", 'title' => __("Match Height with Screen Size", 'lang_parallax'), 'default' => 2);
