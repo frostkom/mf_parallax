@@ -145,6 +145,7 @@ if(!function_exists('get_params'))
 					$options_params[] = array('type' => "font", 'id' => "heading_font_h2", 'title' => __("Font", 'lang_parallax')." (H2)");
 					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h2", 'title' => __("Size", 'lang_parallax')." (H2)", 'default' => "2em");
 					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h2", 'title' => __("Weight", 'lang_parallax')." (H2)");
+					$options_params[] = array('type' => "text", 'id' => 'section_heading_alignment_mobile', 'title' => __("Heading Alignment", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "center");
 					$options_params[] = array('type' => "text", 'id' => "heading_margin_h3", 'title' => __("Margin", 'lang_parallax')." (H3)");
 					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h3", 'title' => __("Size", 'lang_parallax')." (H3)");
 					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h3", 'title' => __("Weight", 'lang_parallax')." (H3)");

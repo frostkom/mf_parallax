@@ -310,6 +310,7 @@ $out .= "@media all
 				bottom: 0;
 				display: none;
 				left: 0;
+				position: absolute;
 				position: fixed;
 				right: 0;
 				top: 0;
@@ -334,7 +335,7 @@ $out .= "@media all
 						break;
 
 						case 'left':
-							$out .= "left: -90%;";
+							$out .= "left: 0;";
 						break;
 					}
 
@@ -345,7 +346,7 @@ $out .= "@media all
 
 					mf-slide-nav .fa-close
 					{
-						font-size: 1.4em;
+						font-size: 2em;
 						margin: 3% 4% 0 0;
 						position: absolute;
 						right: 0;
@@ -736,10 +737,15 @@ $out .= "}
 	$out .= "article > div
 	{
 		display: block;"
-		.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
+		//.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
 	."}
 
-		article h2, #aside p.has_one_image
+		article h2, 
+		{"
+			.render_css(array('property' => 'text-align', 'value' => 'section_heading_alignment_mobile'))
+		."}
+		
+		#aside p.has_one_image
 		{
 			text-align: center;
 		}

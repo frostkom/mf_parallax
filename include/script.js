@@ -12,21 +12,17 @@ jQuery(function($)
 	/* Slide nav */
 	if(script_parallax.slide_nav_position == 'left')
 	{
-		var offset_orig = $('mf-slide-nav > div').css('left');
-
+		// The same solution as from the right does not work in iOS
 		function show_slide_menu()
 		{
-			$('mf-slide-nav').fadeIn().children('div').animate({'left': '0'}, 500);
+			$('mf-slide-nav').fadeIn();
 
 			return false;
 		}
 
 		function hide_slide_menu()
 		{
-			$('mf-slide-nav > div').animate({'left': offset_orig}, 500, function()
-			{
-				$(this).parent('mf-slide-nav').fadeOut();
-			});
+			$('mf-slide-nav').fadeOut();
 
 			return false;
 		}
@@ -59,17 +55,7 @@ jQuery(function($)
 		show_slide_menu();
 	});
 
-	$(document).on('click', 'mf-slide-nav', function(e)
-	{
-		var dom_obj = $(e.target);
-
-		if(dom_obj.is('mf-slide-nav') || dom_obj.is('i'))
-		{
-			hide_slide_menu();
-		}
-	});
-
-	$(document).on('click', 'mf-slide-nav a', function()
+	$(document).on('click', 'mf-slide-nav, mf-slide-nav .fa-close, mf-slide-nav a', function()
 	{
 		hide_slide_menu();
 	});
