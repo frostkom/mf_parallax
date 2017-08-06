@@ -33,7 +33,9 @@ if(!function_exists('options_parallax'))
 {
 	function options_parallax()
 	{
-		add_theme_page(__("Theme Options", 'lang_parallax'), __("Theme Options", 'lang_parallax'), 'edit_theme_options', 'theme_options', 'options_page_parallax');
+		$menu_title = __("Theme Options", 'lang_parallax');
+
+		add_theme_page($menu_title, $menu_title, 'edit_theme_options', 'theme_options', 'options_page_parallax');
 	}
 }
 
