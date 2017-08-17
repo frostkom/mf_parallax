@@ -525,7 +525,38 @@ $out .= "@media all
 						.render_css(array('property' => 'font-family', 'value' => 'footer_font'))
 						.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
 						.render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
-					."}"
+					."}
+					
+	#hamburger_to_top
+	{
+		background: #000;
+		border-radius: .5em;
+		top: .5em;
+		color: #fff;
+		display: none;
+		font-size: 1.3em;
+		opacity: .2;
+		padding: 1em 1.2em;
+		position: fixed;";
+
+		switch($options['hamburger_position'])
+		{
+			default:
+				$out .= "right: .5em;";
+			break;
+
+			case 'left':
+				$out .= "left: .5em;";
+			break;
+		}
+
+		$out .= "z-index: 1001;
+	}
+
+		#hamburger_to_top:hover
+		{
+			opacity: .7;
+		}"
 	.$style_all;
 
 	if(isset($options['custom_css_all']) && $options['custom_css_all'] != '')
