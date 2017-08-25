@@ -282,7 +282,7 @@ $out .= "@media all
 				.render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
 				."overflow: hidden;
 			}
-			
+
 				#mf-pre-content > div
 				{"
 					.render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
@@ -404,7 +404,7 @@ $out .= "@media all
 					{
 						margin-bottom: 1em;
 					}
-				
+
 			article
 			{
 				background: 50% 0 repeat fixed;
@@ -526,7 +526,7 @@ $out .= "@media all
 						.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
 						.render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
 					."}
-					
+
 	#hamburger_to_top
 	{
 		background: #000;
@@ -644,7 +644,7 @@ $out .= "}
 						display: -webkit-flex;
 						display: flex;
 					}
-					
+
 						article section
 						{
 							-webkit-box-flex: 1 1 ".$width_section."%;
@@ -701,7 +701,7 @@ $out .= "}
 			{"
 				.render_css(array('property' => 'max-width', 'value' => 'logo_width_mobile'))
 			."}
-			
+
 			#primary_nav
 			{"
 				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
@@ -771,11 +771,11 @@ $out .= "}
 		//.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
 	."}
 
-		article h2, 
+		article h2
 		{"
 			.render_css(array('property' => 'text-align', 'value' => 'section_heading_alignment_mobile'))
 		."}
-		
+
 		#aside p.has_one_image
 		{
 			text-align: center;

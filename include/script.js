@@ -115,7 +115,7 @@ jQuery(function($)
 		{
 			show_or_hide_hamburger();
 		});
-		
+
 		$(document).on('click', '#hamburger_to_top', function()
 		{
 			$('html, body').animate({scrollTop: 0}, 800);
