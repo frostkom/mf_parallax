@@ -570,7 +570,7 @@ $out .= "}
 {
 	body:before
 	{
-		content: 'tablet';
+		content: 'is_tablet';
 	}
 
 	.show_if_mobile
@@ -583,99 +583,78 @@ $out .= "}
 		.render_css(array('property' => 'font-size', 'value' => 'body_desktop_font_size'))
 	."}";
 
-		/*if($options['website_max_width'] > 0)
+		if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
 		{
-			$out .= "header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
+			switch($options['content_main_position'])
 			{
-				margin: 0 auto;
-				max-width: ".$options['website_max_width']."px;
-			}";
-		}*/
+				default:
+				case 'right':
+					$pos_section = 'right';
+					$pos_aside = 'left';
 
-			if($options['content_main_width'] > 0 && $options['content_main_width'] < 100)
+					$order_section = 2;
+					$order_aside = 1;
+
+					$margin_aside = "0 2.5% 0 0";
+					$padding_aside = "0 2.5% 0 0";
+				break;
+
+				case 'left':
+					$pos_section = 'left';
+					$pos_aside = 'right';
+
+					$order_section = 1;
+					$order_aside = 2;
+
+					$margin_aside = "0 0 0 2.5%";
+					$padding_aside = "0 0 0 2.5%";
+				break;
+			}
+
+			if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
 			{
-				switch($options['content_main_position'])
+				$width_section = $options['content_main_width'];
+				$width_aside = 100 - 5 - $options['content_main_width'];
+
+				$out .= "article > div
 				{
-					default:
-					case 'right':
-						$pos_section = 'right';
-						$pos_aside = 'left';
-
-						$order_section = 2;
-						$order_aside = 1;
-
-						$margin_aside = "0 2.5% 0 0";
-						$padding_aside = "0 2.5% 0 0";
-					break;
-
-					case 'left':
-						$pos_section = 'left';
-						$pos_aside = 'right';
-
-						$order_section = 1;
-						$order_aside = 2;
-
-						$margin_aside = "0 0 0 2.5%";
-						$padding_aside = "0 0 0 2.5%";
-					break;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
 				}
 
-				if(!in_array($options['content_main_position'], array('none', 'initial', 'inherit')))
-				{
-					$width_section = $options['content_main_width'];
-					$width_aside = 100 - 5 - $options['content_main_width'];
-
-					/*$out .= "article > div > h2, article #aside + section
+					article section
 					{
+						-webkit-box-flex: 1 1 ".$width_section."%;
+						-webkit-flex: 1 1 ".$width_section."%;
+						-ms-flex: 1 1 ".$width_section."%;
+						flex: 1 1 ".$width_section."%;
+						-webkit-box-ordinal-group: ".$order_section.";
+						-webkit-order: ".$order_section.";
+						-ms-flex-order: ".$order_section.";
+						order: ".$order_section.";
 						float: ".$pos_section.";
-						width: ".$width_section."%;
+						min-width: ".$width_section."%;
 					}
 
 					article #aside
 					{
+						-webkit-box-flex: 1 1 ".$width_aside."%;
+						-webkit-flex: 1 1 ".$width_aside."%;
+						-ms-flex: 1 1 ".$width_aside."%;
+						flex: 1 1 ".$width_aside."%;
+						-webkit-box-ordinal-group: ".$order_aside.";
+						-webkit-order: ".$order_aside.";
+						-ms-flex-order: ".$order_aside.";
+						order: ".$order_aside.";
 						float: ".$pos_aside.";
-						width: ".$width_aside."%;
-					}";*/
-
-					$out .= "article > div
-					{
-						display: -webkit-box;
-						display: -ms-flexbox;
-						display: -webkit-flex;
-						display: flex;
-					}
-
-						article section
-						{
-							-webkit-box-flex: 1 1 ".$width_section."%;
-							-webkit-flex: 1 1 ".$width_section."%;
-							-ms-flex: 1 1 ".$width_section."%;
-							flex: 1 1 ".$width_section."%;
-							-webkit-box-ordinal-group: ".$order_section.";
-							-webkit-order: ".$order_section.";
-							-ms-flex-order: ".$order_section.";
-							order: ".$order_section.";
-							float: ".$pos_section.";
-							min-width: ".$width_section."%;
-						}
-
-						article #aside
-						{
-							-webkit-box-flex: 1 1 ".$width_aside."%;
-							-webkit-flex: 1 1 ".$width_aside."%;
-							-ms-flex: 1 1 ".$width_aside."%;
-							flex: 1 1 ".$width_aside."%;
-							-webkit-box-ordinal-group: ".$order_aside.";
-							-webkit-order: ".$order_aside.";
-							-ms-flex-order: ".$order_aside.";
-							order: ".$order_aside.";
-							float: ".$pos_aside.";
-							margin: ".$margin_aside.";
-							padding: ".$padding_aside.";
-							min-width: ".$width_aside."%;
-						}";
-				}
+						margin: ".$margin_aside.";
+						padding: ".$padding_aside.";
+						min-width: ".$width_aside."%;
+					}";
 			}
+		}
 
 	$out .= $style_desktop
 ."}
@@ -684,92 +663,86 @@ $out .= "}
 {
 	body:before
 	{
-		content: 'mobile';
+		content: 'is_mobile';
 	}
 
 	.hide_if_mobile
 	{
 		display: none;
-	}";
+	}
 
-		/*header > div
+		header h1, #site_logo
 		{"
-			.render_css(array('property' => 'padding', 'value' => 'header_padding_mobile'))
-		."}*/
+			.render_css(array('property' => 'max-width', 'value' => 'logo_width_mobile'))
+		."}
 
-			$out .= "header h1, #site_logo
-			{"
-				.render_css(array('property' => 'max-width', 'value' => 'logo_width_mobile'))
-			."}
+		#primary_nav
+		{"
+			.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
 
-			#primary_nav
-			{"
-				.render_css(array('property' => 'float', 'value' => 'nav_float_mobile'));
+			if($options['nav_float_mobile'] == "none")
+			{
+				$out .= "text-align: center;";
+			}
 
-				if($options['nav_float_mobile'] == "none")
+			$out .= render_css(array('property' => 'padding', 'value' => 'nav_padding_mobile'))
+		."}";
+
+			if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
+			{
+				$out .= "#primary_nav > .toggle_icon
 				{
-					$out .= "text-align: center;";
+					display: block;
+					font-size: 2em;
+					margin-top: .15em;
 				}
 
-				$out .= render_css(array('property' => 'padding', 'value' => 'nav_padding_mobile'))
-			."}";
+					#primary_nav .fa-close
+					{
+						display: none;
+					}
 
-				if(isset($options['nav_mobile']) && $options['nav_mobile'] == 2)
+					#primary_nav.is_mobile_ready ul > li
+					{
+						display: none;
+					}";
+
+				if(isset($options['nav_click2expand']) && $options['nav_click2expand'] == 2)
+				{
+					$out .= "#primary_nav.open .fa-bars
+					{
+						display: none;
+					}
+
+					#primary_nav.open .fa-close
+					{
+						display: block;
+					}
+
+					#primary_nav.open ul > li
+					{
+						display: block;
+					}";
+				}
+
+				else
 				{
 					$out .= "#primary_nav > .toggle_icon
 					{
-						display: block;
-						font-size: 2em;
-						margin-top: .15em;
+						display: none;
 					}
 
-						#primary_nav .fa-close
+						#primary_nav ul > li.current_page_item, #primary_nav ul > li.current_page_parent, #primary_nav ul:hover > li
 						{
-							display: none;
-						}
-
-						#primary_nav.is_mobile_ready ul > li
-						{
-							display: none;
+							display: inline-block;
 						}";
-
-					if(isset($options['nav_click2expand']) && $options['nav_click2expand'] == 2)
-					{
-						$out .= "#primary_nav.open .fa-bars
-						{
-							display: none;
-						}
-
-						#primary_nav.open .fa-close
-						{
-							display: block;
-						}
-
-						#primary_nav.open ul > li
-						{
-							display: block;
-						}";
-					}
-
-					else
-					{
-						$out .= "#primary_nav > .toggle_icon
-						{
-							display: none;
-						}
-
-							#primary_nav ul > li.current_page_item, #primary_nav ul > li.current_page_parent, #primary_nav ul:hover > li
-							{
-								display: inline-block;
-							}";
-					}
 				}
+			}
 
 	$out .= "article > div
 	{
-		display: block;"
-		//.render_css(array('property' => 'padding', 'value' => 'content_padding_mobile'))
-	."}
+		display: block;
+	}
 
 		article h2
 		{"
@@ -791,11 +764,6 @@ $out .= "}
 					.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
 				."}";
 
-	/*footer > div
-	{"
-		.render_css(array('property' => 'padding', 'value' => 'footer_padding_mobile'))
-	."}*/
-
 	if(isset($options['custom_css_mobile']) && $options['custom_css_mobile'] != '')
 	{
 		$out .= $options['custom_css_mobile'];
@@ -809,7 +777,7 @@ if(isset($options['website_max_width']) && $options['website_max_width'] > 0)
 	{
 		body:before
 		{
-			content: 'desktop';
+			content: 'is_desktop';
 		}
 
 			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
@@ -824,7 +792,7 @@ $out .= "@media print
 {
 	body:before
 	{
-		content: 'print';
+		content: 'is_print';
 	}
 
 	body, article
