@@ -94,18 +94,9 @@ $out .= "@media all
 	."}
 
 	#wrapper .mf_form button, #wrapper .button
-	{";
-		if(isset($options['button_color']) && $options['button_color'] != '')
-		{
-			$out .= render_css(array('property' => 'background', 'value' => 'button_color'));
-		}
-
-		else
-		{
-			$out .= render_css(array('property' => 'background', 'value' => 'nav_color_hover'));
-		}
-
-		$out .= "color: #fff;"
+	{"
+		.render_css(array('property' => 'background', 'value' => array('button_color', 'nav_color_hover')))
+		."color: #fff;"
 	."}
 
 		#wrapper .mf_form button:hover, #wrapper .button:hover
@@ -131,15 +122,9 @@ $out .= "@media all
 	}
 
 	body
-	{";
-
-		if(isset($options['footer_bg']) && $options['footer_bg'] != '')
-		{
-			$out .= render_css(array('property' => 'background', 'value' => 'footer_bg'))
-			."min-height: 100vh;";
-		}
-
-		$out .= render_css(array('property' => 'font-family', 'value' => 'body_font'))
+	{"
+		.render_css(array('property' => 'background', 'value' => 'footer_bg', 'append' => "min-height: 100vh;"))
+		.render_css(array('property' => 'font-family', 'value' => 'body_font'))
 	."}
 
 		#wrapper
@@ -246,19 +231,9 @@ $out .= "@media all
 					#slide_nav > .toggle_icon
 					{"
 						.render_css(array('property' => 'color', 'value' => 'logo_color'))
-						."display: block;";
-
-						if(isset($options['hamburger_font_size']) && $options['hamburger_font_size'] != '')
-						{
-							$out .= render_css(array('property' => 'font-size', 'value' => 'hamburger_font_size'));
-						}
-
-						else
-						{
-							$out .= render_css(array('property' => 'font-size', 'value' => 'logo_font_size'));
-						}
-
-						$out .= "margin: .1em .2em;"
+						."display: block;"
+						.render_css(array('property' => 'font-size', 'value' => array('hamburger_font_size', 'logo_font_size')))
+						."margin: .1em .2em;"
 						.render_css(array('property' => 'padding', 'value' => 'hamburger_margin'))
 						."position: absolute;";
 
@@ -294,7 +269,6 @@ $out .= "@media all
 						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
 						.render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
-						//.render_css(array('property' => 'padding', 'value' => 'heading_padding'))
 					."}
 
 					#mf-pre-content p
