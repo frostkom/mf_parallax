@@ -9,11 +9,11 @@ if(!defined('ABSPATH'))
 	require_once($folder."wp-load.php");
 }
 
-do_action('init_style');
+//do_action('init_style');
 
 $meta_prefix = "mf_parallax_";
 
-$upload_dir = wp_upload_dir();
+//$upload_dir = wp_upload_dir();
 
 $options_fonts = get_theme_fonts();
 
@@ -32,9 +32,9 @@ foreach($result as $post)
 
 	$css_identifier = "#".$post_name.", .header_".$post_name;
 
-	$background_image = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image', 'image_size' => 'full'));
+	$background_image = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image'));
 	$background_repeat = get_post_meta($post_id, $meta_prefix.'background_repeat', true);
-	$background_image_mobile = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image_mobile', 'image_size' => 'full'));
+	$background_image_mobile = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image_mobile'));
 	$text_color = get_post_meta($post_id, $meta_prefix.'text_color', true);
 	$bg_color = get_post_meta($post_id, $meta_prefix.'bg_color', true);
 

@@ -247,15 +247,18 @@ if(!function_exists('widgets_parallax'))
 	}
 }
 
-if(!function_exists('meta_boxes_parallax'))
+if(!function_exists('meta_show_on_page_info'))
 {
-	function get_show_on_page_info()
+	function meta_show_on_page_info()
 	{
 		$out = "<p>".sprintf(__("To choose if this page should be part of the One Page/Parallax you have to set %sShow on Front%s to Your latest Posts.", 'lang_parallax'), "<a href='".admin_url("options-reading.php")."'>", "</a>")."</p>";
 
 		return $out;
 	}
+}
 
+if(!function_exists('meta_boxes_parallax'))
+{
 	function meta_boxes_parallax($meta_boxes)
 	{
 		$meta_prefix = "mf_parallax_";
@@ -306,7 +309,7 @@ if(!function_exists('meta_boxes_parallax'))
 			$arr_page_settings[] = array(
 				'id' => $meta_prefix.'info',
 				'type' => 'custom_html',
-				'callback' => 'get_show_on_page_info',
+				'callback' => 'meta_show_on_page_info',
 			);
 		}
 
