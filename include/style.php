@@ -9,11 +9,9 @@ if(!defined('ABSPATH'))
 	require_once($folder."wp-load.php");
 }
 
-//do_action('init_style');
+do_action('init_style');
 
 $meta_prefix = "mf_parallax_";
-
-//$upload_dir = wp_upload_dir();
 
 $options_fonts = get_theme_fonts();
 
@@ -177,7 +175,6 @@ $out .= "@media all
 
 				header > div
 				{"
-					//.render_css(array('property' => 'font-family', 'value' => 'logo_font'))
 					.render_css(array('property' => 'padding', 'value' => 'header_padding'))
 				."}
 
@@ -297,7 +294,6 @@ $out .= "@media all
 					."bottom: 0;"
 					.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
 					.render_css(array('property' => 'font-family', 'value' => 'nav_font'))
-					//.render_css(array('property' => 'font-size', 'value' => 'nav_size'))
 					."overflow: hidden;
 					padding: 2.6em 0 1em;
 					position: absolute;";
