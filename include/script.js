@@ -1,7 +1,6 @@
 document.createElement("header");
 	document.createElement("nav");
 document.createElement("mf-slide-nav");
-/*document.createElement("mf-pre-content");*/
 document.createElement("mf-content");
 	document.createElement("section");
 	document.createElement("article");

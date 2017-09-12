@@ -277,7 +277,7 @@ $out .= "@media all
 
 			mf-slide-nav
 			{
-				background: rgba(0, 0, 0, .3);
+				background: rgba(0, 0, 0, .7);
 				bottom: 0;
 				display: none;
 				left: 0;
