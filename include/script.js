@@ -117,8 +117,7 @@ jQuery(function($)
 
 		$(document).on('click', '#hamburger_to_top', function()
 		{
-			$('html, body').animate({scrollTop: 0}, 800);
-
+			scroll_to_top();
 			show_or_hide_slide_menu();
 
 			return false;
