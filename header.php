@@ -4,11 +4,8 @@
  */
 
 echo "<!DOCTYPE html>
-<html lang='".get_bloginfo('language')."'>
-	<head>
-		<meta charset='".get_bloginfo('charset')."'>
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<title>".get_wp_title()."</title>";
+<html lang='".get_bloginfo('language')."'".apply_filters('the_html_tag', '').">
+	<head>";
 
 		wp_head();
 
