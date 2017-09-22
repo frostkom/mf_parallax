@@ -4,7 +4,7 @@
  */
 
 echo "<!DOCTYPE html>
-<html lang='".get_bloginfo('language')."'".apply_filters('the_html_tag', '').">
+<html ".get_language_attributes().">
 	<head>";
 
 		wp_head();
