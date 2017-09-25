@@ -9,7 +9,7 @@ if(!defined('ABSPATH'))
 	require_once($folder."wp-load.php");
 }
 
-do_action('init_style');
+//do_action('init_style');
 
 $meta_prefix = "mf_parallax_";
 
