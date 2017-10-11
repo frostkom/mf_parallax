@@ -1,6 +1,6 @@
 <?php
 
-class widget_parallax_logo extends WP_Widget
+/*class widget_parallax_logo extends WP_Widget
 {
 	function __construct()
 	{
@@ -25,7 +25,7 @@ class widget_parallax_logo extends WP_Widget
 		$instance = wp_parse_args((array)$instance, $this->arr_default);
 
 		echo $before_widget
-			.get_logo_parallax()
+			.get_logo()
 		.$after_widget;
 	}
 
@@ -46,7 +46,7 @@ class widget_parallax_logo extends WP_Widget
 
 		echo "<p>".__("No need for settings here, we'll take care of the rest", 'lang_parallax')."</p>";
 	}
-}
+}*/
 
 class widget_parallax_menu extends WP_Widget
 {

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-21 11:21+0100\n"
+"POT-Creation-Date: 2017-10-11 09:42+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,19 +15,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: ../..\n"
-
-#: ../include/classes.php:9
-msgid "Display logo"
-msgstr "Visa logga"
-
-#: ../include/classes.php:18
-#: ../include/functions.php:88
-msgid "Logo"
-msgstr "Logga"
-
-#: ../include/classes.php:47
-msgid "No need for settings here, we'll take care of the rest"
-msgstr "Inställningar behövs inte här, vi tar hand om resten"
 
 #: ../include/classes.php:57
 msgid "Display menu"
@@ -156,6 +143,10 @@ msgstr "Position"
 #: ../include/functions.php:83
 msgid "Override background with page background"
 msgstr "Ersätt bakgrund med sidans bakgrund"
+
+#: ../include/functions.php:88
+msgid "Logo"
+msgstr "Logga"
 
 #: ../include/functions.php:89
 #: ../include/functions.php:92
@@ -372,17 +363,9 @@ msgstr "Vertikalt"
 msgid "Settings"
 msgstr "Inställningar"
 
-#: ../include/functions.php:389
-msgid "Site logo"
-msgstr "Logga för webbsida"
-
-#: ../include/functions.php:394
-msgid "Site mobile logo"
-msgstr "Logga för mobiler"
-
 #: ../../mf_theme/index.php:62
 #: ../../mf_theme/index.php:72
-#: ../../mf_theme/include/functions.php:719
+#: ../../mf_theme/include/functions.php:725
 msgid "Read More"
 msgstr "Läs mer"
 
@@ -534,7 +517,7 @@ msgstr "Textkolumner"
 msgid "Body Class"
 msgstr "Klass på Body-tagg"
 
-#: ../../mf_theme/include/functions.php:737
+#: ../../mf_theme/include/functions.php:743
 msgid "Load more posts"
 msgstr "Ladda fler inlägg"
 

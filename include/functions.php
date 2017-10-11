@@ -69,7 +69,7 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "color", 'id' => "body_color", 'title' => __("Text Color", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => "body_link_color", 'title' => __("Link Color", 'lang_parallax'));
 				$options_params[] = array('type' => "color", 'id' => 'button_color', 'title' => __("Button Color", 'lang_parallax'));
-					$options_params[] = array('type' => "color", 'id' => 'button_color_hover', 'title' => " - ".__("Button Color", 'lang_parallax')." (".__("Hover", 'lang_theme').")", 'show_if' => 'button_color');
+					$options_params[] = array('type' => "color", 'id' => 'button_color_hover', 'title' => " - ".__("Button Color", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'button_color');
 				$options_params[] = array('type' => "number", 'id' => "website_max_width", 'title' => __("Max Width", 'lang_parallax'), 'default' => "1100");
 				$options_params[] = array('type' => "text", 'id' => "body_desktop_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => ".625em", 'show_if' => "body_font_size");
 				$options_params[] = array('type' => "number", 'id' => "mobile_breakpoint", 'title' => __("Breakpoint", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "600");
@@ -242,7 +242,7 @@ if(!function_exists('widgets_parallax'))
 			'after_widget' => '</div>'
 		));
 
-		register_widget('widget_parallax_logo');
+		//register_widget('widget_parallax_logo');
 		register_widget('widget_parallax_menu');
 	}
 }
@@ -371,7 +371,7 @@ if(!function_exists('meta_boxes_parallax'))
 	}
 }
 
-if(!function_exists('get_logo_parallax'))
+/*if(!function_exists('get_logo_parallax'))
 {
 	function get_logo_parallax($options = "")
 	{
@@ -412,7 +412,7 @@ if(!function_exists('get_logo_parallax'))
 
 		return $out;
 	}
-}
+}*/
 
 if(!function_exists('get_menu_parallax'))
 {

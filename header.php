@@ -22,9 +22,9 @@ echo "<!DOCTYPE html>
 
 					else
 					{
-						list($options_params, $options) = get_params();
+						//list($options_params, $options) = get_params();
 
-						echo get_logo_parallax($options)
+						echo get_logo() //array('options' => $options)
 						.get_menu_parallax(array('where' => 'header'));
 					}
 
