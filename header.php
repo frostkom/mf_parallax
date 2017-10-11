@@ -22,9 +22,7 @@ echo "<!DOCTYPE html>
 
 					else
 					{
-						//list($options_params, $options) = get_params();
-
-						echo get_logo() //array('options' => $options)
+						echo get_logo()
 						.get_menu_parallax(array('where' => 'header'));
 					}
 
@@ -34,14 +32,14 @@ echo "<!DOCTYPE html>
 
 			if(is_active_sidebar('widget_slide'))
 			{
-				echo "<mf-slide-nav>
+				echo "<div id='mf-slide-nav'>
 					<div>
 						<i class='fa fa-close'></i>";
 
 						dynamic_sidebar('widget_slide');
 
 					echo "</div>
-				</mf-slide-nav>";
+				</div>";
 			}
 
 			if(is_active_sidebar('widget_pre_content'))
@@ -57,5 +55,5 @@ echo "<!DOCTYPE html>
 				</div>";
 			}
 
-			echo "<mf-content>
+			echo "<div id='mf-content'>
 				<div>";

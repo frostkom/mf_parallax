@@ -4,7 +4,7 @@
  */
 
 				echo "</div>
-			</mf-content>";
+			</div>";
 
 			if(is_active_sidebar('widget_footer'))
 			{

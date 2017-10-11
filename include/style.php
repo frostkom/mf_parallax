@@ -247,135 +247,141 @@ $out .= "@media all
 
 						$out .= "top: 0;
 						z-index: 1;
-					}
+					}";
 
-			#mf-pre-content
-			{"
-				.render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
-				."overflow: hidden;
-			}
-
-				#mf-pre-content > div
-				{"
-					.render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
-				."}
-
-					#mf-pre-content h3
-					{"
-						.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-						.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
-						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
-						.render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
-					."}
-
-					#mf-pre-content p
-					{"
-						.render_css(array('property' => 'font-size', 'value' => 'section_size'))
-						.render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
-						.render_css(array('property' => 'margin', 'value' => 'section_margin'))
-					."}
-
-			mf-slide-nav
+			if(is_active_sidebar('widget_slide'))
 			{
-				background: rgba(0, 0, 0, .7);
-				bottom: 0;
-				display: none;
-				left: 0;
-				position: absolute;
-				position: fixed;
-				right: 0;
-				top: 0;
-				z-index: 1001;
-			}
-
-				mf-slide-nav > div
-				{"
-					.render_css(array('property' => 'background', 'value' => 'slide_nav_bg'))
-					."bottom: 0;"
-					.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-					.render_css(array('property' => 'font-family', 'value' => 'nav_font'))
-					."overflow: hidden;
-					padding: 2.6em 0 1em;
-					position: absolute;";
-
-					switch($options['slide_nav_position'])
-					{
-						default:
-							$out .= "right: -90%;";
-						break;
-
-						case 'left':
-							$out .= "left: 0;";
-						break;
-					}
-
-					$out .= "top: 0;
-					width: 90%;
-					max-width: 300px;
+				$out .= "#mf-slide-nav
+				{
+					background: rgba(0, 0, 0, .7);
+					bottom: 0;
+					display: none;
+					left: 0;
+					position: absolute;
+					position: fixed;
+					right: 0;
+					top: 0;
+					z-index: 1001;
 				}
 
-					mf-slide-nav .fa-close
-					{
-						font-size: 2em;
-						margin: 3% 4% 0 0;
-						position: absolute;
-						right: 0;
-						top: 0;
-					}
+					#mf-slide-nav > div
+					{"
+						.render_css(array('property' => 'background', 'value' => 'slide_nav_bg'))
+						."bottom: 0;"
+						.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
+						.render_css(array('property' => 'font-family', 'value' => 'nav_font'))
+						."overflow: hidden;
+						padding: 2.6em 0 1em;
+						position: absolute;";
 
-					mf-slide-nav ul
-					{
-						list-style: none;
-					}
-
-						mf-slide-nav li
+						switch($options['slide_nav_position'])
 						{
-							width: 100%;
+							default:
+								$out .= "right: -90%;";
+							break;
+
+							case 'left':
+								$out .= "left: 0;";
+							break;
 						}
 
-							mf-slide-nav .theme_nav ul a
-							{"
-								.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-								."display: block;
-								letter-spacing: .2em;"
-								.render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
-								."transition: all .4s ease;
-							}
-
-								mf-slide-nav .theme_nav ul a:hover
-								{"
-									.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-									.render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
-									."text-indent: .3em;
-								}
-
-								mf-slide-nav .theme_nav li.current_page_item > a
-								{"
-									.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-									.render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
-								."}
-
-							mf-slide-nav .theme_nav li ul
-							{
-								margin-bottom: 0;
-							}
-
-								mf-slide-nav .theme_nav li ul a
-								{
-									text-indent: 1.4em;
-								}
-
-									mf-slide-nav .theme_nav li ul a:hover
-									{
-										text-indent: 2em;
-									}
-
-					mf-slide-nav ul, mf-slide-nav p
-					{
-						margin-bottom: 1em;
+						$out .= "top: 0;
+						width: 90%;
+						max-width: 300px;
 					}
 
-			article
+						#mf-slide-nav .fa-close
+						{
+							font-size: 2em;
+							margin: 3% 4% 0 0;
+							position: absolute;
+							right: 0;
+							top: 0;
+						}
+
+						#mf-slide-nav ul
+						{
+							list-style: none;
+						}
+
+							#mf-slide-nav li
+							{
+								width: 100%;
+							}
+
+								#mf-slide-nav .theme_nav ul a
+								{"
+									.render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
+									."display: block;
+									letter-spacing: .2em;"
+									.render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
+									."transition: all .4s ease;
+								}
+
+									#mf-slide-nav .theme_nav ul a:hover
+									{"
+										.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+										.render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
+										."text-indent: .3em;
+									}
+
+									#mf-slide-nav .theme_nav li.current_page_item > a
+									{"
+										.render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+										.render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
+									."}
+
+								#mf-slide-nav .theme_nav li ul
+								{
+									margin-bottom: 0;
+								}
+
+									#mf-slide-nav .theme_nav li ul a
+									{
+										text-indent: 1.4em;
+									}
+
+										#mf-slide-nav .theme_nav li ul a:hover
+										{
+											text-indent: 2em;
+										}
+
+						#mf-slide-nav ul, #mf-slide-nav p
+						{
+							margin-bottom: 1em;
+						}";
+			}
+
+			if(is_active_sidebar('widget_pre_content'))
+			{
+				$out .= "#mf-pre-content
+				{"
+					.render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
+					."overflow: hidden;
+				}
+
+					#mf-pre-content > div
+					{"
+						.render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
+					."}
+
+						#mf-pre-content h3
+						{"
+							.render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+							.render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
+							.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
+							.render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
+						."}
+
+						#mf-pre-content p
+						{"
+							.render_css(array('property' => 'font-size', 'value' => 'section_size'))
+							.render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
+							.render_css(array('property' => 'margin', 'value' => 'section_margin'))
+						."}";
+			}
+
+			$out .= "article
 			{
 				background: 50% 0 repeat fixed;
 				background-size: 100%;";
@@ -436,7 +442,7 @@ $out .= "@media all
 						.render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
 					."}
 
-					article #aside p
+					article .aside p
 					{"
 						.render_css(array('property' => 'font-size', 'value' => 'aside_p'))
 					."}
@@ -473,61 +479,68 @@ $out .= "@media all
 						{"
 							.render_css(array('property' => 'background', 'value' => 'nav_color_hover'))
 							."color: #fff;
-						}
+						}";
 
-			footer
-			{"
-				.render_css(array('property' => 'background', 'value' => 'footer_bg'))
-				.render_css(array('property' => 'margin', 'value' => 'footer_margin'))
-				."position: relative;
-			}
+			if(is_active_sidebar('widget_footer'))
+			{
+				$out .= "footer
+				{"
+					.render_css(array('property' => 'background', 'value' => 'footer_bg'))
+					.render_css(array('property' => 'margin', 'value' => 'footer_margin'))
+					."position: relative;
+				}
 
-				footer > div
-				{
-					overflow: hidden;"
-					.render_css(array('property' => 'padding', 'value' => 'footer_padding'))
-					.render_css(array('property' => 'text-align', 'value' => 'footer_align'))
-				."}
-
-					footer .widget
-					{"
-						.render_css(array('property' => 'color', 'value' => 'footer_color'))
-						.render_css(array('property' => 'font-family', 'value' => 'footer_font'))
-						.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
-						.render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
+					footer > div
+					{
+						overflow: hidden;"
+						.render_css(array('property' => 'padding', 'value' => 'footer_padding'))
+						.render_css(array('property' => 'text-align', 'value' => 'footer_align'))
 					."}
 
-	#hamburger_to_top
+						footer .widget
+						{"
+							.render_css(array('property' => 'color', 'value' => 'footer_color'))
+							.render_css(array('property' => 'font-family', 'value' => 'footer_font'))
+							.render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
+							.render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
+						."}";
+			}
+
+	if($options['hamburger_fixed'] == 'fixed')
 	{
-		background: #000;
-		border-radius: .5em;
-		top: .5em;
-		color: #fff;
-		display: none;
-		font-size: 1.3em;
-		opacity: .2;
-		padding: 1em 1.2em;
-		position: fixed;";
-
-		switch($options['hamburger_position'])
+		$out .= "#hamburger_to_top
 		{
-			default:
-				$out .= "right: .5em;";
-			break;
+			background: #000;
+			border-radius: .5em;
+			top: .5em;
+			color: #fff;
+			display: none;
+			font-size: 1.3em;
+			opacity: .2;
+			padding: 1em 1.2em;
+			position: fixed;";
 
-			case 'left':
-				$out .= "left: .5em;";
-			break;
+			switch($options['hamburger_position'])
+			{
+				default:
+					$out .= "right: .5em;";
+				break;
+
+				case 'left':
+					$out .= "left: .5em;";
+				break;
+			}
+
+			$out .= "z-index: 1001;
 		}
 
-		$out .= "z-index: 1001;
+			#hamburger_to_top:hover
+			{
+				opacity: .7;
+			}";
 	}
 
-		#hamburger_to_top:hover
-		{
-			opacity: .7;
-		}"
-	.$style_all;
+	$out .= $style_all;
 
 	if(isset($options['custom_css_all']) && $options['custom_css_all'] != '')
 	{
@@ -608,7 +621,7 @@ $out .= "}
 						min-width: ".$width_section."%;
 					}
 
-					article #aside
+					article .aside
 					{
 						-webkit-box-flex: 1 1 ".$width_aside."%;
 						-webkit-flex: 1 1 ".$width_aside."%;
@@ -719,17 +732,17 @@ $out .= "}
 			.render_css(array('property' => 'text-align', 'value' => 'section_heading_alignment_mobile'))
 		."}
 
-		#aside p.has_one_image
+		.aside p.has_one_image
 		{
 			text-align: center;
 		}
 
-			article #aside
+			article .aside
 			{
 				margin-bottom: 3em;
 			}
 
-				aside img, #aside img
+				aside img, .aside img
 				{"
 					.render_css(array('property' => 'max-width', 'value' => 'mobile_aside_img_max_width'))
 				."}";
@@ -770,7 +783,7 @@ $out .= "@media print
 		background: none;
 	}
 
-	header, #aside, footer
+	header, .aside, footer
 	{
 		display: none;
 	}

@@ -1,7 +1,7 @@
 document.createElement("header");
 	document.createElement("nav");
-document.createElement("mf-slide-nav");
-document.createElement("mf-content");
+/*document.createElement("mf-slide-nav");
+document.createElement("mf-content");*/
 	document.createElement("section");
 	document.createElement("article");
 document.createElement("footer");
@@ -16,7 +16,7 @@ jQuery(function($)
 			/* The same solution as from the right does not work in iOS */
 			function show_or_hide_slide_menu()
 			{
-				var dom_obj = $('mf-slide-nav');
+				var dom_obj = $('#mf-slide-nav');
 
 				if(dom_obj.is(':visible'))
 				{
@@ -34,17 +34,17 @@ jQuery(function($)
 
 		else
 		{
-			var offset_orig = $('mf-slide-nav > div').css('right');
+			var offset_orig = $('#mf-slide-nav > div').css('right');
 
 			function show_or_hide_slide_menu()
 			{
-				var dom_obj = $('mf-slide-nav');
+				var dom_obj = $('#mf-slide-nav');
 
 				if(dom_obj.is(':visible'))
 				{
 					dom_obj.children('div').animate({'right': offset_orig}, 500, function()
 					{
-						$(this).parent('mf-slide-nav').fadeOut();
+						$(this).parent('#mf-slide-nav').fadeOut();
 					});
 				}
 
@@ -57,7 +57,7 @@ jQuery(function($)
 			}
 		}
 
-		$(document).on('click', '#slide_nav, mf-slide-nav, mf-slide-nav .fa-close, mf-slide-nav a', function()
+		$(document).on('click', '#slide_nav, #mf-slide-nav, #mf-slide-nav .fa-close, #mf-slide-nav a', function()
 		{
 			show_or_hide_slide_menu();
 		});
@@ -124,7 +124,7 @@ jQuery(function($)
 		});
 	}
 
-	$('aside p, #aside p').each(function()
+	$('.aside p').each(function()
 	{
 		if($(this).children('img').length == 1 || ($(this).children('img.show_if_mobile').length == 1 && $(this).children('img.hide_if_mobile').length == 1))
 		{
