@@ -45,7 +45,7 @@ get_header();
 
 					if($post_aside != '')
 					{
-						echo "<div id='aside'>"
+						echo "<div class='aside'>"
 							.apply_filters('the_content', $post_aside)
 						."</div>";
 					}
