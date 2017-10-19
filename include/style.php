@@ -266,7 +266,7 @@ $out .= "@media all
 					position: fixed;
 					right: 0;
 					top: 0;
-					z-index: 1001;
+					z-index: 1002;
 				}
 
 					#mf-slide-nav > div
@@ -536,7 +536,7 @@ $out .= "@media all
 				break;
 			}
 
-			$out .= "z-index: 1001;
+			$out .= "z-index: 1002;
 		}
 
 			#hamburger_to_top:hover
