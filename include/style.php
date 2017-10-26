@@ -254,7 +254,7 @@ $out .= "@media all
 						z-index: 1;
 					}";
 
-			if(is_active_sidebar('widget_slide'))
+			if(is_active_widget_area('widget_slide'))
 			{
 				$out .= "#mf-slide-nav
 				{
@@ -357,7 +357,7 @@ $out .= "@media all
 						}";
 			}
 
-			if(is_active_sidebar('widget_pre_content'))
+			if(is_active_widget_area('widget_pre_content'))
 			{
 				$out .= "#mf-pre-content
 				{"
@@ -486,7 +486,7 @@ $out .= "@media all
 							."color: #fff;
 						}";
 
-			if(is_active_sidebar('widget_footer'))
+			if(is_active_widget_area('widget_footer'))
 			{
 				$out .= "footer
 				{"
