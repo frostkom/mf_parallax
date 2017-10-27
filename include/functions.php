@@ -7,18 +7,18 @@ if(!function_exists('head_parallax'))
 		enqueue_theme_fonts();
 
 		$template_url = get_bloginfo('template_url');
-		$plugin_version = get_plugin_version(__FILE__);
+		$theme_version = get_theme_version();
 
-		mf_enqueue_style('style', $template_url."/include/style.php", $plugin_version);
+		mf_enqueue_style('style', $template_url."/include/style.php", $theme_version);
 
 		list($options_params, $options) = get_params();
 
-		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", $plugin_version);
+		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", $theme_version);
 		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array(
 			'override_bg' => (isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2),
 			'slide_nav_position' => (isset($options['slide_nav_position']) && $options['slide_nav_position'] == 'left' ? $options['slide_nav_position'] : 'right'),
 			'hamburger_fixed' => (isset($options['hamburger_fixed']) ? $options['hamburger_fixed'] : false)
-		), $plugin_version);
+		), $theme_version);
 	}
 }
 

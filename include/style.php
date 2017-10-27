@@ -13,7 +13,7 @@ if($is_standalone)
 
 else
 {
-	global $options, $options_fonts;
+	global $wpdb, $options, $options_fonts;
 }
 
 $meta_prefix = "mf_parallax_";
