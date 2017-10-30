@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-11 09:42+0100\n"
+"POT-Creation-Date: 2017-10-30 14:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -31,10 +31,6 @@ msgstr "Typ av meny"
 #: ../include/functions.php:32
 msgid "Primary Navigation"
 msgstr "Primär navigation"
-
-#: ../include/functions.php:41
-msgid "Theme Options"
-msgstr "Temainställningar"
 
 #: ../include/functions.php:65
 msgid "Generic"
@@ -365,7 +361,7 @@ msgstr "Inställningar"
 
 #: ../../mf_theme/index.php:62
 #: ../../mf_theme/index.php:72
-#: ../../mf_theme/include/functions.php:725
+#: ../../mf_theme/include/functions.php:734
 msgid "Read More"
 msgstr "Läs mer"
 
@@ -396,10 +392,6 @@ msgstr "Jag kunde inte hitta något resultat för '%s'"
 #: ../../mf_theme/include/functions.php:155
 msgid "Secondary Navigation"
 msgstr "Sekundär meny"
-
-#: ../../mf_theme/include/functions.php:175
-msgid "Theme Updates"
-msgstr "Temauppdatering"
 
 #: ../../mf_theme/include/functions.php:218
 msgid "Get Updates From"
@@ -509,15 +501,19 @@ msgstr "Under huvudkolumn"
 msgid "Right"
 msgstr "Höger"
 
-#: ../../mf_theme/include/functions.php:525
+#: ../../mf_theme/include/functions.php:500
+msgid "Window Side Icons"
+msgstr "Sidoikoner i fönstret"
+
+#: ../../mf_theme/include/functions.php:534
 msgid "Text Columns"
 msgstr "Textkolumner"
 
-#: ../../mf_theme/include/functions.php:535
+#: ../../mf_theme/include/functions.php:544
 msgid "Body Class"
 msgstr "Klass på Body-tagg"
 
-#: ../../mf_theme/include/functions.php:743
+#: ../../mf_theme/include/functions.php:752
 msgid "Load more posts"
 msgstr "Ladda fler inlägg"
 

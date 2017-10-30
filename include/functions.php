@@ -34,24 +34,6 @@ if(!function_exists('setup_parallax'))
 	}
 }
 
-if(!function_exists('options_parallax'))
-{
-	function options_parallax()
-	{
-		$menu_title = __("Theme Options", 'lang_parallax');
-
-		add_theme_page($menu_title, $menu_title, 'edit_theme_options', 'theme_options', 'options_page_parallax');
-	}
-}
-
-if(!function_exists('options_page_parallax'))
-{
-	function options_page_parallax()
-	{
-		echo get_options_page_theme_core(array('dir' => "mf_parallax"));
-	}
-}
-
 if(!function_exists('get_params'))
 {
 	function get_params()
