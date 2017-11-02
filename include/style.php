@@ -133,6 +133,8 @@ $out .= "@media all
 		#wrapper
 		{"
 			.render_css(array('property' => 'background', 'value' => 'body_bg'))
+			.render_css(array('property' => 'background-color', 'value' => 'body_bg_color'))
+			.render_css(array('property' => 'background-image', 'value' => 'body_bg_image'))
 		."}
 
 			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
