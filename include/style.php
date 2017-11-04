@@ -364,6 +364,8 @@ $out .= "@media all
 				$out .= "#mf-pre-content
 				{"
 					.render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
+					.render_css(array('property' => 'background-color', 'value' => 'pre_content_bg_color'))
+					.render_css(array('property' => 'background-image', 'value' => 'pre_content_bg_image'))
 					."overflow: hidden;
 				}
 

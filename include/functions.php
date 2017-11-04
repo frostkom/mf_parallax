@@ -38,50 +38,11 @@ if(!function_exists('get_params'))
 {
 	function get_params()
 	{
-		//$options_params = array();
-		//$arr_sidebars = wp_get_sidebars_widgets();
-
 		$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
 
 		$options_params = get_params_theme_core('mf_parallax');
 
-		//$options_params[] = array('category' => __("Generic", 'lang_parallax'), 'id' => "mf_parallax_body");
-			//$options_params[] = array('type' => "text", 'id' => 'style_source', 'title' => __("Get Updates From", 'lang_parallax'), 'placeholder' => "http://domain.com");
-			//$options_params[] = array('type' => "text", 'id' => "body_bg", 'title' => __("Background", 'lang_parallax'), 'default' => "#fff", 'placeholder' => $bg_placeholder);
-			//$options_params[] = array('type' => "text", 'id' => 'main_padding', 'title' => __("Padding", 'lang_parallax'), 'default' => "1em 2em");
-			//$options_params[] = array('type' => "font", 'id' => "body_font", 'title' => __("Font", 'lang_parallax'));
-			//$options_params[] = array('type' => "color", 'id' => "body_color", 'title' => __("Text Color", 'lang_parallax'));
-			//$options_params[] = array('type' => "color", 'id' => "body_link_color", 'title' => __("Link Color", 'lang_parallax'));
-			//$options_params[] = array('type' => "color", 'id' => 'button_color', 'title' => __("Button Color", 'lang_parallax'));
-				//$options_params[] = array('type' => "color", 'id' => 'button_color_hover', 'title' => " - ".__("Button Color", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'button_color');
-			//$options_params[] = array('type' => "number", 'id' => "website_max_width", 'title' => __("Max Width", 'lang_parallax'), 'default' => "1100");
-			//$options_params[] = array('type' => "text", 'id' => "body_desktop_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => ".625em", 'show_if' => "body_font_size");
-			//$options_params[] = array('type' => "number", 'id' => "mobile_breakpoint", 'title' => __("Breakpoint", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "600");
-			//$options_params[] = array('type' => "text", 'id' => "body_font_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "1.2vw", 'show_if' => 'mobile_breakpoint');
-				//$options_params[] = array('type' => "text", 'id' => "mobile_aside_img_max_width", 'title' => __("Aside Image Max Width", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => "mobile_breakpoint");
-		//$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Header", 'lang_parallax'), 'id' => "mf_parallax_header");
-				$options_params[] = array('type' => "position", 'id' => "header_fixed", 'title' => __("Position", 'lang_parallax'), 'default' => 'fixed');
-				$options_params[] = array('type' => "text",	'id' => "header_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
-				$options_params[] = array('type' => "checkbox", 'id' => "header_override_bg_with_page_bg", 'title' => __("Override background with page background", 'lang_parallax'), 'default' => 2);
-				$options_params[] = array('type' => "text",	'id' => "header_padding", 'title' => __("Padding", 'lang_parallax'));
-					//$options_params[] = array('type' => "text",	'id' => "header_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
-			$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Logo", 'lang_parallax'), 'id' => 'mf_parallax_logo');
-				$options_params[] = array('type' => "image", 'id' => "header_logo", 'title' => __("Image", 'lang_parallax'));
-					$options_params[] = array('type' => "float", 'id' => 'logo_float', 'title' => __("Alignment", 'lang_parallax'), 'default' => 'left', 'show_if' => 'header_logo');
-					$options_params[] = array('type' => "text", 'id' => 'logo_width', 'title' => __("Width", 'lang_parallax'), 'show_if' => 'header_logo');
-				$options_params[] = array('type' => "image", 'id' => "header_mobile_logo", 'title' => __("Image", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'header_logo');
-					$options_params[] = array('type' => "text", 'id' => 'logo_width_mobile', 'title' => __("Width", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")");
-				$options_params[] = array('type' => "text",	'id' => "logo_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "1.5em 1em");
-				$options_params[] = array('type' => "font",	'id' => "logo_font", 'title' => __("Font", 'lang_parallax'), 'hide_if' => 'header_logo');
-				$options_params[] = array('type' => "text", 'id' => "logo_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => "3em", 'hide_if' => 'header_logo');
-				$options_params[] = array('type' => "color", 'id' => "logo_color", 'title' => __("Text Color", 'lang_parallax'), 'hide_if' => 'header_logo');
-			$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Navigation", 'lang_parallax'), 'id' => "mf_parallax_navigation");
+			/*$options_params[] = array('category' => __("Navigation", 'lang_parallax'), 'id' => "mf_parallax_navigation");
 				$options_params[] = array('type' => "checkbox", 'id' => "nav_mobile", 'title' => __("Compressed on mobile", 'lang_parallax'), 'default' => 2);
 					$options_params[] = array('type' => "checkbox", 'id' => "nav_click2expand", 'title' => __("Click to expand", 'lang_parallax'), 'default' => 1);
 				$options_params[] = array('type' => "text", 'id' => "nav_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "0 1em");
@@ -94,16 +55,8 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
 			$options_params[] = array('category_end' => "");
 
-			//if(isset($arr_sidebars['widget_slide']) && count($arr_sidebars['widget_slide']) > 0)
 			if(is_active_widget_area('widget_slide'))
 			{
-				$options_params[] = array('category' => " - ".__("Mobile Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_hamburger');
-					$options_params[] = array('type' => "float", 'id' => 'hamburger_position', 'title' => __("Alignment", 'lang_parallax'), 'default' => "right");
-					$options_params[] = array('type' => "position", 'id' => 'hamburger_fixed', 'title' => __("Position", 'lang_parallax'));
-					$options_params[] = array('type' => "text", 'id' => 'hamburger_font_size', 'title' => __("Size", 'lang_parallax'), 'default' => "2.5em");
-					$options_params[] = array('type' => "text", 'id' => 'hamburger_margin', 'title' => __("Margin", 'lang_parallax'), 'default' => "1em .8em");
-				$options_params[] = array('category_end' => "");
-
 				$options_params[] = array('category' => " - ".__("Slide Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_slide');
 					$options_params[] = array('type' => "float", 'id' => 'slide_nav_position', 'title' => __("Alignment", 'lang_parallax'), 'default' => "right");
 					$options_params[] = array('type' => "text", 'id' => 'slide_nav_link_padding', 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1.5em 1em 1em");
@@ -115,14 +68,12 @@ if(!function_exists('get_params'))
 				$options_params[] = array('category_end' => "");
 			}
 
-			//if(isset($arr_sidebars['widget_pre_content']) && count($arr_sidebars['widget_pre_content']) > 0)
 			if(is_active_widget_area('widget_pre_content'))
 			{
 				$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => 'mf_parallax_pre_content');
 					$options_params[] = array('type' => "checkbox", 'id' => 'pre_content_full_width', 'title' => __("Full Width", 'lang_parallax'), 'default' => 1);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_bg', 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
 					$options_params[] = array('type' => "text", 'id' => 'pre_content_padding', 'title' => __("Padding", 'lang_parallax'));
-					//$options_params[] = array('type' => "text", 'id' => "pre_content_size", 'title' => __("Font Size", 'lang_parallax'));
 				$options_params[] = array('category_end' => "");
 			}
 
@@ -149,7 +100,7 @@ if(!function_exists('get_params'))
 					$options_params[] = array('type' => "text", 'id' => "heading_margin_h5", 'title' => __("Margin", 'lang_parallax')." (H5)");
 					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h5", 'title' => __("Size", 'lang_parallax')." (H5)");
 					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h5", 'title' => __("Weight", 'lang_parallax')." (H5)");
-				$options_params[] = array('category_end' => "");
+				$options_params[] = array('category_end' => "");*/
 
 				$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
 					$options_params[] = array('type' => "text", 'id' => "section_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Content", 'lang_parallax').")", 'default' => "1.6em");
@@ -170,7 +121,6 @@ if(!function_exists('get_params'))
 				$options_params[] = array('type' => "text", 'id' => "footer_margin", 'title' => __("Margin", 'lang_parallax')); //, 'default' => "0 0 .3em"
 				$options_params[] = array('type' => "text", 'id' => "footer_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => ".1em 0");
 				$options_params[] = array('type' => "align", 'id' => "footer_align", 'title' => __("Align", 'lang_parallax'));
-					//$options_params[] = array('type' => "text",	'id' => "footer_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'footer_padding');
 					$options_params[] = array('type' => "text", 'id' => "footer_widget_padding", 'title' => __("Widget Padding", 'lang_parallax'), 'default' => ".2em");
 			$options_params[] = array('category_end' => "");
 
@@ -187,8 +137,6 @@ if(!function_exists('widgets_parallax'))
 {
 	function widgets_parallax()
 	{
-		//$arr_sidebars = wp_get_sidebars_widgets();
-
 		register_sidebar(array(
 			'name' => __("Header", 'lang_parallax'),
 			'id' => 'widget_header',
@@ -198,7 +146,6 @@ if(!function_exists('widgets_parallax'))
 			'after_widget' => ""
 		));
 
-		//if(isset($arr_sidebars['widget_header']) && count($arr_sidebars['widget_header']) > 0)
 		if(is_active_widget_area('widget_header'))
 		{
 			register_sidebar(array(
@@ -229,7 +176,6 @@ if(!function_exists('widgets_parallax'))
 			'after_widget' => '</div>'
 		));
 
-		//register_widget('widget_parallax_logo');
 		register_widget('widget_parallax_menu');
 	}
 }
