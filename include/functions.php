@@ -38,71 +38,11 @@ if(!function_exists('get_params'))
 {
 	function get_params()
 	{
-		$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
+		//$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
 
-		$options_params = get_params_theme_core('mf_parallax');
+		$options_params = get_params_theme_core();
 
-			/*$options_params[] = array('category' => __("Navigation", 'lang_parallax'), 'id' => "mf_parallax_navigation");
-				$options_params[] = array('type' => "checkbox", 'id' => "nav_mobile", 'title' => __("Compressed on mobile", 'lang_parallax'), 'default' => 2);
-					$options_params[] = array('type' => "checkbox", 'id' => "nav_click2expand", 'title' => __("Click to expand", 'lang_parallax'), 'default' => 1);
-				$options_params[] = array('type' => "text", 'id' => "nav_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => "0 1em");
-				$options_params[] = array('type' => "text", 'id' => "nav_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'nav_padding');
-				$options_params[] = array('type' => "float", 'id' => "nav_float", 'title' => __("Alignment", 'lang_parallax'), 'default' => "right");
-				$options_params[] = array('type' => "float", 'id' => "nav_float_mobile", 'title' => __("Alignment", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "none", 'show_if' => 'nav_float');
-				$options_params[] = array('type' => "text", 'id' => "nav_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => "2em");
-				$options_params[] = array('type' => "color", 'id' => "nav_color", 'title' => __("Text Color", 'lang_parallax'));
-					$options_params[] = array('type' => "color", 'id' => "nav_color_hover", 'title' => __("Text Color", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'nav_color');
-				$options_params[] = array('type' => "text", 'id' => "nav_link_padding", 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1em");
-			$options_params[] = array('category_end' => "");
-
-			if(is_active_widget_area('widget_slide'))
-			{
-				$options_params[] = array('category' => " - ".__("Slide Menu", 'lang_parallax'), 'id' => 'mf_theme_navigation_slide');
-					$options_params[] = array('type' => "float", 'id' => 'slide_nav_position', 'title' => __("Alignment", 'lang_parallax'), 'default' => "right");
-					$options_params[] = array('type' => "text", 'id' => 'slide_nav_link_padding', 'title' => __("Link Padding", 'lang_parallax'), 'default' => "1.5em 1em 1em");
-					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg', 'title' => __("Background", 'lang_parallax'), 'default' => "#fff");
-					$options_params[] = array('type' => "color", 'id' => 'slide_nav_bg_hover', 'title' => " - ".__("Background", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'slide_nav_bg');
-					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color', 'title' => __("Text Color", 'lang_parallax'));
-					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color_hover', 'title' => " - ".__("Text Color", 'lang_parallax')." (".__("Hover", 'lang_parallax').")", 'show_if' => 'slide_nav_color');
-					$options_params[] = array('type' => "color", 'id' => 'slide_nav_color_current', 'title' => __("Text Color", 'lang_parallax')." (".__("Current", 'lang_parallax').")");
-				$options_params[] = array('category_end' => "");
-			}
-
-			if(is_active_widget_area('widget_pre_content'))
-			{
-				$options_params[] = array('category' => __("Pre Content", 'lang_parallax'), 'id' => 'mf_parallax_pre_content');
-					$options_params[] = array('type' => "checkbox", 'id' => 'pre_content_full_width', 'title' => __("Full Width", 'lang_parallax'), 'default' => 1);
-					$options_params[] = array('type' => "text", 'id' => 'pre_content_bg', 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
-					$options_params[] = array('type' => "text", 'id' => 'pre_content_padding', 'title' => __("Padding", 'lang_parallax'));
-				$options_params[] = array('category_end' => "");
-			}
-
-			$options_params[] = array('category' => __("Content", 'lang_parallax'), 'id' => "mf_parallax_content");
-				$options_params[] = array('type' => "checkbox", 'id' => "content_stretch_height", 'title' => __("Match Height with Screen Size", 'lang_parallax'), 'default' => 2);
-				$options_params[] = array('type' => "float", 'id' => "content_main_position", 'title' => __("Main Column Alignment", 'lang_parallax'), 'default' => "right");
-				$options_params[] = array('type' => "number", 'id' => "content_main_width", 'title' => __("Main Column Width", 'lang_parallax')." (%)", 'default' => "60");
-				$options_params[] = array('type' => "text", 'id' => "content_padding", 'title' => __("Padding", 'lang_parallax')); //, 'default' => "30px 0 20px"
-					//$options_params[] = array('type' => "text",	'id' => "content_padding_mobile", 'title' => __("Padding", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'content_padding');
-			$options_params[] = array('category_end' => "");
-
-				$options_params[] = array('category' => " - ".__("Headings", 'lang_parallax'), 'id' => 'mf_parallax_content_heading');
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h2", 'title' => __("Margin", 'lang_parallax')." (H2)", 'default' => "0 0 1em");
-					$options_params[] = array('type' => "font", 'id' => "heading_font_h2", 'title' => __("Font", 'lang_parallax')." (H2)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h2", 'title' => __("Size", 'lang_parallax')." (H2)", 'default' => "2em");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h2", 'title' => __("Weight", 'lang_parallax')." (H2)");
-					$options_params[] = array('type' => "text", 'id' => 'section_heading_alignment_mobile', 'title' => __("Heading Alignment", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'default' => "center");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h3", 'title' => __("Margin", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h3", 'title' => __("Size", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h3", 'title' => __("Weight", 'lang_parallax')." (H3)");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h4", 'title' => __("Margin", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h4", 'title' => __("Size", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h4", 'title' => __("Weight", 'lang_parallax')." (H4)");
-					$options_params[] = array('type' => "text", 'id' => "heading_margin_h5", 'title' => __("Margin", 'lang_parallax')." (H5)");
-					$options_params[] = array('type' => "text", 'id' => "heading_font_size_h5", 'title' => __("Size", 'lang_parallax')." (H5)");
-					$options_params[] = array('type' => "weight", 'id' => "heading_weight_h5", 'title' => __("Weight", 'lang_parallax')." (H5)");
-				$options_params[] = array('category_end' => "");*/
-
-				$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
+				/*$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
 					$options_params[] = array('type' => "text", 'id' => "section_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Content", 'lang_parallax').")", 'default' => "1.6em");
 					$options_params[] = array('type' => "text", 'id' => 'section_line_height', 'title' => __("Line Height", 'lang_parallax'), 'default' => "1.5");
 					$options_params[] = array('type' => "text", 'id' => 'section_margin', 'title' => __("Margin", 'lang_parallax'));
@@ -127,7 +67,7 @@ if(!function_exists('get_params'))
 			$options_params[] = array('category' => __("Custom", 'lang_parallax'), 'id' => "mf_parallax_generic");
 				$options_params[] = array('type' => "textarea",	'id' => "custom_css_all", 'title' => __("Custom CSS", 'lang_parallax'));
 				$options_params[] = array('type' => "textarea",	'id' => "custom_css_mobile", 'title' => __("Custom CSS", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
-			$options_params[] = array('category_end' => "");
+			$options_params[] = array('category_end' => "");*/
 
 		return gather_params($options_params);
 	}

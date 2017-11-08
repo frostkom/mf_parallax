@@ -121,8 +121,8 @@ $out .= "@media all
 	{
 		font-size: .625em;"
 		.render_css(array('property' => 'font-size', 'value' => 'body_font_size'))
-		."overflow-y: scroll;
-	}
+		.render_css(array('property' => 'overflow-y', 'value' => 'body_scroll'))
+	."}
 
 	body
 	{"
@@ -158,6 +158,7 @@ $out .= "@media all
 			{"
 				.render_css(array('property' => 'background', 'value' => 'header_bg'))
 				."background-size: 100%;"
+				.render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
 				."text-align: center;";
 
 				if(isset($options['header_fixed']) && in_array($options['header_fixed'], array(2, 'absolute', 'fixed')))
@@ -198,10 +199,14 @@ $out .= "@media all
 
 					#primary_nav
 					{"
+						.render_css(array('property' => 'background', 'value' => 'nav_bg'))
+						.render_css(array('property' => 'clear', 'value' => 'nav_clear'))
 						.render_css(array('property' => 'color', 'value' => 'nav_color'))
 						.render_css(array('property' => 'float', 'value' => 'nav_float'))
+						.render_css(array('property' => 'font-family', 'value' => 'nav_font'))
 						.render_css(array('property' => 'font-size', 'value' => 'nav_size'))
 						.render_css(array('property' => 'padding', 'value' => 'nav_padding'))
+						.render_css(array('property' => 'text-align', 'value' => 'nav_align'))
 						."position: relative;
 					}
 
