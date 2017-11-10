@@ -244,49 +244,6 @@ if(!function_exists('meta_boxes_parallax'))
 	}
 }
 
-/*if(!function_exists('get_logo_parallax'))
-{
-	function get_logo_parallax($options = "")
-	{
-		if($options == "")
-		{
-			list($options_params, $options) = get_params();
-		}
-
-		$out = "<a href='".get_site_url()."/' id='site_logo'>";
-
-			if($options['header_logo'] != '' || $options['header_mobile_logo'] != '')
-			{
-				if($options['header_logo'] != '')
-				{
-					$out .= "<img src='".$options['header_logo']."'".($options['header_mobile_logo'] != '' ? " class='hide_if_mobile'" : "")." alt='".__("Site logo", 'lang_parallax')."'>";
-				}
-
-				if($options['header_mobile_logo'] != '')
-				{
-					$out .= "<img src='".$options['header_mobile_logo']."'".($options['header_logo'] != '' ? " class='show_if_mobile'" : "")." alt='".__("Site mobile logo", 'lang_parallax')."'>";
-				}
-			}
-
-			else
-			{
-				$site_name = get_bloginfo('name');
-				$site_description = get_bloginfo('description');
-
-				$out .= "<div>".$site_name."</div>";
-
-				if($site_description != '')
-				{
-					$out .= "<span>".$site_description."</span>";
-				}
-			}
-
-		$out .= "</a>";
-
-		return $out;
-	}
-}*/
-
 if(!function_exists('get_menu_parallax'))
 {
 	function get_menu_parallax($data = array())
