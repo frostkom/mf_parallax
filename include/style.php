@@ -127,6 +127,8 @@ $out .= "@media all
 	body
 	{"
 		.render_css(array('property' => 'background', 'value' => 'footer_bg', 'append' => "min-height: 100vh;"))
+		.render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
+		.render_css(array('property' => 'background-image', 'value' => 'footer_bg_image'))
 		.render_css(array('property' => 'font-family', 'value' => 'body_font'))
 	."}
 
@@ -500,6 +502,8 @@ $out .= "@media all
 				$out .= "footer
 				{"
 					.render_css(array('property' => 'background', 'value' => 'footer_bg'))
+					.render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
+					.render_css(array('property' => 'background-image', 'value' => 'footer_bg_image'))
 					.render_css(array('property' => 'margin', 'value' => 'footer_margin'))
 					."position: relative;
 				}
