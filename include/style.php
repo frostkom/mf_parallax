@@ -159,6 +159,8 @@ $out .= "@media all
 			header
 			{"
 				.render_css(array('property' => 'background', 'value' => 'header_bg'))
+				.render_css(array('property' => 'background-color', 'value' => 'header_bg_color'))
+				.render_css(array('property' => 'background-image', 'value' => 'header_bg_image'))
 				."background-size: 100%;"
 				.render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
 				."text-align: center;";

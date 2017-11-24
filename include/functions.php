@@ -38,36 +38,7 @@ if(!function_exists('get_params'))
 {
 	function get_params()
 	{
-		//$bg_placeholder = "#ffffff, rgba(0, 0, 0, .3), url(background.png)";
-
 		$options_params = get_params_theme_core();
-
-				/*$options_params[] = array('category' => " - ".__("Text", 'lang_parallax'), 'id' => 'mf_parallax_content_text');
-					$options_params[] = array('type' => "text", 'id' => "section_size", 'title' => __("Font Size", 'lang_parallax')." (".__("Content", 'lang_parallax').")", 'default' => "1.6em");
-					$options_params[] = array('type' => "text", 'id' => 'section_line_height', 'title' => __("Line Height", 'lang_parallax'), 'default' => "1.5");
-					$options_params[] = array('type' => "text", 'id' => 'section_margin', 'title' => __("Margin", 'lang_parallax'));
-					$options_params[] = array('type' => "text", 'id' => "quote_size", 'title' => __("Quote Size", 'lang_parallax'));
-				$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Aside", 'lang_parallax'), 'id' => 'mf_parallax_aside');
-				$options_params[] = array('type' => "text", 'id' => "aside_p", 'title' => __("Paragraph Size", 'lang_parallax'));
-			$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Footer", 'lang_parallax'), 'id' => "mf_parallax_footer");
-				$options_params[] = array('type' => "text",	'id' => "footer_bg", 'title' => __("Background", 'lang_parallax'), 'placeholder' => $bg_placeholder);
-				$options_params[] = array('type' => "font", 'id' => "footer_font", 'title' => __("Font", 'lang_parallax'));
-				$options_params[] = array('type' => "text", 'id' => "footer_font_size", 'title' => __("Font Size", 'lang_parallax'), 'default' => "1.8em");
-				$options_params[] = array('type' => "color", 'id' => "footer_color", 'title' => __("Color", 'lang_parallax'));
-				$options_params[] = array('type' => "text", 'id' => "footer_margin", 'title' => __("Margin", 'lang_parallax')); //, 'default' => "0 0 .3em"
-				$options_params[] = array('type' => "text", 'id' => "footer_padding", 'title' => __("Padding", 'lang_parallax'), 'default' => ".1em 0");
-				$options_params[] = array('type' => "align", 'id' => "footer_align", 'title' => __("Align", 'lang_parallax'));
-					$options_params[] = array('type' => "text", 'id' => "footer_widget_padding", 'title' => __("Widget Padding", 'lang_parallax'), 'default' => ".2em");
-			$options_params[] = array('category_end' => "");
-
-			$options_params[] = array('category' => __("Custom", 'lang_parallax'), 'id' => "mf_parallax_generic");
-				$options_params[] = array('type' => "textarea",	'id' => "custom_css_all", 'title' => __("Custom CSS", 'lang_parallax'));
-				$options_params[] = array('type' => "textarea",	'id' => "custom_css_mobile", 'title' => __("Custom CSS", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")", 'show_if' => 'mobile_breakpoint');
-			$options_params[] = array('category_end' => "");*/
 
 		return gather_params($options_params);
 	}
