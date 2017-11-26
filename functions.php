@@ -15,4 +15,3 @@ else
 
 add_action('after_setup_theme', 'setup_parallax');
 add_action('widgets_init', 'widgets_parallax');
-add_action('customize_register', 'customize_theme');

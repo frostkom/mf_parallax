@@ -34,7 +34,7 @@ if(!function_exists('setup_parallax'))
 	}
 }
 
-if(!function_exists('get_params'))
+/*if(!function_exists('get_params'))
 {
 	function get_params()
 	{
@@ -42,7 +42,7 @@ if(!function_exists('get_params'))
 
 		return gather_params($options_params);
 	}
-}
+}*/
 
 if(!function_exists('widgets_parallax'))
 {
