@@ -22,7 +22,12 @@ echo "<!DOCTYPE html>
 
 					else
 					{
-						echo get_logo()
+						if(!isset($obj_theme_core))
+						{
+							$obj_theme_core = new mf_theme_core();
+						}
+
+						echo $obj_theme_core->get_logo()
 						.get_menu_parallax(array('where' => 'header'));
 					}
 
@@ -44,9 +49,14 @@ echo "<!DOCTYPE html>
 
 			if(is_active_sidebar('widget_pre_content'))
 			{
-				list($options_params, $options) = get_params();
+				if(!isset($obj_theme_core))
+				{
+					$obj_theme_core = new mf_theme_core();
+				}
 
-				echo "<div id='mf-pre-content'".(isset($options['pre_content_full_width']) && $options['pre_content_full_width'] == 2 ? " class='full_width'" : "").">
+				$obj_theme_core->get_params();
+
+				echo "<div id='mf-pre-content'".(isset($obj_theme_core->options['pre_content_full_width']) && $obj_theme_core->options['pre_content_full_width'] == 2 ? " class='full_width'" : "").">
 					<div>";
 
 						dynamic_sidebar('widget_pre_content');

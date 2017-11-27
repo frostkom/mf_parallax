@@ -4,20 +4,20 @@ if(!function_exists('head_parallax'))
 {
 	function head_parallax()
 	{
-		enqueue_theme_fonts();
+		$obj_theme_core = new mf_theme_core();
+		$obj_theme_core->get_params();
+		$obj_theme_core->enqueue_theme_fonts();
 
 		$template_url = get_bloginfo('template_url');
 		$theme_version = get_theme_version();
 
 		mf_enqueue_style('style', $template_url."/include/style.php", $theme_version);
 
-		list($options_params, $options) = get_params();
-
 		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", $theme_version);
 		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array(
-			'override_bg' => (isset($options['header_override_bg_with_page_bg']) && $options['header_override_bg_with_page_bg'] == 2),
-			'slide_nav_position' => (isset($options['slide_nav_position']) && $options['slide_nav_position'] == 'left' ? $options['slide_nav_position'] : 'right'),
-			'hamburger_fixed' => (isset($options['hamburger_fixed']) ? $options['hamburger_fixed'] : false)
+			'override_bg' => (isset($obj_theme_core->options['header_override_bg_with_page_bg']) && $obj_theme_core->options['header_override_bg_with_page_bg'] == 2),
+			'slide_nav_position' => (isset($obj_theme_core->options['slide_nav_position']) && $obj_theme_core->options['slide_nav_position'] == 'left' ? $obj_theme_core->options['slide_nav_position'] : 'right'),
+			'hamburger_fixed' => (isset($obj_theme_core->options['hamburger_fixed']) ? $obj_theme_core->options['hamburger_fixed'] : false)
 		), $theme_version);
 	}
 }
@@ -33,16 +33,6 @@ if(!function_exists('setup_parallax'))
 		));
 	}
 }
-
-/*if(!function_exists('get_params'))
-{
-	function get_params()
-	{
-		$options_params = get_params_theme_core();
-
-		return gather_params($options_params);
-	}
-}*/
 
 if(!function_exists('widgets_parallax'))
 {
