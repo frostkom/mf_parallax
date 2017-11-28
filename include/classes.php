@@ -33,7 +33,7 @@ class widget_parallax_menu extends WP_Widget
 
 		$new_instance = wp_parse_args((array)$new_instance, $this->arr_default);
 
-		$instance['theme_menu_type'] = strip_tags($new_instance['theme_menu_type']);
+		$instance['theme_menu_type'] = sanitize_text_field($new_instance['theme_menu_type']);
 
 		return $instance;
 	}
