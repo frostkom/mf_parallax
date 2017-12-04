@@ -129,7 +129,7 @@ $out .= "@media all
 	{"
 		.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'footer_bg', 'append' => "min-height: 100vh;"))
 		.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
-		.$obj_theme_core->render_css(array('property' => 'background-image', 'value' => 'footer_bg_image'))
+		.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
 		.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'body_font'))
 	."}
 
@@ -137,7 +137,7 @@ $out .= "@media all
 		{"
 			.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'body_bg'))
 			.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'body_bg_color'))
-			.$obj_theme_core->render_css(array('property' => 'background-image', 'value' => 'body_bg_image'))
+			.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'body_bg_image', 'suffix' => '); background-size: cover'))
 		."}
 
 			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
@@ -161,7 +161,7 @@ $out .= "@media all
 			{"
 				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'header_bg'))
 				.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'header_bg_color'))
-				.$obj_theme_core->render_css(array('property' => 'background-image', 'value' => 'header_bg_image'))
+				.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'header_bg_image', 'suffix' => '); background-size: cover'))
 				."background-size: 100%;"
 				.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
 				."text-align: center;";
@@ -375,7 +375,7 @@ $out .= "@media all
 				{"
 					.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
 					.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'pre_content_bg_color'))
-					.$obj_theme_core->render_css(array('property' => 'background-image', 'value' => 'pre_content_bg_image'))
+					.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'pre_content_bg_image', 'suffix' => '); background-size: cover'))
 					."overflow: hidden;
 				}
 
@@ -506,7 +506,7 @@ $out .= "@media all
 				{"
 					.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'footer_bg'))
 					.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
-					.$obj_theme_core->render_css(array('property' => 'background-image', 'value' => 'footer_bg_image'))
+					.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
 					.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'footer_margin'))
 					."position: relative;
 				}
