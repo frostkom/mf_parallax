@@ -97,26 +97,29 @@ $out .= "@media all
 		.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'body_link_color'))
 	."}
 
-	#wrapper .mf_form button, #wrapper .button
+	#wrapper .mf_form button, #wrapper .button, .color_button, #wrapper .mf_form .button-primary
 	{"
 		.$obj_theme_core->render_css(array('property' => 'background', 'value' => array('button_color', 'nav_color_hover')))
-		."color: #fff;"
+		.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'button_text_color'))
 	."}
 
-		#wrapper .mf_form button:hover, #wrapper .button:hover
-		{"
-			.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'button_color_hover'))
-		."}
+	#wrapper .button-secondary, .color_button_2
+	{"
+		.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'button_color_secondary', 'suffix' => " !important"))
+		.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'button_text_color_secondary'))
+	."}
 
-		#wrapper button.button-secondary
+	.color_button_negative
+	{"
+		.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'button_color_negative', 'suffix' => " !important"))
+		.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'button_text_color_negative'))
+	."}
+
+		#wrapper .mf_form button:hover, #wrapper .button:hover, #wrapper .mf_form .button-primary:hover, #wrapper .button-secondary:hover, .color_button_2:hover, .color_button_negative:hover
 		{
-			background: #999;
-		}
-
-			#wrapper button.button-secondary:hover
-			{
-				background: #aaa;
-			}
+			box-shadow: inset 0 0 10em rgba(0, 0, 0, .1);"
+			//.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'button_color_hover'))
+		."}
 
 	html
 	{
