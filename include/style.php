@@ -333,13 +333,13 @@ $out .= "@media all
 						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
 					."}
 
-						#mf-pre-content h3
+						/*#mf-pre-content h3
 						{"
 							.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 							.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
 							.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
 							.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
-						."}
+						."}*/
 
 						#mf-pre-content p
 						{"
@@ -386,12 +386,12 @@ $out .= "@media all
 						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h2'))
 					."}
 
-					article h3
+					article h3, #mf-pre-content h3
 					{"
 						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
-						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
 						.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
+						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
 					."}
 
 					article h4
