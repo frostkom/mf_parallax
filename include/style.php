@@ -528,7 +528,7 @@ $out .= "}
 
 	.show_if_mobile
 	{
-		display: none;
+		display: none !important;
 	}
 
 	html
@@ -621,7 +621,7 @@ $out .= "}
 
 	.hide_if_mobile
 	{
-		display: none;
+		display: none !important;
 	}
 
 		header h1, #site_logo
