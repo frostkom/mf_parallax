@@ -2,12 +2,13 @@
 Theme Name: MF Parallax
 Theme URI: https://github.com/frostkom/mf_parallax
 Description: 
-Version: 3.7.7
+Version: 3.7.9
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: http://frostkom.se
 Text Domain: lang_parallax
 Domain Path: /lang
 
+Depends: MF Base, MF Theme Core
 GitHub Theme URI: frostkom/mf_parallax
 */

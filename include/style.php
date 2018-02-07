@@ -95,17 +95,6 @@ $out .= "@media all
 				."position: relative;
 			}
 
-			.full_width .widget
-			{
-				left: 50%;
-				margin-left: -50vw;
-				margin-right: -50vw;
-				position: relative;
-				right: 50%;
-				width: 100vw;
-				max-width: none;
-			}
-
 			header
 			{"
 				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'header_bg'))
@@ -740,33 +729,5 @@ if(isset($obj_theme_core->options['website_max_width']) && $obj_theme_core->opti
 			}
 	}";
 }
-
-$out .= "@media print
-{
-	body:before
-	{
-		content: 'is_print';
-	}
-
-	body, article
-	{
-		background: none;
-	}
-
-	header, .aside, footer
-	{
-		display: none;
-	}
-
-	header, article > div, footer
-	{
-		padding: 0;
-	}
-
-	article
-	{
-		min-height: auto;
-	}
-}";
 
 echo $out;
