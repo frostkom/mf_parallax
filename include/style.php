@@ -143,6 +143,8 @@ $out .= "@media all
 					#primary_nav
 					{"
 						.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'nav_bg'))
+						.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'nav_bg_color'))
+						.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'nav_bg_image', 'suffix' => '); background-size: cover'))
 						.$obj_theme_core->render_css(array('property' => 'clear', 'value' => 'nav_clear'))
 						.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color'))
 						.$obj_theme_core->render_css(array('property' => 'float', 'value' => 'nav_float'))
