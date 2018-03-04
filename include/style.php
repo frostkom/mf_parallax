@@ -104,21 +104,11 @@ $out .= "@media all
 				.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
 				."text-align: center;";
 
-				if(isset($obj_theme_core->options['header_fixed']) && in_array($obj_theme_core->options['header_fixed'], array(2, 'absolute', 'fixed')))
+				if(isset($obj_theme_core->options['header_fixed']) && $obj_theme_core->options['header_fixed'] != '')
 				{
-					$out .= "left: 0;";
-
-					if($obj_theme_core->options['header_fixed'] == 2)
-					{
-						$out .= "position: fixed;";
-					}
-
-					else
-					{
-						$out .= $obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'));
-					}
-
-					$out .= "right: 0;
+					$out .= "left: 0;"
+					.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
+					."right: 0;
 					z-index: 10;";
 				}
 
@@ -160,27 +150,32 @@ $out .= "@media all
 							display: none;
 						}
 
-						#primary_nav ul
-						{
-							list-style: none;
-						}
+						header #primary_nav > div
+						{"
+							.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_padding'))
+						."}
 
-							#primary_nav li
+							#primary_nav ul
 							{
-								display: inline-block;
+								list-style: none;
 							}
 
-								#primary_nav li > a
+								#primary_nav li
 								{
-									color: inherit;
-									display: block;"
-									.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
-								."}
+									display: inline-block;
+								}
 
-									#primary_nav li.current_page_item > a
-									{"
-										.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
+									#primary_nav li > a
+									{
+										color: inherit;
+										display: block;"
+										.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
 									."}
+
+										#primary_nav li.current_page_item > a
+										{"
+											.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
+										."}
 
 					#slide_nav > .toggle_icon
 					{"
@@ -724,7 +719,7 @@ if(isset($obj_theme_core->options['website_max_width']) && $obj_theme_core->opti
 			content: 'is_desktop';
 		}
 
-			header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
+			header > div, #mf-pre-content > div, article > div, footer > div, nav.full_width > div, .full_width .widget .section, .full_width .widget > div
 			{
 				margin: 0 auto;
 				max-width: ".$obj_theme_core->options['website_max_width']."px;

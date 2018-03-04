@@ -291,7 +291,16 @@ if(!function_exists('get_menu_parallax'))
 
 					else
 					{
-						$out .= "<nav id='primary_nav' class='is_mobile_ready'>
+						global $obj_theme_core;
+
+						if(!isset($obj_theme_core))
+						{
+							$obj_theme_core = new mf_theme_core();
+						}
+
+						$obj_theme_core->get_params();
+
+						$out .= "<nav id='primary_nav' class='is_mobile_ready".(isset($obj_theme_core->options['nav_full_width']) && $obj_theme_core->options['nav_full_width'] == 2 ? " full_width" : "")."'>
 							<i class='fa fa-bars toggle_icon'></i>
 							<i class='fa fa-close toggle_icon'></i>"
 							.$nav_content
