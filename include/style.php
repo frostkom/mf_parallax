@@ -102,15 +102,16 @@ $out .= "@media all
 				.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'header_bg_image', 'suffix' => '); background-size: cover'))
 				."background-size: 100%;"
 				.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
+				.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
 				."text-align: center;";
 
-				if(isset($obj_theme_core->options['header_fixed']) && $obj_theme_core->options['header_fixed'] != '')
+				/*if(isset($obj_theme_core->options['header_fixed']) && $obj_theme_core->options['header_fixed'] != '')
 				{
 					$out .= "left: 0;"
 					.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
 					."right: 0;
 					z-index: 10;";
-				}
+				}*/
 
 			$out .= "}
 
