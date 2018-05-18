@@ -1,7 +1,7 @@
 <?php
 
-include_once("include/functions.php");
 include_once("include/classes.php");
+include_once("include/functions.php");
 
 if(is_admin())
 {

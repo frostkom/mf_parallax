@@ -38,6 +38,9 @@ if(!function_exists('widgets_parallax'))
 {
 	function widgets_parallax()
 	{
+		$obj_theme_core = new mf_theme_core();
+		$obj_theme_core->get_custom_widget_areas();
+
 		register_sidebar(array(
 			'name' => __("Header", 'lang_parallax'),
 			'id' => 'widget_header',
@@ -46,6 +49,8 @@ if(!function_exists('widgets_parallax'))
 			'after_title' => '</div>',
 			'after_widget' => ""
 		));
+
+		$obj_theme_core->display_custom_widget_area('widget_header');
 
 		if(is_active_widget_area('widget_header'))
 		{
@@ -57,6 +62,8 @@ if(!function_exists('widgets_parallax'))
 				'after_title' => "",
 				'after_widget' => ""
 			));
+
+			$obj_theme_core->display_custom_widget_area('widget_slide');
 		}
 
 		register_sidebar(array(
@@ -68,6 +75,8 @@ if(!function_exists('widgets_parallax'))
 			'after_widget' => '</div>'
 		));
 
+		$obj_theme_core->display_custom_widget_area('widget_pre_content');
+
 		register_sidebar(array(
 			'name' => __("Footer", 'lang_parallax'),
 			'id' => 'widget_footer',
@@ -76,6 +85,8 @@ if(!function_exists('widgets_parallax'))
 			'after_title' => '</h3>',
 			'after_widget' => '</div>'
 		));
+
+		$obj_theme_core->display_custom_widget_area('widget_footer');
 
 		register_widget('widget_parallax_menu');
 	}
