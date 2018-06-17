@@ -189,7 +189,7 @@ if(!function_exists('meta_boxes_parallax'))
 			'id' => $meta_prefix.'background_repeat',
 			'type' => 'select',
 			'options' => array(
-				'' => "-- ".__("Choose here", 'lang_parallax')." --",
+				'' => "-- ".__("Choose Here", 'lang_parallax')." --",
 				'no-repeat' => __("No", 'lang_parallax'),
 				//'repeat' => __("Yes", 'lang_parallax'),
 				'repeat-x' => __("Yes", 'lang_parallax')." (".__("Horizontal", 'lang_parallax').")",
