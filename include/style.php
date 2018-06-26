@@ -29,10 +29,10 @@ $style_all = $style_desktop = $style_mobile = "";
 
 $result = $wpdb->get_results("SELECT ID, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' ORDER BY menu_order ASC");
 
-foreach($result as $post)
+foreach($result as $r)
 {
-	$post_id = $post->ID;
-	$post_name = $post->post_name;
+	$post_id = $r->ID;
+	$post_name = $r->post_name;
 
 	$css_identifier = "#".$post_name.", .header_".$post_name;
 

@@ -9,12 +9,12 @@ get_header();
 
 	$result = $wpdb->get_results("SELECT ID, post_title, post_content, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
 
-	foreach($result as $post)
+	foreach($result as $r)
 	{
-		$post_id = $post->ID;
-		$post_title = $post->post_title;
-		$post_content = apply_filters('the_content', $post->post_content);
-		$post_name = $post->post_name;
+		$post_id = $r->ID;
+		$post_title = $r->post_title;
+		$post_content = apply_filters('the_content', $r->post_content);
+		$post_name = $r->post_name;
 
 		$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
 

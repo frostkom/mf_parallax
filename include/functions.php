@@ -264,11 +264,11 @@ if(!function_exists('get_menu_parallax'))
 
 						$meta_prefix = "mf_parallax_";
 
-						foreach($result as $post)
+						foreach($result as $r)
 						{
-							$post_id = $post->ID;
-							$post_title = $post->post_title;
-							$post_name = $post->post_name;
+							$post_id = $r->ID;
+							$post_title = $r->post_title;
+							$post_name = $r->post_name;
 
 							$post_show_on_page = get_post_meta_or_default($post_id, $meta_prefix.'show_on_page', true, 'yes');
 							$post_show_in_menu = get_post_meta_or_default($post_id, $meta_prefix.'show_in_menu', true, 'yes');
