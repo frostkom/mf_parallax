@@ -89,7 +89,7 @@ $out .= "@media all
 {"
 	.$obj_theme_core->get_common_style()
 
-			."header > div, #mf-pre-content > div, article > div, footer > div, .full_width .widget .section, .full_width .widget > div
+			."header > div, #mf-pre-content > div, article > div, footer > div, .full_width > div > .widget .section, .full_width > div > .widget > div
 			{"
 				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'main_padding'))
 				."position: relative;
@@ -724,8 +724,8 @@ if(isset($obj_theme_core->options['website_max_width']) && $obj_theme_core->opti
 			content: 'is_desktop';
 		}
 
-			header > div, #mf-pre-content > div, article > div, footer > div, body:not(.is_mobile) nav.full_width > div, .full_width .widget > *
-			/*, .full_width .widget .section, .full_width .widget > div*/
+			header > div, #mf-pre-content > div, article > div, footer > div, body:not(.is_mobile) nav.full_width > div, .full_width > div > .widget > *
+			/*, .full_width > div > .widget .section, .full_width > div > .widget > div*/
 			{
 				margin: 0 auto;
 				margin-left: auto !important;
