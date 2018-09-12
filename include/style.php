@@ -243,7 +243,7 @@ $out .= "@media all
 						max-width: 300px;
 					}
 
-						#mf-slide-nav .fa-close
+						#mf-slide-nav .fa-times
 						{
 							font-size: 2em;
 							margin: 3% 4% 0 0;
@@ -641,7 +641,7 @@ $out .= "}
 					margin-top: .15em;
 				}
 
-					#primary_nav .fa-close
+					#primary_nav .fa-times
 					{
 						display: none;
 					}
@@ -658,7 +658,7 @@ $out .= "}
 						display: none;
 					}
 
-					#primary_nav.open .fa-close
+					#primary_nav.open .fa-times
 					{
 						display: block;
 					}

@@ -313,7 +313,7 @@ if(!function_exists('get_menu_parallax'))
 
 						$out .= "<nav id='primary_nav' class='is_mobile_ready".(isset($obj_theme_core->options['nav_full_width']) && $obj_theme_core->options['nav_full_width'] == 2 ? " full_width" : "")."'>
 							<i class='fas fa-bars toggle_icon'></i>
-							<i class='fa fa-close toggle_icon'></i>"
+							<i class='fa fa-times toggle_icon'></i>"
 							.$nav_content
 						."</nav>";
 					}

@@ -57,7 +57,7 @@ jQuery(function($)
 			}
 		}
 
-		$(document).on('click', '#slide_nav, #mf-slide-nav, #mf-slide-nav .fa-close, #mf-slide-nav a', function()
+		$(document).on('click', '#slide_nav, #mf-slide-nav, #mf-slide-nav .fa-times, #mf-slide-nav a', function()
 		{
 			show_or_hide_slide_menu();
 		});

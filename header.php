@@ -39,7 +39,7 @@ echo "<!DOCTYPE html>
 			{
 				echo "<div id='mf-slide-nav'>
 					<div>
-						<i class='fa fa-close'></i>";
+						<i class='fa fa-times'></i>";
 
 						dynamic_sidebar('widget_slide');
 
