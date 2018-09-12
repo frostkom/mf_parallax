@@ -106,7 +106,7 @@ jQuery(function($)
 			}
 		}
 
-		$('body').append("<a href='#' id='hamburger_to_top'><i class='fa fa-lg fa-bars'></i></a>");
+		$('body').append("<a href='#' id='hamburger_to_top'><i class='fas fa-bars fa-lg'></i></a>");
 
 		show_or_hide_hamburger();
 
