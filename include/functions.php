@@ -231,7 +231,7 @@ if(!function_exists('get_menu_parallax'))
 		{
 			$out .= "<nav>
 				<a href='#' id='slide_nav'>
-					<i class='fas fa-bars toggle_icon'></i>
+					<i class='fa fa-bars toggle_icon'></i>
 				</a>
 			</nav>"; //".__("Menu", 'lang_parallax')."
 		}
@@ -312,7 +312,7 @@ if(!function_exists('get_menu_parallax'))
 						$obj_theme_core->get_params();
 
 						$out .= "<nav id='primary_nav' class='is_mobile_ready".(isset($obj_theme_core->options['nav_full_width']) && $obj_theme_core->options['nav_full_width'] == 2 ? " full_width" : "")."'>
-							<i class='fas fa-bars toggle_icon'></i>
+							<i class='fa fa-bars toggle_icon'></i>
 							<i class='fa fa-times toggle_icon'></i>"
 							.$nav_content
 						."</nav>";
