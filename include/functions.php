@@ -112,8 +112,8 @@ if(!function_exists('meta_boxes_parallax'))
 			'id' => 'info',
 			'title' => __("Information", 'lang_parallax'),
 			'post_types' => array('page'),
-			'context' => 'after_title',
-			'priority' => 'low',
+			'context' => (function_exists('is_gutenberg_page') && !isset($_GET['classic-editor']) ? 'normal' : 'after_title'),
+			'priority' => (function_exists('is_gutenberg_page') && !isset($_GET['classic-editor']) ? 'high' : 'low'),
 			'fields' => array(
 				/*array(
 					'name' => __("Heading", 'lang_parallax'),

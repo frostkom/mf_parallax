@@ -10,7 +10,7 @@ class widget_parallax_menu extends WP_Widget
 		);
 
 		$this->arr_default = array(
-			'theme_menu_type' => "",
+			'theme_menu_type' => '',
 		);
 
 		parent::__construct('parallax-menu-widget', __("Menu", 'lang_parallax'), $widget_ops);
