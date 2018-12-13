@@ -103,17 +103,8 @@ $out .= "@media all
 				."background-size: 100%;"
 				.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
 				.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
-				."text-align: center;";
-
-				/*if(isset($obj_theme_core->options['header_fixed']) && $obj_theme_core->options['header_fixed'] != '')
-				{
-					$out .= "left: 0;"
-					.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
-					."right: 0;
-					z-index: 10;";
-				}*/
-
-			$out .= "}
+				."text-align: center;
+			}
 
 				header > div
 				{"
@@ -448,8 +439,9 @@ $out .= "@media all
 					.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
 					.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
 					.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'footer_margin'))
-					."position: relative;
-				}
+					//."position: relative;"
+					.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
+				."}
 
 					footer > div
 					{
