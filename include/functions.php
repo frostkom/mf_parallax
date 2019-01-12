@@ -108,12 +108,14 @@ if(!function_exists('meta_boxes_parallax'))
 	{
 		$meta_prefix = "mf_parallax_";
 
+		$has_gutenberg = function_exists('register_block_type') && !isset($_GET['classic-editor']);
+
 		$meta_boxes[] = array(
 			'id' => 'info',
 			'title' => __("Information", 'lang_parallax'),
 			'post_types' => array('page'),
-			'context' => (function_exists('is_gutenberg_page') && !isset($_GET['classic-editor']) ? 'normal' : 'after_title'),
-			'priority' => (function_exists('is_gutenberg_page') && !isset($_GET['classic-editor']) ? 'high' : 'low'),
+			'context' => ($has_gutenberg ? 'normal' : 'after_title'),
+			'priority' => ($has_gutenberg ? 'high' : 'low'),
 			'fields' => array(
 				/*array(
 					'name' => __("Heading", 'lang_parallax'),
