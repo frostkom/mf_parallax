@@ -1,17 +1,18 @@
 <?php
 
 include_once("include/classes.php");
-include_once("include/functions.php");
+
+$obj_parallax = new mf_parallax();
 
 if(is_admin())
 {
-	add_action('rwmb_meta_boxes', 'meta_boxes_parallax');
+	add_action('rwmb_meta_boxes', array($obj_parallax, 'rwmb_meta_boxes'));
 }
 
 else
 {
-	add_action('wp_head', 'head_parallax', 0);
+	add_action('wp_head', array($obj_parallax, 'wp_head'), 0);
 }
 
-add_action('after_setup_theme', 'setup_parallax');
-add_action('widgets_init', 'widgets_parallax');
+add_action('after_setup_theme', array($obj_parallax, 'after_setup_theme'));
+add_action('widgets_init', array($obj_parallax, 'widgets_init'));

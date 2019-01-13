@@ -3,6 +3,16 @@
  * The Header for our theme.
  */
 
+if(!isset($obj_theme_core))
+{
+	$obj_theme_core = new mf_theme_core();
+}
+
+if(!isset($obj_parallax))
+{
+	$obj_parallax = new mf_parallax();
+}
+
 echo "<!DOCTYPE html>
 <html ".get_language_attributes().">
 	<head>";
@@ -22,13 +32,8 @@ echo "<!DOCTYPE html>
 
 					else
 					{
-						if(!isset($obj_theme_core))
-						{
-							$obj_theme_core = new mf_theme_core();
-						}
-
 						echo $obj_theme_core->get_logo()
-						.get_menu_parallax(array('where' => 'header'));
+						.$obj_parallax->get_menu(array('where' => 'header'));
 					}
 
 					echo "<div class='clear'></div>
@@ -49,11 +54,6 @@ echo "<!DOCTYPE html>
 
 			if(is_active_sidebar('widget_pre_content'))
 			{
-				if(!isset($obj_theme_core))
-				{
-					$obj_theme_core = new mf_theme_core();
-				}
-
 				$obj_theme_core->get_params();
 
 				echo "<div id='mf-pre-content'".(isset($obj_theme_core->options['pre_content_full_width']) && $obj_theme_core->options['pre_content_full_width'] == 2 ? " class='full_width'" : "").">
