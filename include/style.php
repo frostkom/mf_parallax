@@ -19,7 +19,10 @@ if(!isset($obj_theme_core))
 	$obj_theme_core = new mf_theme_core();
 }
 
-$meta_prefix = "mf_parallax_";
+if(!isset($obj_parallax))
+{
+	$obj_parallax = new mf_parallax();
+}
 
 $obj_theme_core->get_params();
 
@@ -36,11 +39,11 @@ foreach($result as $r)
 
 	$css_identifier = "#".$post_name.", .header_".$post_name;
 
-	$background_image = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image'));
-	$background_repeat = get_post_meta($post_id, $meta_prefix.'background_repeat', true);
-	$background_image_mobile = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $meta_prefix.'background_image_mobile'));
-	$text_color = get_post_meta($post_id, $meta_prefix.'text_color', true);
-	$bg_color = get_post_meta($post_id, $meta_prefix.'bg_color', true);
+	$background_image = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $obj_parallax->meta_prefix.'background_image'));
+	$background_repeat = get_post_meta($post_id, $obj_parallax->meta_prefix.'background_repeat', true);
+	$background_image_mobile = get_post_meta_file_src(array('post_id' => $post_id, 'meta_key' => $obj_parallax->meta_prefix.'background_image_mobile'));
+	$text_color = get_post_meta($post_id, $obj_parallax->meta_prefix.'text_color', true);
+	$bg_color = get_post_meta($post_id, $obj_parallax->meta_prefix.'bg_color', true);
 
 	$style_bg_img_mobile = $style_bg_img = "";
 

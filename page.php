@@ -1,14 +1,13 @@
 <?php
-/**
- * @package WordPress
- * @subpackage MF Parallax
- */
 
 get_header();
 
 	if(have_posts())
 	{
-		$meta_prefix = "mf_parallax_";
+		if(!isset($obj_parallax))
+		{
+			$obj_parallax = new mf_parallax();
+		}
 
 		while(have_posts())
 		{
@@ -19,10 +18,10 @@ get_header();
 			$post_content = apply_filters('the_content', $post->post_content);
 			$post_name = $post->post_name;
 
-			$post_display_heading = get_post_meta_or_default($post_id, $meta_prefix.'display_heading', true, 'yes');
+			$post_display_heading = get_post_meta_or_default($post_id, $obj_parallax->meta_prefix.'display_heading', true, 'yes');
 
-			$post_heading = get_post_meta($post_id, $meta_prefix.'heading', true);
-			$post_aside = get_post_meta($post_id, $meta_prefix.'aside', true);
+			$post_heading = get_post_meta($post_id, $obj_parallax->meta_prefix.'heading', true);
+			$post_aside = get_post_meta($post_id, $obj_parallax->meta_prefix.'aside', true);
 
 			echo "<article id='".$post_name."'>
 				<div>";
