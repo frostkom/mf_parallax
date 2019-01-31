@@ -92,375 +92,375 @@ $out .= "@media all
 {"
 	.$obj_theme_core->get_common_style()
 
-			."header > div, #mf-pre-content > div, article > div, footer > div, .full_width > div > .widget .section, .full_width > div > .widget > div
+	."header > div, #mf-pre-content > div, article > div, footer > div, .full_width > div > .widget .section, .full_width > div > .widget > div
+	{"
+		.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'main_padding'))
+		."position: relative;
+	}
+
+	header
+	{"
+		.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'header_bg'))
+		.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'header_bg_color'))
+		.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'header_bg_image', 'suffix' => '); background-size: cover'))
+		."background-size: 100%;"
+		.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
+		.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
+		."text-align: center;
+	}
+
+		header > div
+		{"
+			.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'header_padding'))
+		."}
+
+			header h1, #site_logo
 			{"
-				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'main_padding'))
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'logo_color'))
+				."display: block;"
+				.$obj_theme_core->render_css(array('property' => 'float', 'value' => 'logo_float'))
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'logo_font'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'logo_font_size'))
+				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'logo_padding'))
+				.$obj_theme_core->render_css(array('property' => 'max-width', 'value' => 'logo_width'))
+			."}
+
+			#primary_nav
+			{"
+				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'nav_bg'))
+				.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'nav_bg_color'))
+				.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'nav_bg_image', 'suffix' => '); background-size: cover'))
+				.$obj_theme_core->render_css(array('property' => 'clear', 'value' => 'nav_clear'))
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color'))
+				.$obj_theme_core->render_css(array('property' => 'float', 'value' => 'nav_float'))
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'nav_font'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'nav_size'))
+				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_padding'))
+				.$obj_theme_core->render_css(array('property' => 'text-align', 'value' => 'nav_align'))
 				."position: relative;
 			}
 
-			header
-			{"
-				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'header_bg'))
-				.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'header_bg_color'))
-				.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'header_bg_image', 'suffix' => '); background-size: cover'))
-				."background-size: 100%;"
-				.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
-				.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
-				."text-align: center;
-			}
+				#primary_nav > .toggle_icon
+				{
+					display: none;
+				}
 
-				header > div
+				header #primary_nav > div
 				{"
-					.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'header_padding'))
+					.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_padding'))
 				."}
 
-					header h1, #site_logo
-					{"
-						.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'logo_color'))
-						."display: block;"
-						.$obj_theme_core->render_css(array('property' => 'float', 'value' => 'logo_float'))
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'logo_font'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'logo_font_size'))
-						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'logo_padding'))
-						.$obj_theme_core->render_css(array('property' => 'max-width', 'value' => 'logo_width'))
-					."}
-
-					#primary_nav
-					{"
-						.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'nav_bg'))
-						.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'nav_bg_color'))
-						.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'nav_bg_image', 'suffix' => '); background-size: cover'))
-						.$obj_theme_core->render_css(array('property' => 'clear', 'value' => 'nav_clear'))
-						.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color'))
-						.$obj_theme_core->render_css(array('property' => 'float', 'value' => 'nav_float'))
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'nav_font'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'nav_size'))
-						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_padding'))
-						.$obj_theme_core->render_css(array('property' => 'text-align', 'value' => 'nav_align'))
-						."position: relative;
+					#primary_nav ul
+					{
+						list-style: none;
 					}
 
-						#primary_nav > .toggle_icon
+						#primary_nav li
 						{
-							display: none;
+							display: inline-block;
 						}
 
-						header #primary_nav > div
-						{"
-							.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_padding'))
-						."}
-
-							#primary_nav ul
+							#primary_nav li > a
 							{
-								list-style: none;
-							}
+								color: inherit;
+								display: block;"
+								.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
+							."}
 
-								#primary_nav li
-								{
-									display: inline-block;
-								}
+								#primary_nav li.current_page_item > a
+								{"
+									.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
+								."}
 
-									#primary_nav li > a
-									{
-										color: inherit;
-										display: block;"
-										.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'nav_link_padding'))
-									."}
+			#slide_nav > .toggle_icon
+			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'logo_color'))
+				."display: block;"
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => array('hamburger_font_size', 'logo_font_size')))
+				."margin: .1em .2em;"
+				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'hamburger_margin'))
+				."position: absolute;";
 
-										#primary_nav li.current_page_item > a
-										{"
-											.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'nav_color_hover'))
-										."}
-
-					#slide_nav > .toggle_icon
-					{"
-						.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'logo_color'))
-						."display: block;"
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => array('hamburger_font_size', 'logo_font_size')))
-						."margin: .1em .2em;"
-						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'hamburger_margin'))
-						."position: absolute;";
-
-						switch($obj_theme_core->options['hamburger_position'])
-						{
-							default:
-								$out .= "right: 0;";
-							break;
-
-							case 'left':
-								$out .= "left: 0;";
-							break;
-						}
-
-						$out .= "top: 0;
-						z-index: 1;
-					}";
-
-			if(is_active_widget_area('widget_slide'))
-			{
-				$out .= "#mf-slide-nav
+				switch($obj_theme_core->options['hamburger_position'])
 				{
-					background: rgba(0, 0, 0, .7);
-					bottom: 0;
-					display: none;
-					left: 0;
+					default:
+						$out .= "right: 0;";
+					break;
+
+					case 'left':
+						$out .= "left: 0;";
+					break;
+				}
+
+				$out .= "top: 0;
+				z-index: 1;
+			}";
+
+	if(is_active_widget_area('widget_slide'))
+	{
+		$out .= "#mf-slide-nav
+		{
+			background: rgba(0, 0, 0, .7);
+			bottom: 0;
+			display: none;
+			left: 0;
+			position: absolute;
+			position: fixed;
+			right: 0;
+			top: 0;
+			z-index: 1002;
+		}
+
+			#mf-slide-nav > div
+			{"
+				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg'))
+				."bottom: 0;"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'nav_font'))
+				."overflow: hidden;
+				padding: 2.6em 0 1em;
+				position: absolute;";
+
+				switch($obj_theme_core->options['slide_nav_position'])
+				{
+					default:
+						$out .= "right: -90%;";
+					break;
+
+					case 'left':
+						$out .= "left: 0;";
+					break;
+				}
+
+				$out .= "top: 0;
+				width: 90%;
+				max-width: 300px;
+			}
+
+				#mf-slide-nav .fa-times
+				{
+					font-size: 2em;
+					margin: 3% 4% 0 0;
 					position: absolute;
-					position: fixed;
 					right: 0;
 					top: 0;
-					z-index: 1002;
 				}
 
-					#mf-slide-nav > div
-					{"
-						.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg'))
-						."bottom: 0;"
-						.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'nav_font'))
-						."overflow: hidden;
-						padding: 2.6em 0 1em;
-						position: absolute;";
+				#mf-slide-nav ul
+				{
+					list-style: none;
+				}
 
-						switch($obj_theme_core->options['slide_nav_position'])
-						{
-							default:
-								$out .= "right: -90%;";
-							break;
-
-							case 'left':
-								$out .= "left: 0;";
-							break;
-						}
-
-						$out .= "top: 0;
-						width: 90%;
-						max-width: 300px;
+					#mf-slide-nav li
+					{
+						width: 100%;
 					}
 
-						#mf-slide-nav .fa-times
-						{
-							font-size: 2em;
-							margin: 3% 4% 0 0;
-							position: absolute;
-							right: 0;
-							top: 0;
+						#mf-slide-nav .theme_nav ul a
+						{"
+							.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
+							."display: block;
+							letter-spacing: .2em;"
+							.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
+							."transition: all .4s ease;
 						}
 
-						#mf-slide-nav ul
-						{
-							list-style: none;
-						}
-
-							#mf-slide-nav li
-							{
-								width: 100%;
-							}
-
-								#mf-slide-nav .theme_nav ul a
-								{"
-									.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-									."display: block;
-									letter-spacing: .2em;"
-									.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
-									."transition: all .4s ease;
-								}
-
-									#mf-slide-nav .theme_nav ul a:hover
-									{"
-										.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-										.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
-										."text-indent: .3em;
-									}
-
-									#mf-slide-nav .theme_nav li.current_page_item > a
-									{"
-										.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-										.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
-									."}
-
-								#mf-slide-nav .theme_nav li ul
-								{
-									margin-bottom: 0;
-								}
-
-									#mf-slide-nav .theme_nav li ul a
-									{
-										text-indent: 1.4em;
-									}
-
-										#mf-slide-nav .theme_nav li ul a:hover
-										{
-											text-indent: 2em;
-										}
-
-						#mf-slide-nav ul, #mf-slide-nav p
-						{
-							margin-bottom: 1em;
-						}";
-			}
-
-			if(is_active_widget_area('widget_pre_content'))
-			{
-				$out .= "#mf-pre-content
-				{"
-					.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
-					.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'pre_content_bg_color'))
-					.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'pre_content_bg_image', 'suffix' => '); background-size: cover'))
-					."overflow: hidden;
-				}
-
-					#mf-pre-content > div
-					{"
-						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
-					."}
-
-						/*#mf-pre-content h3
-						{"
-							.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-							.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
-							.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
-							.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
-						."}*/
-
-						#mf-pre-content p
-						{"
-							.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'section_size'))
-							.$obj_theme_core->render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
-						."}
-
-							#mf-pre-content p:not(:last-child)
+							#mf-slide-nav .theme_nav ul a:hover
 							{"
-								.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'section_margin'))
-							."}";
-			}
-
-			$out .= "article
-			{
-				background: 50% 0 repeat fixed;
-				background-size: 100%;";
-
-				if(isset($obj_theme_core->options['content_stretch_height']) && $obj_theme_core->options['content_stretch_height'] == 2)
-				{
-					$out .= "min-height: 100vh;";
-				}
-
-				$out .= "overflow: hidden;
-				position: relative;
-				width: 100%;
-			}
-
-				article > div
-				{
-					margin: 0 auto;"
-					.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'content_padding'))
-					."overflow: hidden;
-					position: relative;
-				}";
-
-					/*article h1
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size'))
-					."}*/
-
-					$out .= "article h2
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h2'))
-						.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h2'))
-						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h2'))
-					."}
-
-					article h3, #mf-pre-content h3
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
-						.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
-						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
-					."}
-
-					article h4
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h4'))
-						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h4'))
-						.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h4'))
-					."}
-
-					article h5
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h5'))
-						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h5'))
-						.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
-					."}
-
-					article .aside p
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'aside_p'))
-					."}
-
-					article section
-					{"
-						.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'section_size'))
-						.$obj_theme_core->render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
-					."}
-
-						article a
-						{
-							color: inherit;
-						}
-
-							article a:hover
-							{
-								text-decoration: underline;
+								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+								.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
+								."text-indent: .3em;
 							}
 
-						article p, article ol, article ul
+							#mf-slide-nav .theme_nav li.current_page_item > a
+							{"
+								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
+								.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
+							."}
+
+						#mf-slide-nav .theme_nav li ul
 						{
-							list-style-position: inside;
-							margin-bottom: .5em;
+							margin-bottom: 0;
 						}
 
-						article blockquote
-						{"
-							.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'quote_size'))
-							."margin-left: 0;
-						}
+							#mf-slide-nav .theme_nav li ul a
+							{
+								text-indent: 1.4em;
+							}
 
-						article form button
-						{"
-							.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'nav_color_hover'))
-							."color: #fff;
-						}";
+								#mf-slide-nav .theme_nav li ul a:hover
+								{
+									text-indent: 2em;
+								}
 
-			if(is_active_widget_area('widget_footer'))
-			{
-				$out .= "footer
+				#mf-slide-nav ul, #mf-slide-nav p
+				{
+					margin-bottom: 1em;
+				}";
+	}
+
+	if(is_active_widget_area('widget_pre_content'))
+	{
+		$out .= "#mf-pre-content
+		{"
+			.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'pre_content_bg'))
+			.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'pre_content_bg_color'))
+			.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'pre_content_bg_image', 'suffix' => '); background-size: cover'))
+			."overflow: hidden;
+		}
+
+			#mf-pre-content > div
+			{"
+				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'pre_content_padding'))
+			."}
+
+				/*#mf-pre-content h3
 				{"
-					.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'footer_bg'))
-					.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
-					.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
-					.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'footer_margin'))
-					//."position: relative;"
-					.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
+					.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+					.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
+					.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
+					.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
+				."}*/
+
+				#mf-pre-content p
+				{"
+					.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'section_size'))
+					.$obj_theme_core->render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
 				."}
 
-					footer > div
-					{
-						overflow: hidden;"
-						.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'footer_padding'))
-						.$obj_theme_core->render_css(array('property' => 'text-align', 'value' => 'footer_align'))
-					."}
+					#mf-pre-content p:not(:last-child)
+					{"
+						.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'section_margin'))
+					."}";
+	}
 
-						footer .widget
-						{"
-							.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'footer_color'))
-							.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'footer_font'))
-							.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
-							.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
-						."}";
-			}
+	$out .= "article
+	{
+		background: 50% 0 repeat fixed;
+		background-size: 100%;";
+
+		if(isset($obj_theme_core->options['content_stretch_height']) && $obj_theme_core->options['content_stretch_height'] == 2)
+		{
+			$out .= "min-height: 100vh;";
+		}
+
+		$out .= "overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+
+		article > div
+		{
+			margin: 0 auto;"
+			.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'content_padding'))
+			."overflow: hidden;
+			position: relative;
+		}";
+
+			/*article h1
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size'))
+			."}*/
+
+			$out .= "article h2
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h2'))
+				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h2'))
+				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h2'))
+			."}
+
+			article h3, #mf-pre-content h3
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
+				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
+				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h3'))
+			."}
+
+			article h4
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h4'))
+				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h4'))
+				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h4'))
+			."}
+
+			article h5
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h5'))
+				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h5'))
+				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h5'))
+			."}
+
+			article .aside p
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'aside_p'))
+			."}
+
+			article section
+			{"
+				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'section_size'))
+				.$obj_theme_core->render_css(array('property' => 'line-height', 'value' => 'section_line_height'))
+			."}
+
+				article a
+				{
+					color: inherit;
+				}
+
+					article a:hover
+					{
+						text-decoration: underline;
+					}
+
+				article p, article ol, article ul
+				{
+					list-style-position: inside;
+					margin-bottom: .5em;
+				}
+
+				article blockquote
+				{"
+					.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'quote_size'))
+					."margin-left: 0;
+				}
+
+				article form button
+				{"
+					.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'nav_color_hover'))
+					."color: #fff;
+				}";
+
+	if(is_active_widget_area('widget_footer'))
+	{
+		$out .= "footer
+		{"
+			.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'footer_bg'))
+			.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
+			.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
+			.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'footer_margin'))
+			//."position: relative;"
+			.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
+		."}
+
+			footer > div
+			{
+				overflow: hidden;"
+				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'footer_padding'))
+				.$obj_theme_core->render_css(array('property' => 'text-align', 'value' => 'footer_align'))
+			."}
+
+				footer .widget
+				{"
+					.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'footer_color'))
+					.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'footer_font'))
+					.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'footer_font_size'))
+					.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'footer_widget_padding'))
+				."}";
+	}
 
 	if($obj_theme_core->options['hamburger_fixed'] == 'fixed')
 	{
