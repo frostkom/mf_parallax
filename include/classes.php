@@ -120,23 +120,21 @@ class mf_parallax
 
 	function rwmb_meta_boxes($meta_boxes)
 	{
-		$has_gutenberg = function_exists('register_block_type') && !isset($_GET['classic-editor']);
-
 		$meta_boxes[] = array(
 			'id' => 'info',
 			'title' => __("Information", 'lang_parallax'),
 			'post_types' => array('page'),
-			'context' => ($has_gutenberg ? 'normal' : 'after_title'),
-			'priority' => ($has_gutenberg ? 'high' : 'low'),
+			'context' => 'normal',
+			'priority' => 'high',
 			'fields' => array(
 				/*array(
 					'name' => __("Heading", 'lang_parallax'),
-					'id'   => $this->meta_prefix.'heading',
+					'id' => $this->meta_prefix.'heading',
 					'type' => 'text'
 				),*/
 				array(
 					'name' => __("Aside", 'lang_parallax'),
-					'id'   => $this->meta_prefix.'aside',
+					'id' => $this->meta_prefix.'aside',
 					'type' => 'wysiwyg'
 				),
 			)

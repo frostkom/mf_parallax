@@ -9,12 +9,12 @@
  *
  * @version 3.0.0
  *
- * Example usage:
- * $('#nav').onePageNav({
- *   currentClass: 'current',
- *   changeHash: false,
- *   scrollSpeed: 750
- * });
+ *	Example usage:
+ *	$('#nav').onePageNav({
+ *		currentClass: 'current',
+ *		changeHash: false,
+ *		scrollSpeed: 750
+ *	});
  */
 
 ;(function($, window, document, undefined){
