@@ -188,12 +188,16 @@ class mf_parallax
 			'name' => __("Background", 'lang_parallax')." (".__("Desktop", 'lang_parallax').")",
 			'id' => $this->meta_prefix.'background_image',
 			'type' => 'file_advanced',
+			'max_file_uploads' => 1,
+			'mime_type' => 'image',
 		);
 
 		$arr_page_settings[] = array(
 			'name' => __("Background", 'lang_parallax')." (".__("Mobile", 'lang_parallax').")",
 			'id' => $this->meta_prefix.'background_image_mobile',
 			'type' => 'file_advanced',
+			'max_file_uploads' => 1,
+			'mime_type' => 'image',
 		);
 
 		$arr_page_settings[] = array(
