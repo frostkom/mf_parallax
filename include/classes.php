@@ -4,7 +4,7 @@ class mf_parallax
 {
 	function __construct()
 	{
-		$this->meta_prefix = "mf_parallax_";
+		$this->meta_prefix = 'mf_parallax_';
 	}
 
 	function get_menu($data = array())
