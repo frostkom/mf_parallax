@@ -113,7 +113,7 @@ class mf_parallax
 
 	function meta_show_on_page_info()
 	{
-		$out = "<p>".sprintf(__("To choose if this page should be part of the One Page/Parallax you have to set %sShow on Front%s to Your latest Posts.", 'lang_parallax'), "<a href='".admin_url("options-reading.php")."'>", "</a>")."</p>";
+		$out = "<p>".sprintf(__("To choose if this page should be part of the %s you have to set %sYour homepage displays%s to Your latest posts.", 'lang_parallax'), "One Page/Parallax", "<a href='".admin_url("options-reading.php")."'>", "</a>")."</p>";
 
 		return $out;
 	}

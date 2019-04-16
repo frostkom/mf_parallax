@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 10:04+0100\n"
+"POT-Creation-Date: 2019-04-16 07:17+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -17,39 +17,39 @@ msgstr ""
 
 #: ../include/classes.php:116
 #, php-format
-msgid "To choose if this page should be part of the One Page/Parallax you have to set %sShow on Front%s to Your latest Posts."
-msgstr ""
+msgid "To choose if this page should be part of the %s you have to set %sYour homepage displays%s to Your latest posts."
+msgstr "För att välja om denna sida ska vara del av en %s måste du ha satt %sDin startsida visar%s till Dina senaste inlägg"
 
-#: ../include/classes.php:127
+#: ../include/classes.php:125
 msgid "Information"
 msgstr ""
 
-#: ../include/classes.php:138
+#: ../include/classes.php:136
 msgid "Aside"
 msgstr "Sidokolumn"
 
-#: ../include/classes.php:150
+#: ../include/classes.php:148
 msgid "Show in Menu"
 msgstr "Visa i meny"
 
-#: ../include/classes.php:158
+#: ../include/classes.php:156
 msgid "Show on Page"
 msgstr "Visa på sida"
 
-#: ../include/classes.php:176
+#: ../include/classes.php:174
 msgid "Display Heading"
 msgstr "Visa rubrik"
 
-#: ../include/classes.php:184
+#: ../include/classes.php:182
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../include/classes.php:190
+#: ../include/classes.php:188
 #: ../include/classes.php:196
 msgid "Background"
 msgstr "Bakgrund"
 
-#: ../include/classes.php:190
+#: ../include/classes.php:188
 msgid "Desktop"
 msgstr ""
 
@@ -57,68 +57,68 @@ msgstr ""
 msgid "Mobile"
 msgstr "Mobil"
 
-#: ../include/classes.php:202
+#: ../include/classes.php:204
 msgid "Repeat Image"
 msgstr "Repetera bild"
 
-#: ../include/classes.php:206
+#: ../include/classes.php:208
 msgid "Choose Here"
 msgstr "Välj här"
 
-#: ../include/classes.php:207
+#: ../include/classes.php:209
 msgid "No"
 msgstr "Nej"
 
-#: ../include/classes.php:209
-#: ../include/classes.php:210
+#: ../include/classes.php:211
+#: ../include/classes.php:212
 msgid "Yes"
 msgstr "Ja"
 
-#: ../include/classes.php:209
+#: ../include/classes.php:211
 msgid "Horizontal"
 msgstr "Horisontell"
 
-#: ../include/classes.php:210
+#: ../include/classes.php:212
 msgid "Vertical"
 msgstr "Vertikal"
 
-#: ../include/classes.php:215
+#: ../include/classes.php:217
 msgid "Text Color"
 msgstr "Textfärg"
 
-#: ../include/classes.php:222
+#: ../include/classes.php:224
 msgid "Settings"
 msgstr "Inställning"
 
-#: ../include/classes.php:256
+#: ../include/classes.php:258
 msgid "Primary Navigation"
 msgstr "Primär navigation"
 
-#: ../include/classes.php:266
+#: ../include/classes.php:268
 msgid "Header"
 msgstr "Sidhuvud"
 
-#: ../include/classes.php:279
+#: ../include/classes.php:281
 msgid "Slide menu"
 msgstr "Sidomeny"
 
-#: ../include/classes.php:291
+#: ../include/classes.php:293
 msgid "Pre Content"
 msgstr "Före innehåll"
 
-#: ../include/classes.php:302
+#: ../include/classes.php:304
 msgid "Footer"
 msgstr "Sidfot"
 
-#: ../include/classes.php:322
+#: ../include/classes.php:324
 msgid "Display menu"
 msgstr "Visa meny"
 
-#: ../include/classes.php:331
+#: ../include/classes.php:333
 msgid "Menu"
 msgstr "Meny"
 
-#: ../include/classes.php:361
+#: ../include/classes.php:363
 msgid "Menu Type"
 msgstr "Typ av meny"
 
