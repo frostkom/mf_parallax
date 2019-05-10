@@ -509,7 +509,7 @@ $out .= "}
 {
 	body:before
 	{
-		content: 'is_tablet';
+		content: 'is_size_lap';
 	}
 
 	.show_if_mobile
@@ -602,7 +602,7 @@ $out .= "}
 {
 	body:before
 	{
-		content: 'is_mobile';
+		content: 'is_size_palm';
 	}
 
 	.hide_if_mobile
@@ -716,11 +716,10 @@ if(isset($obj_theme_core->options['website_max_width']) && $obj_theme_core->opti
 	{
 		body:before
 		{
-			content: 'is_desktop';
+			content: 'is_size_desk';
 		}
 
 			header > div, #mf-pre-content > div, article > div, footer > div, body:not(.is_mobile) nav.full_width > div, .full_width > div > .widget > *
-			/*, .full_width > div > .widget .section, .full_width > div > .widget > div*/
 			{
 				margin: 0 auto;
 				margin-left: auto !important;

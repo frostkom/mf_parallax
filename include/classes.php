@@ -336,7 +336,6 @@ class widget_parallax_menu extends WP_Widget
 	function widget($args, $instance)
 	{
 		extract($args);
-
 		$instance = wp_parse_args((array)$instance, $this->arr_default);
 
 		echo $before_widget
@@ -347,7 +346,6 @@ class widget_parallax_menu extends WP_Widget
 	function update($new_instance, $old_instance)
 	{
 		$instance = $old_instance;
-
 		$new_instance = wp_parse_args((array)$new_instance, $this->arr_default);
 
 		$instance['theme_menu_type'] = sanitize_text_field($new_instance['theme_menu_type']);
