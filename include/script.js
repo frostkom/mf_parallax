@@ -18,7 +18,7 @@ jQuery(function($)
 			{
 				var dom_obj = $("#mf-slide-nav");
 
-				if(dom_obj.is(':visible'))
+				if(dom_obj.is(":visible"))
 				{
 					dom_obj.fadeOut();
 				}
@@ -40,7 +40,7 @@ jQuery(function($)
 			{
 				var dom_obj = $("#mf-slide-nav");
 
-				if(dom_obj.is(':visible'))
+				if(dom_obj.is(":visible"))
 				{
 					dom_obj.children("div").animate({'right': offset_orig}, 500, function()
 					{

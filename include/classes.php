@@ -242,6 +242,8 @@ class mf_parallax
 
 		mf_enqueue_style('style', $template_url."/include/style.php", $theme_version);
 
+		$obj_theme_core->get_external_css($theme_version);
+
 		mf_enqueue_script('script_nav', $template_url."/include/jquery.nav.js", $theme_version);
 		mf_enqueue_script('script_parallax', $template_url."/include/script.js", array(
 			'override_bg' => (isset($obj_theme_core->options['header_override_bg_with_page_bg']) && $obj_theme_core->options['header_override_bg_with_page_bg'] == 2),
