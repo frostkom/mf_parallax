@@ -332,7 +332,7 @@ class widget_parallax_menu extends WP_Widget
 
 		$this->obj_parallax = new mf_parallax();
 
-		parent::__construct('parallax-menu-widget', __("Menu", 'lang_parallax'), $widget_ops);
+		parent::__construct($widget_ops['classname'].'-menu-widget', __("Menu", 'lang_parallax'), $widget_ops);
 	}
 
 	function widget($args, $instance)
