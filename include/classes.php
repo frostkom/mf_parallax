@@ -252,6 +252,31 @@ class mf_parallax
 		), $theme_version);
 	}
 
+	function filter_is_file_used($arr_used)
+	{
+		global $wpdb;
+
+		$result = $wpdb->get_results($wpdb->prepare("SELECT post_id FROM ".$wpdb->postmeta." WHERE (meta_key = %s OR meta_key = %s) AND meta_value = %s", $this->meta_prefix.'background_image', $this->meta_prefix.'background_image_mobile', $arr_used['id']));
+		$rows = $wpdb->num_rows;
+
+		if($rows > 0)
+		{
+			$arr_used['amount'] += $rows;
+
+			foreach($result as $r)
+			{
+				if($arr_used['example'] != '')
+				{
+					break;
+				}
+
+				$arr_used['example'] = admin_url("post.php?action=edit&post=".$r->post_id);
+			}
+		}
+
+		return $arr_used;
+	}
+
 	function after_setup_theme()
 	{
 		load_theme_textdomain('lang_parallax', get_template_directory()."/lang");
