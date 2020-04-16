@@ -729,4 +729,12 @@ if(isset($obj_theme_core->options['website_max_width']) && $obj_theme_core->opti
 	}";
 }
 
+$out .= "@media print
+{
+	html
+	{"
+		.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'body_print_font_size'))
+	."}
+}";
+
 echo $out;
