@@ -121,7 +121,7 @@ class mf_parallax
 	function rwmb_meta_boxes($meta_boxes)
 	{
 		$meta_boxes[] = array(
-			'id' => 'info',
+			'id' => $this->meta_prefix.'info',
 			'title' => __("Information", 'lang_parallax'),
 			'post_types' => array('page'),
 			'context' => 'normal',
@@ -220,7 +220,7 @@ class mf_parallax
 		);
 
 		$meta_boxes[] = array(
-			'id' => 'settings',
+			'id' => $this->meta_prefix.'settings',
 			'title' => __("Settings", 'lang_parallax'),
 			'post_types' => array('page'),
 			'context' => 'side',
