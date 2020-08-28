@@ -346,7 +346,7 @@ class widget_parallax_menu extends WP_Widget
 {
 	function __construct()
 	{
-		$widget_ops = array(
+		$this->widget_ops = array(
 			'classname' => 'parallax',
 			'description' => __("Display menu", 'lang_parallax')
 		);
@@ -357,7 +357,7 @@ class widget_parallax_menu extends WP_Widget
 
 		$this->obj_parallax = new mf_parallax();
 
-		parent::__construct($widget_ops['classname'].'-menu-widget', __("Menu", 'lang_parallax'), $widget_ops);
+		parent::__construct(str_replace("_", "-", $this->widget_ops['classname']).'-menu-widget', __("Menu", 'lang_parallax'), $this->widget_ops);
 	}
 
 	function widget($args, $instance)
