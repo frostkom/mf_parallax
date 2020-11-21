@@ -284,13 +284,15 @@ $out .= "@media all
 						}
 
 							#mf-slide-nav .theme_nav li ul a
-							{
-								text-indent: 1.4em;
+							{"
+								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_sub_bg'))
+								."text-indent: 1.4em;
 							}
 
 								#mf-slide-nav .theme_nav li ul a:hover
-								{
-									text-indent: 2em;
+								{"
+									.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_sub_bg_hover'))
+									."text-indent: 2em;
 								}
 
 				#mf-slide-nav ul, #mf-slide-nav p
