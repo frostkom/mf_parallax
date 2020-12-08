@@ -92,27 +92,11 @@ $out .= "@media all
 {"
 	.$obj_theme_core->get_common_style()
 
-	."header > div, #mf-pre-content > div, article > div, footer > div, .full_width > div > .widget .section, .full_width > div > .widget > div
-	{"
-		.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'main_padding'))
-		."position: relative;
+	."header
+	{
+		background-size: 100%;
+		text-align: center;
 	}
-
-	header
-	{"
-		.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'header_bg'))
-		.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'header_bg_color'))
-		.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'header_bg_image', 'suffix' => '); background-size: cover'))
-		."background-size: 100%;"
-		.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'header_overflow'))
-		.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
-		."text-align: center;
-	}
-
-		header > div
-		{"
-			.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'header_padding'))
-		."}
 
 			header h1, #site_logo
 			{"
@@ -198,107 +182,21 @@ $out .= "@media all
 
 	if(is_active_widget_area('widget_slide'))
 	{
-		$out .= "#mf-slide-nav
-		{
-			background: rgba(0, 0, 0, .7);
-			bottom: 0;
-			display: none;
-			left: 0;
-			position: absolute;
-			position: fixed;
-			right: 0;
-			top: 0;
-			z-index: 1003;
-		}
+		$out .= "#mf-slide-nav > div
+		{";
 
-			#mf-slide-nav > div
-			{"
-				.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg'))
-				."bottom: 0;"
-				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'nav_font'))
-				."overflow: hidden;
-				padding: 2.6em 0 1em;
-				position: absolute;";
+			switch($obj_theme_core->options['slide_nav_position'])
+			{
+				default:
+					$out .= "right: -90%;";
+				break;
 
-				switch($obj_theme_core->options['slide_nav_position'])
-				{
-					default:
-						$out .= "right: -90%;";
-					break;
-
-					case 'left':
-						$out .= "left: 0;";
-					break;
-				}
-
-				$out .= "top: 0;
-				width: 90%;
-				max-width: 300px;
+				case 'left':
+					$out .= "left: 0;";
+				break;
 			}
 
-				#mf-slide-nav .fa-times
-				{
-					font-size: 2em;
-					margin: 3% 4% 0 0;
-					position: absolute;
-					right: 0;
-					top: 0;
-				}
-
-				#mf-slide-nav ul
-				{
-					list-style: none;
-				}
-
-					#mf-slide-nav li
-					{
-						width: 100%;
-					}
-
-						#mf-slide-nav .theme_nav ul a
-						{"
-							.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color'))
-							."display: block;
-							letter-spacing: .2em;"
-							.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'slide_nav_link_padding'))
-							."transition: all .4s ease;
-						}
-
-							#mf-slide-nav .theme_nav ul a:hover
-							{"
-								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-								.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_hover'))
-								."text-indent: .3em;
-							}
-
-							#mf-slide-nav .theme_nav li.current_page_item > a
-							{"
-								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_bg_hover'))
-								.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'slide_nav_color_current'))
-							."}
-
-						#mf-slide-nav .theme_nav li ul
-						{
-							margin-bottom: 0;
-						}
-
-							#mf-slide-nav .theme_nav li ul a
-							{"
-								.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_sub_bg'))
-								."text-indent: 1.4em;
-							}
-
-								#mf-slide-nav .theme_nav li ul a:hover
-								{"
-									.$obj_theme_core->render_css(array('property' => 'background', 'value' => 'slide_nav_sub_bg_hover'))
-									."text-indent: 2em;
-								}
-
-				#mf-slide-nav ul, #mf-slide-nav p
-				{
-					margin-bottom: 1em;
-				}";
+		$out .= "}";
 	}
 
 	if(is_active_widget_area('widget_pre_content'))
