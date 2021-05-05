@@ -233,7 +233,13 @@ class mf_parallax
 
 	function wp_head()
 	{
-		$obj_theme_core = new mf_theme_core();
+		global $obj_theme_core;
+
+		if(!isset($obj_theme_core))
+		{
+			$obj_theme_core = new mf_theme_core();
+		}
+
 		$obj_theme_core->get_params();
 		$obj_theme_core->enqueue_theme_fonts();
 
