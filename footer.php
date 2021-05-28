@@ -8,7 +8,6 @@
 
 			if(is_active_sidebar('widget_footer'))
 			{
-				// id='footer'
 				echo "<footer>
 					<div>";
 
