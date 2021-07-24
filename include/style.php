@@ -334,7 +334,6 @@ $out .= "@media all
 			.$obj_theme_core->render_css(array('property' => 'background-color', 'value' => 'footer_bg_color'))
 			.$obj_theme_core->render_css(array('property' => 'background-image', 'prefix' => 'url(', 'value' => 'footer_bg_image', 'suffix' => '); background-size: cover'))
 			.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'footer_margin'))
-			//."position: relative;"
 			.$obj_theme_core->render_css(array('property' => 'position', 'value' => 'header_fixed'))
 		."}
 
@@ -344,6 +343,11 @@ $out .= "@media all
 				.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'footer_padding'))
 				.$obj_theme_core->render_css(array('property' => 'text-align', 'value' => 'footer_align'))
 			."}
+
+				footer.full_width > div
+				{
+					overflow: unset;
+				}
 
 				footer .widget
 				{"
