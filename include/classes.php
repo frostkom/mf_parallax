@@ -354,7 +354,7 @@ class widget_parallax_menu extends WP_Widget
 	{
 		$this->widget_ops = array(
 			'classname' => 'parallax',
-			'description' => __("Display menu", 'lang_parallax')
+			'description' => __("Display Menu", 'lang_parallax')
 		);
 
 		$this->arr_default = array(
