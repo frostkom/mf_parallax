@@ -47,7 +47,7 @@ class mf_parallax
 				{
 					$nav_content .= "<ul id='menu-main-menu'>";
 
-						$result = $wpdb->get_results("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = 'page' AND post_status = 'publish' ORDER BY menu_order ASC");
+						$result = $wpdb->get_results($wpdb->prepare("SELECT ID, post_title, post_name FROM ".$wpdb->posts." WHERE post_type = %s AND post_status = %s ORDER BY menu_order ASC", 'page', 'publish'));
 
 						$i = 0;
 
