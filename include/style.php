@@ -251,12 +251,14 @@ $out .= "@media all
 
 			/*article h1
 			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'heading_color'))
 				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font'))
 				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size'))
 			."}*/
 
 			$out .= "article h2
 			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'heading_color_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h2'))
@@ -265,6 +267,7 @@ $out .= "@media all
 
 			#wrapper article h3, #mf-pre-content h3
 			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'heading_color_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h3'))
 				.$obj_theme_core->render_css(array('property' => 'font-weight', 'value' => 'heading_weight_h3'))
@@ -273,6 +276,7 @@ $out .= "@media all
 
 			article h4
 			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'heading_color_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h4'))
 				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h4'))
@@ -281,6 +285,7 @@ $out .= "@media all
 
 			article h5
 			{"
+				.$obj_theme_core->render_css(array('property' => 'color', 'value' => 'heading_color_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-family', 'value' => 'heading_font_h2'))
 				.$obj_theme_core->render_css(array('property' => 'font-size', 'value' => 'heading_font_size_h5'))
 				.$obj_theme_core->render_css(array('property' => 'margin', 'value' => 'heading_margin_h5'))
