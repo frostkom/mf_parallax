@@ -300,10 +300,10 @@ class mf_parallax
 		register_sidebar(array(
 			'name' => __("Header", 'lang_parallax'),
 			'id' => 'widget_header',
-			'before_widget' => "",
+			'before_widget' => "<div class='widget %s %s'>",
 			'before_title' => '<div>',
 			'after_title' => '</div>',
-			'after_widget' => ""
+			'after_widget' => "</div>",
 		));
 
 		$obj_theme_core->display_custom_widget_area('widget_header');
@@ -313,10 +313,10 @@ class mf_parallax
 			register_sidebar(array(
 				'name' => __("Slide menu", 'lang_parallax'),
 				'id' => 'widget_slide',
-				'before_widget' => "",
+				'before_widget' => "<div class='widget %s %s'>",
 				'before_title' => "",
 				'after_title' => "",
-				'after_widget' => ""
+				'after_widget' => "</div>",
 			));
 
 			$obj_theme_core->display_custom_widget_area('widget_slide');
@@ -339,7 +339,7 @@ class mf_parallax
 			'before_widget' => "<div class='widget %s %s'>",
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
-			'after_widget' => '</div>'
+			'after_widget' => '</div>',
 		));
 
 		$obj_theme_core->display_custom_widget_area('widget_footer');
@@ -371,7 +371,7 @@ class widget_parallax_menu extends WP_Widget
 		extract($args);
 		$instance = wp_parse_args((array)$instance, $this->arr_default);
 
-		echo $before_widget
+		echo apply_filters('filter_before_widget', $before_widget)
 			.$this->obj_parallax->get_menu(array('type' => $instance['theme_menu_type'], 'where' => $id))
 		.$after_widget;
 	}
