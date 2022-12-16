@@ -391,7 +391,7 @@ class widget_parallax_menu extends WP_Widget
 		$instance = wp_parse_args((array)$instance, $this->arr_default);
 
 		echo "<div class='mf_form'>"
-			.show_select(array('data' => get_menu_type_for_select(), 'name' => $this->get_field_name('theme_menu_type'), 'text' => __("Menu Type", 'lang_parallax'), 'value' => $instance['theme_menu_type']))
+			.show_select(array('data' => get_menu_type_for_select(), 'name' => $this->get_field_name('theme_menu_type'), 'text' => __("Menu Type", 'lang_parallax')." <a href='".admin_url("nav-menus.php")."'><i class='fa fa-wrench fa-lg'></i></a>", 'value' => $instance['theme_menu_type']))
 		."</div>";
 	}
 }
