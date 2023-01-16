@@ -20,7 +20,7 @@ echo "<!DOCTYPE html>
 		wp_head();
 
 	echo "</head>
-	<body class='".implode(" ", get_body_class())."'>
+	<body class='".implode(" ", get_body_class()).(is_user_logged_in() ? " mf_parallax" : "")."'>
 		<div id='wrapper'>
 			<header>
 				<div>";

@@ -22,7 +22,7 @@ class mf_parallax
 				<a href='#' id='slide_nav'>
 					<i class='fa fa-bars toggle_icon'></i>
 				</a>
-			</nav>"; //".__("Menu", 'lang_parallax')."
+			</nav>";
 		}
 
 		else
