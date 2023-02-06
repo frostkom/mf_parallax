@@ -244,9 +244,10 @@ $out .= "@media all
 		article > div
 		{
 			margin: 0 auto;"
+			."overflow: hidden;"
+			.$obj_theme_core->render_css(array('property' => 'overflow', 'value' => 'content_overflow'))
 			.$obj_theme_core->render_css(array('property' => 'padding', 'value' => 'content_padding'))
-			."overflow: hidden;
-			position: relative;
+			."position: relative;
 		}";
 
 			/*article h1
