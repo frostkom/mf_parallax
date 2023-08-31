@@ -352,16 +352,22 @@ class mf_parallax
 
 class widget_parallax_menu extends WP_Widget
 {
+	var $widget_ops = array();
+
+	var $arr_default = array(
+		'theme_menu_type' => '',
+	);
+
 	function __construct()
 	{
 		$this->widget_ops = array(
 			'classname' => 'parallax',
-			'description' => __("Display Menu", 'lang_parallax')
+			'description' => __("Display Menu", 'lang_parallax'),
 		);
 
-		$this->arr_default = array(
+		/*$this->arr_default = array(
 			'theme_menu_type' => '',
-		);
+		);*/
 
 		$this->obj_parallax = new mf_parallax();
 
