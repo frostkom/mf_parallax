@@ -2,9 +2,11 @@
 
 class mf_parallax
 {
+	var $meta_prefix = 'mf_parallax_';
+
 	function __construct()
 	{
-		$this->meta_prefix = 'mf_parallax_';
+		//$this->meta_prefix = 'mf_parallax_';
 	}
 
 	function get_menu($data = array())

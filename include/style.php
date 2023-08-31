@@ -455,7 +455,7 @@ $out .= "}
 			if(!in_array($obj_theme_core->options['content_main_position'], array('none', 'initial', 'inherit')))
 			{
 				$width_section = $obj_theme_core->options['content_main_width'];
-				$width_aside = 100 - 5 - $obj_theme_core->options['content_main_width'];
+				$width_aside = (100 - 5 - $obj_theme_core->options['content_main_width']);
 
 				$out .= "article > div
 				{
