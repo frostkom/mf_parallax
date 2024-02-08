@@ -4,10 +4,7 @@ class mf_parallax
 {
 	var $meta_prefix = 'mf_parallax_';
 
-	function __construct()
-	{
-		//$this->meta_prefix = 'mf_parallax_';
-	}
+	function __construct(){}
 
 	function get_menu($data = array())
 	{
@@ -364,10 +361,6 @@ class widget_parallax_menu extends WP_Widget
 			'classname' => 'parallax',
 			'description' => __("Display Menu", 'lang_parallax'),
 		);
-
-		/*$this->arr_default = array(
-			'theme_menu_type' => '',
-		);*/
 
 		$this->obj_parallax = new mf_parallax();
 
